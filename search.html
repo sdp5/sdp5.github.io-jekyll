@@ -9,7 +9,7 @@
   <meta name="author" content="Sundeep Anand">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts Zanata-Python-Client v1.4.0 ">
+  <meta name="description" content="Search Results ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sundeep-co-in.github.io/">
+  <link rel="canonical" href="http://sundeep-co-in.github.io/search.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Sundeep Anand" type="application/atom+xml">
@@ -63,34 +63,22 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
-  
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+      <h1 class="entry-title"><center>Search Results</center></h1>
+<div id="search_loading" style="margin: 40px 0">
+    <center><img src="/images/loading.gif"></center>
 </div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2015/12/12/zanata-python-client-v1-dot-4-0/">Zanata-Python-Client v1.4.0</a>
-      </li>
-    
-  </ul>
-</section>
 
+<script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
+<div id="search_results" style="display:none">
+<br>
+</div>
+<script>
+         $('#search_results').tapir({
+             'token': '',
+             'complete' : function() { document.getElementById('search_loading').style.display="none"; }
+         });
+</script>
 
-
-
-
-  
-</aside>
 
     </div>
   </div>

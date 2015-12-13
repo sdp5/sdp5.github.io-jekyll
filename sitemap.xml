@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://sundeep-co-in.github.io/blog/2015/12/12/zanata-python-client-v1-dot-4-0/</loc>
+    <lastmod>2015-12-12T20:20:20+05:30</lastmod>
+  </url>
+  <url>
+    <loc>http://sundeep-co-in.github.io/</loc>
+  </url>
+  <url>
+    <loc>http://sundeep-co-in.github.io/blog/archives/</loc>
+  </url>
+  <url>
+    <loc>http://sundeep-co-in.github.io/posts/</loc>
+  </url>
+  <url>
+    <loc>http://sundeep-co-in.github.io/search.html</loc>
+  </url>
+  <url>
+    <loc>http://sundeep-co-in.github.io/blog/categories/python/</loc>
+  </url>
+  <url>
+    <loc>http://sundeep-co-in.github.io/blog/categories/zanata/</loc>
+  </url>
+</urlset>
