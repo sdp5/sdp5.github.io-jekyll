@@ -61,7 +61,7 @@ $ zanata version create {version_id} --project-id={project_id}
 $ zanata push --help
 $ zanata push [OPTIONS] 
 ```
-* This should push all templates, translations (if flagged) onto server. Cool! translation activities for the activated languages can now, be started. Get translations back to compile lang-packs.
+* This should push all templates, translations (if flagged) onto server. Cool! translation activities for the enabled languages can now, be started. Get translations back to compile lang-packs.
 ```sh
 $ zanata pull --help
 $ zanata pull [OPTIONS]
