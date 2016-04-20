@@ -3,7 +3,7 @@ layout: post
 title: "Zanata-Python-Client v1.5.0"
 date: 2016-04-20 10:25:08 +0530
 comments: true
-categories: fedora, i18n, l10n, python, zanata 
+categories: fedora i18n l10n python zanata 
 ---
 
 This release makes z-p-c little more stable with some major bugfixes. Feature wise we have `translation files mapping rules` added.

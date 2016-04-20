@@ -3,7 +3,7 @@ layout: post
 title: "Zanata-Python-Client v1.4.1"
 date: 2016-01-14 16:15:14 +0530
 comments: true
-categories: [fedora, i18n, l10n, python, zanata]
+categories: fedora i18n l10n python zanata
 ---
 A new release - v1.4.1 is **out**. This brings feature which makes getting started with **ZPC** more fun. GitHub Release [Link](https://github.com/zanata/zanata-python-client/releases/tag/zpc-v1.4.1)
 
