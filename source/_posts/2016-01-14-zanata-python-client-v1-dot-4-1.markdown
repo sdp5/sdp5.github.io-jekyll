@@ -25,6 +25,8 @@ Point your favorite browser to [```https://translate.zanata.org/zanata/```](http
 
 *Done! Let's move on...*
 
+<!--more-->
+
 > Client Side - CLI tasks
 
 Create a file ```zanata.ini``` at ```$HOME/.config/``` and copy the contents. Now, have **ZPC** in place. 

@@ -17,6 +17,8 @@ categories: fedora i18n l10n python zanata
 ## Translators
 I am sure, your search for translations platform, which can cater all your requirements, would come to an end, when you look at [Zanata](http://zanata.org), and if your project is already here - we have some new exciting features waiting for you to check them out. Let's get started...
 
+<!--more-->
+
 > Preparation
 
 Keep your language resources ready (POT file/s or folder/s). Have `zanata.ini` in-place, details [here](http://zanata-client.readthedocs.org/en/latest/configuration/#user-configuration). Write your project configuration `zanata.xml` and keep it at root directory of your project, this helps ZPC to have some prior information of the project while talking to Zanata Server. Structure would be...

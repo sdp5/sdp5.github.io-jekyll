@@ -28,6 +28,8 @@ TMGMT Zanata requires the Translation Management Tool module (TMGMT) to be enabl
 * Content Translation (enable only, part of core)
 * Locale (enable only, part of core)
 
+<!--more-->
+
 TMGMT also requires some other modules to be enabled:
 
 * Translation Management UI

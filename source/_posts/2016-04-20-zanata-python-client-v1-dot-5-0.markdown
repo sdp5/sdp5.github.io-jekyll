@@ -24,6 +24,8 @@ In the example above, `pattern` identifies a source file, and the contents of th
 
 The `pattern` attribute is a **glob** matching pattern to your source document file(s). You can define more than one rule and apply each rule to a specific set of source documents using different patterns. The first matched rule will be applied to the file.
 
+<!--more-->
+
 Please note pattern value will be tested against file path relative to project root, not `src-dir`.
 
 `pattern` is optional. If not specified, the rule will be applied to all source documents in your project. The actual rule consists of literal path and placeholders/variables.
