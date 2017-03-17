@@ -72,6 +72,7 @@ github_skip_forks: true
 # Twitter
 twitter_user: sundeep_co_in
 twitter_tweet_button: true
+twitter_widget_id: xxxxxxxxxxxxxxx
 
 # Google +1
 google_plus_one: true
