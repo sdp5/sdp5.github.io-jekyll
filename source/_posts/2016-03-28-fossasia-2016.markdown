@@ -3,10 +3,13 @@ layout: post
 title: "FOSSASIA 2016"
 date: 2016-03-28 18:20:17 +0530
 comments: true
-categories: events foss zanata 
+categories: events zanata 
 ---
 
 *AI 380 Delhi to Singapore 5:30 AM* All were sleeping and cabin crew announces `we are about to land at Singapore Changi Airport in 15 minutes`. This thrills almost all passengers travelling to Singapore for the first time including me. Within seconds fog started appearing on windows and we landed smoothly. This took 10 mins getting from the arrival gate to immigration post. And after 20 mins or so I completed baggage claim and was heading Terminal 3 arrivals. Met with my colleagues there and by 10:15 AM we boarded MRT to `Red Hat Singapore Office`. In the evening explored `Bugis Street` and enjoyed food at `Little India` - this lead to end of 0th day.
+
+<!--more-->
+
 
 #### Day 1
 
@@ -15,8 +18,6 @@ Started at `Singapore Science Center` - wonders of science, technology, engineer
 ->![Welcome](https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_2850.JPG)<-
 
 *Harish Pillay* the president of the Internet Society Singapore Chapter delivered keynote and spoke about phases of Free and Open Source Software. This took us through the journey! the revolution!!
-
-<!--more-->
 
 ->![Keynote](https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_2851.JPG)<-
 

@@ -14,14 +14,15 @@ Chandan Kumar greeted everyone there and with some backgrounds/purpose of this m
 ->![opening](https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/pypune2016/pypune_oct16_1.jpg)<-
 
 
+<!--more-->
+
+
 ### My Talk
 
 And then came my turn. Again [Zanata-Python-Client](https://speakerdeck.com/sundeep/zanata-python-client) but with more insights to why localization, what purpose Zanata solves and how to start contributing to python-client project. This includes [walk-through](https://youtu.be/LpyDF6u6DN8) of interacting with Zanata using python-client. I think everyone enjoyed slides/demo. Got a few questions as well.
 
 ->![my talk](https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/pypune2016/pypune_oct16_2.jpg)<-
 
-
-<!--more-->
 
 ### Remainder
 

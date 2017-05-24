@@ -3,7 +3,7 @@ layout: post
 title: "Zanata-Python-Client v1.4.1"
 date: 2016-01-14 16:15:14 +0530
 comments: true
-categories: fedora i18n l10n python zanata
+categories: i18n/l10n python zanata
 ---
 A new release - v1.4.1 is **out**. This brings feature which makes getting started with **ZPC** more fun. GitHub Release [Link](https://github.com/zanata/zanata-python-client/releases/tag/zpc-v1.4.1)
 
@@ -15,6 +15,8 @@ A new release - v1.4.1 is **out**. This brings feature which makes getting start
 ## Getting Started with Zanata and Python Client
 Starting out with translation project is a breeze with Zanata. Let's get started...
 
+<!--more-->
+
 > Server Side - User Settings
 
 Point your favorite browser to [```https://translate.zanata.org/zanata/```](https://translate.zanata.org/zanata/) and login (*signup for a new account*). You may find [this](http://zanata-client.readthedocs.org/en/latest/configuration/#user-configuration) useful.
@@ -25,7 +27,6 @@ Point your favorite browser to [```https://translate.zanata.org/zanata/```](http
 
 *Done! Let's move on...*
 
-<!--more-->
 
 > Client Side - CLI tasks
 

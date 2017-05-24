@@ -3,7 +3,7 @@ layout: post
 title: "Zanata-Python-Client v1.5.0"
 date: 2016-04-20 10:25:08 +0530
 comments: true
-categories: fedora i18n l10n python zanata 
+categories: i18n/l10n python zanata 
 ---
 
 This release makes z-p-c little more stable with some major bugfixes. Feature wise we have `translation files mapping rules` added.
@@ -20,11 +20,13 @@ Customize the way translation files are found when pushing, as well as the locat
 </rules>
 ```
 
+<!--more-->
+
+
 In the example above, `pattern` identifies a source file, and the contents of the rule element specify how translation files will be stored.
 
 The `pattern` attribute is a **glob** matching pattern to your source document file(s). You can define more than one rule and apply each rule to a specific set of source documents using different patterns. The first matched rule will be applied to the file.
 
-<!--more-->
 
 Please note pattern value will be tested against file path relative to project root, not `src-dir`.
 

@@ -3,7 +3,7 @@ layout: post
 title: "Zanata-Python-Client v1.4.0"
 date: 2015-12-15 16:40:42 +0530
 comments: true
-categories: fedora i18n l10n python zanata
+categories: i18n/l10n python zanata
 ---
 
 **ZPC** is a convenient way to communicate with Zanata server to push text for translation and pull translated text back for inclusion in software or documentation builds. This release brings fresh experiences to translators and contributors. GitHub Release [Link](https://github.com/zanata/zanata-python-client/releases/tag/v1.4.0)
@@ -14,10 +14,11 @@ categories: fedora i18n l10n python zanata
 * Keep source and target dir paths in `zanata.xml`
 * Code improvements for better maintainability.
 
+<!--more-->
+
 ## Translators
 I am sure, your search for translations platform, which can cater all your requirements, would come to an end, when you look at [Zanata](http://zanata.org), and if your project is already here - we have some new exciting features waiting for you to check them out. Let's get started...
 
-<!--more-->
 
 > Preparation
 
