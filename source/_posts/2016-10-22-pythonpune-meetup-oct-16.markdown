@@ -11,10 +11,10 @@ It has been long attending some talks - specially around **Python**!! And Python
 
 Chandan Kumar greeted everyone there and with some backgrounds/purpose of this meetup called for a round of introduction - *we had the strength of 50* - with some new faces. Nevertheless common goal was to **learn new things**. Akshay Goel started the talks with his discussions around `pyautogui` - an awesome module to automate keyboard/mouse events.
 
+<!--more-->
+
 ->![opening](https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/pypune2016/pypune_oct16_1.jpg)<-
 
-
-<!--more-->
 
 
 ### My Talk

@@ -3,7 +3,7 @@ layout: post
 title: "transtats"
 date: 2017-03-17 15:56:42 +0530
 comments: true
-categories: i18n/l10n statistics
+categories: i18n/l10n fedora
 ---
 
 From last few months, working on an idea. Globalization market is evolving and we have better translation platforms out in the market, some of them are closed source but some are open. In the whole process, success is defined when users identify some-software xyz-release is now available in so and so languages. The complexity increases when a project involves various packages. Is translation progress of all involved packages up-to-the-mark for the project's next release? [Transtats](http://transtats.org/) is an answer to this!
