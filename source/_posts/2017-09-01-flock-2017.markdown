@@ -52,7 +52,7 @@ This is the day I was waiting for! [Globalization](https://fedoraproject.org/wik
 
 {% img center https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2275.JPG?raw=true 450 280 %}
 
-And here came my talk on `Introduction to Transtats`. Tool to track translation progress of packages across releases. You can find slides [here](https://speakerdeck.com/sundeep/introduction-to-transtats). This was followed by l10n talk by *Pravin Satpute*, *Alex Eng* and *Jean-Baptiste*. Alex demo'd Jenkins-Zanata plugin. Jean makes us feel what processes are required to make fedora localization community a better place. Thank you Jean!
+And here come [my talk](https://www.youtube.com/watch?v=Ln9e3LM2Ht8) on `Introduction to Transtats`. Tool to track translation progress of packages across releases. You can find slides [here](https://speakerdeck.com/sundeep/introduction-to-transtats). This was followed by l10n talk by *Pravin Satpute*, *Alex Eng* and *Jean-Baptiste*. Alex demo'd Jenkins-Zanata plugin. Jean makes us feel what processes are required to make fedora localization community a better place. Thank you Jean!
 
 {% img center https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2281.JPG?raw=true 450 280 %}
 
