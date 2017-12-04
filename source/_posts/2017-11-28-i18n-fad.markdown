@@ -6,7 +6,7 @@ comments: true
 categories: events fedora i18n/l10n
 ---
 
-This time [Pune, India](https://en.wikipedia.org/wiki/Pune) was selected for [Fedora Activity Day](https://fedoraproject.org/wiki/FAD_I18N_2017) 2017 of Internationalization (i18n) Engineering. Folks from all over APAC and EMEA joined together to exchange ideas, fix long pending bugs and hack on new ideas. Thanks to [Bex](https://fedoraproject.org/wiki/User:Bex) for approving budget and moving i18n FAD arrangements further! [Jens](https://fedoraproject.org/wiki/User:Petersen), [Parag](https://fedoraproject.org/wiki/User:Pnemade) and [Pravin](https://fedoraproject.org/wiki/User:Pravins) played vital roles in organising everything required to make it happen. 
+This time [Pune, India](https://en.wikipedia.org/wiki/Pune) was selected for [Fedora Activity Day](https://fedoraproject.org/wiki/FAD_I18N_2017) 2017 of Internationalization (i18n) Engineering. Folks from all over APAC and EMEA joined together to exchange ideas, fix long pending bugs and hack on new ideas. Thanks to Fedora Council for approving budget and to [Bex](https://fedoraproject.org/wiki/User:Bex) for coordinating & moving i18n FAD arrangements further! [Jens](https://fedoraproject.org/wiki/User:Petersen), [Parag](https://fedoraproject.org/wiki/User:Pnemade) and [Pravin](https://fedoraproject.org/wiki/User:Pravins) played vital roles in organising everything required to make it happen. 
 
 {% img center https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_0.JPG?raw=true 450 280 %}
 
