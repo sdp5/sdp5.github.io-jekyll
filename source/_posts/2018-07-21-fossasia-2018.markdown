@@ -24,7 +24,7 @@ Special guest `Teo Ser Luck` (Member of Parliament) gave an overview on Open Tec
 
 {% img center https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-2.jpg?raw=true 450 280 %}
 
-Then comes keynotes. Started by `Jonas von Malottki` (Senior Manager Daimler). He shared how Daimler uses Free and Open Source software within several of its products. Daimler is the first German automaker that joined the development of Automotive Grade Linux to help build the next generation connected car platform. This was very interesting to learn!
+Then come keynotes. Started by `Jonas von Malottki` (Senior Manager Daimler). He shared how Daimler uses Free and Open Source software within several of its products. Daimler is the first German automaker that joined the development of Automotive Grade Linux to help build the next generation connected car platform. This was very interesting to learn!
 
 {% img center https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-3.jpg?raw=true 450 280 %}
 
