@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Working With TMGMT Zanata - sundeep's blog</title>
+  <meta name="author" content="Sundeep Anand">
+
+  
+  <meta name="description" content="TMGMT Zanata is a plugin for Drupal&rsquo;s Translation Management Module TMGMT. The plugin allows TMGMT to send content to a configured Zanata &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="sundeep's blog" type="application/atom+xml">
+  <link href="/fedora-feed.xml" rel="alternate" title="sundeep's blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-52687204-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sundeep's blog</a></h1>
+  
+    <h2>Open source developer and linux enthusiast</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="sundeep.co.in">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <!--<li><a href="/resume">Resume</a></li>-->
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Working With TMGMT Zanata</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-02-25T11:53:55+05:30'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:53 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://sundeep.co.in">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>TMGMT Zanata is a plugin for Drupal&rsquo;s Translation Management Module TMGMT. The plugin allows TMGMT to send content to a configured Zanata project for translation, and can download translations as they are ready.</p>
+
+<p>Zanata is a web-based system for translators, content creators and developers to manage localization projects.</p>
+
+<ol>
+<li>Installation</li>
+<li>Set Up</li>
+<li>Configuration</li>
+<li>Translation Jobs</li>
+</ol>
+
+
+<!--more-->
+
+
+<h2>Installation</h2>
+
+<p>TMGMT Zanata requires the Translation Management Tool module (TMGMT) to be enabled. And to use Translation Management (Node Translation), the following modules must be installed:</p>
+
+<ul>
+<li>Entity API</li>
+<li>Views</li>
+<li>Chaos Tools (Required for Views)</li>
+<li>Views Bulk Operations</li>
+<li>Rules</li>
+<li>Content Translation (enable only, part of core)</li>
+<li>Locale (enable only, part of core)</li>
+</ul>
+
+
+<p>TMGMT also requires some other modules to be enabled:</p>
+
+<ul>
+<li>Translation Management UI</li>
+<li>Content Source User Interface</li>
+<li>Export / Import File</li>
+</ul>
+
+
+<p>This will automatically trigger the activation of Translation Management Core, Content Source and Translation Management Field modules.</p>
+
+<p>TMGMT Zanata Installation is similar to any Drupal module.</p>
+
+<p>Installed and enabled TMGMT with Zanata Plugin will look something similar to screenshot below:</p>
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/1_tmgmt.png" alt="Drupal TMGMT Module" /></p>
+
+<p>TMGMT Zanata plugin appears as <code>Zanata translator</code> and if enabled, can be used as one of the available translators to TMGMT module.</p>
+
+<h2>Set Up</h2>
+
+<h3>Enable translation for content types</h3>
+
+<p>To make each content type translatable, the publishing options for the content type must be set appropriately. To do so:</p>
+
+<ol>
+<li>In the administration menu, navigate to &ldquo;Structure&rdquo; > &ldquo;Content types&rdquo;.</li>
+<li>Find the content type you wish to make translatable and open its edit page.</li>
+<li>Change to the &ldquo;Publishing options&rdquo; tab</li>
+<li>Under &ldquo;Multilingual support, select "Enabled, with translation&rdquo;.</li>
+<li>Click &ldquo;Save content type&rdquo;</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/2_content_type.png" alt="Content Type" /></p>
+
+<h3>Add languages</h3>
+
+<p>To allow translation, your site must have one or more languages enabled, in addition to the default language. To enable a language:</p>
+
+<ol>
+<li>In the administration menu, navigate to &ldquo;Configuration&rdquo; > &ldquo;Regional and language&rdquo; > &ldquo;Languages&rdquo;.</li>
+<li>Open the &ldquo;Add language&rdquo; page</li>
+<li>Select an existing language or enter details for a custom language.</li>
+<li>Click &ldquo;Add language&rdquo; or &ldquo;Add custom language&rdquo;</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/3_languages.png" alt="Enable Languages" /></p>
+
+<h3>Enable the TMGMT Zanata plugin module</h3>
+
+<p>Once the code for the plugin module has been installed, enable the module. To do so, open &ldquo;Modules&rdquo; in the Administration menu, scroll to the &ldquo;Translation Management&rdquo; section, and ensure that &ldquo;Zanata translator&rdquo; is checked. Also ensure that TMGMT and its dependencies are checked. Click &ldquo;Save configuration&rdquo; to finalize the change.</p>
+
+<h3>Cron</h3>
+
+<p>Set up cron to automatically fetch new translations from Zanata server every time it runs.
+There are two separate ways to run Drupal&rsquo;s cron tasks:</p>
+
+<h4>Automated Cron</h4>
+
+<p>The automated cron system is compatible with all systems because it doesn&rsquo;t actually involve the system&rsquo;s cron daemon. It works by checking at the end of each Drupal request to see when cron last ran and, if it has been too long, processing the cron tasks as part of that request. The two down-sides are
+cron tasks will only run when Drupal is processing requests, and
+the &lsquo;weight&rsquo; (processing and memory) of running the cron tasks will be added to some arbitrary unknown page request, which may slow down those requests, which may slow down those requests, and has the potential to exceed memory limits on a complex site.</p>
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/4_cron.png" alt="Cron" /></p>
+
+<h4>External Cron</h4>
+
+<p>Create a cron job, or use some other external (to Drupal) method of triggering its cron tasks, such as an external cron job service like EasyCron or Cronless. This is the more reliable because it will always run on schedule. Note that if you create a cron job, you may want to disable the &ldquo;automated cron&rdquo; system entirely.</p>
+
+<p>Easiest way to setup external cron it to add following in system crontab:</p>
+
+<p><code>0 * * * * wget -O - -q -t 1 http://{your_drupal_server}/cron.php</code></p>
+
+<p>This would run every hour. Replace {your_drupal_server} with the url of your server.</p>
+
+<h2>Configuration</h2>
+
+<p>Before the module can be used, it must be configured with some details about Zanata - user and project. These are set on the translator configuration page.</p>
+
+<p>If you do not yet have a Zanata username or API key, or you have not yet created a project or project-version on Zanata for your website, use the following instructions to do so before you continue:</p>
+
+<ul>
+<li>To get a Zanata account, see Signing Up.</li>
+<li>For instructions on finding your API key, see &ldquo;User Configuration&rdquo; on the Configure the Client help page.
+
+<ul>
+<li>User settings are accessed through the Dashboard.</li>
+<li>Note that you do not need to create any config files for this plugin.</li>
+</ul>
+</li>
+<li>For help creating a project, see Project Creation.</li>
+<li>For help creating a version, see Version Creation.</li>
+</ul>
+
+
+<p>To open the translator configuration page and enter configuration:</p>
+
+<ol>
+<li>Open the Administration menu</li>
+<li>Navigate to &ldquo;Configuration&rdquo; -> &ldquo;Regional and language&rdquo; -> &ldquo;Translation Management Translators&rdquo;</li>
+<li>You will see a list of translator plugins that have been added to TMGMT. Look for &ldquo;Zanata translator&rdquo; in the list.</li>
+<li>If you see an auto-created Zanata translator, open the configuration page by clicking &ldquo;edit&rdquo;.</li>
+<li>If you do not see an auto-created Zanata translator, create one. To create a Zanata translator, click &ldquo;Add translator&rdquo;, enter an appropriate label such as &ldquo;Zanata translator&rdquo;, and in &ldquo;Translator plugin&rdquo; select &ldquo;Zanata translator&rdquo;. When you select &ldquo;Zanata translator&rdquo; its configuration page will be displayed below.</li>
+<li>If you do not wish to perform translation review in Drupal, for example if review will be done in Zanata, ensure that &ldquo;Auto accept finished translations&rdquo; is checked. This setting can be changed later.</li>
+<li>Ensure that the Zanata server URL shows the correct Zanata server on which you have an account and have created a project for your website. To find the full URL, open the Zanata server and click the Zanata logo to open the homepage. The URL shown in your browser address bar is the server URL, but do not include a / at the end. For example, the homepage for the main Zanata server is at &ldquo;<a href="http://translate.zanata.org/zanata/">http://translate.zanata.org/zanata/</a>&rdquo; so the URL for this server is &ldquo;<a href="http://translate.zanata.org/zanata">http://translate.zanata.org/zanata</a>&rdquo;.</li>
+<li>Enter your username, your API key, your project ID and your project-version ID. Be careful to use your Zanata username rather than your display name, and the Project ID rather than the Project Name. See the links above for directions that may help to find this information.</li>
+<li>Click &ldquo;Save translator&rdquo; to complete the configuration.</li>
+<li>You are now able to create translation jobs that use Zanata translator.</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/5_settings.png" alt="Plugin Configuration" /></p>
+
+<p>Feature, <code>Translation Periodic Check</code> depends upon Cron setup and it fetches new translations from Zanata server every time cron runs.</p>
+
+<h2>Translation Jobs</h2>
+
+<p>TMGMT Zanata is a plugin for the Translation Management Tool (TMGMT), so most of the directions for creating and interacting with translation jobs can be taken directly from TMGMT&rsquo;s documentation. Let’s see translation of an article using TMGMT Zanata.</p>
+
+<ul>
+<li>In your website, navigate to article&rsquo;s page (you want to translate) and click on <code>Translate</code>. If <code>Translate</code> is not appearing please see configurations and complete the steps.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/6_page.png" alt="Page" /></p>
+
+<ul>
+<li>Clicking on <code>Translate</code> would take you to this page. Here, you can select language and request translation. Translation job would be created as soon as you request translation.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/7_select_lang.png" alt="Select Language" /></p>
+
+<ul>
+<li>Upon request, translation job would be added to cart. Here we can select translator for the added job and submit it. Job items and target language should be verified. As soon as we submit or checkout, page’s content would be pushed to server for translation.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/8_submit.png" alt="Submit Job" /></p>
+
+<ul>
+<li>After submission we receive confirmation which looks something like:</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/9_confirmation.png" alt="Submit Confirmation" /></p>
+
+<ul>
+<li>In Zanata, we can navigate to the document uploaded.
+
+<ul>
+<li>As mentioned in Zanata Translator Plugin Settings, select Project and Version.</li>
+<li>Select the language for which job is created.</li>
+<li>Here, we can see list of documents uploaded for the given language.</li>
+<li>Select the document which belongs to submitted job.
+
+<ul>
+<li>Please refer submission confirmation notes to identify document name, as it may differ than the article’s heading.</li>
+</ul>
+</li>
+<li>This would take you to Zanata translation page. Here, you can translate the article.
+Upon translation of content, mark complete to make them available for pull.</li>
+</ul>
+</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/10_zanata.png" alt="Zanata" /></p>
+
+<ul>
+<li>If <code>Auto accept finished translations</code> and <code>Translation Periodic Check</code> are checked in translators settings, new translations delta are fetched every time cron runs and article will be published automatically once it reach 100% translated. We can fetch new translations and/or re-submit it to translator for active translation jobs.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/11_manage.png" alt="Manage Job" /></p>
+
+<ul>
+<li>Once translations are fetched from Zanata, it would be available for review. This step can be skipped by checking <code>Auto accept finished translations</code>. Accepted translations look like the screen below. Acceptance of translation makes a translation job finished.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/12_fetch.png" alt="Fetch Translation" /></p>
+
+<ul>
+<li>As soon as a translation job finishes, TMGMT publishes it and a navigation is added to the page which takes user to translated version of the article of intended language.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/13_publish.png" alt="Publish Translation" /></p>
+
+<ul>
+<li>Summary of translation jobs looks similar to below screen.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/14_summary.png" alt="Job Summary" /></p>
+
+<h3>References</h3>
+
+<ul>
+<li><a href="https://www.drupal.org/project/tmgmt_zanata">https://www.drupal.org/project/tmgmt_zanata</a></li>
+<li><a href="https://www.drupal.org/node/1490024">https://www.drupal.org/node/1490024</a></li>
+<li><a href="https://www.drupal.org/cron">https://www.drupal.org/cron</a></li>
+<li><a href="https://www.drupal.org/node/1547632">https://www.drupal.org/node/1547632</a></li>
+</ul>
+
+
+<p>Happy Website Translation!!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Sundeep Anand</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-02-25T11:53:55+05:30'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:53 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/i18n-slash-l10n/'>i18n/l10n</a>, <a class='category' href='/blog/categories/php/'>php</a>, <a class='category' href='/blog/categories/zanata/'>zanata</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata/" data-via="sundeep_co_in" data-counturl="http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/01/14/zanata-python-client-v1-dot-4-1/" title="Previous Post: Zanata-Python-Client v1.4.1">&laquo; Zanata-Python-Client v1.4.1</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2016/03/28/fossasia-2016/" title="Next Post: FOSSASIA 2016">FOSSASIA 2016 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="sundeep-anand"><a class="LI-simple-link" href='https://in.linkedin.com/in/sundeep-anand?trk=profile-badge'></a></p>
+  <p>Interests in linux, i18n, web, containers, devops. IRC #freenode nick suanand.</p>
+  <p>Fedora <a href="https://fedoraproject.org/wiki/User:Sundeep" target="_blank">Page</a></p>
+  <p>Speaker <a href="https://speakerdeck.com/sundeep" target="_blank">Deck</a></p>
+</section>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sundeep-co-in">@sundeep-co-in</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sundeep-co-in',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/03/16/fossasia-2019/">FOSSASIA 2019</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/02/06/transtats-getting-started/">Transtats - Getting Started</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/20/flock-2018/">Flock 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/03/31/fossasia-2018/">FOSSASIA 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/11/28/i18n-fad/">I18n FAD</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/blog/categories/events/'>events (7)</a></li><li><a href='/blog/categories/fedora/'>fedora (5)</a></li><li><a href='/blog/categories/i18n-slash-l10n/'>i18n/l10n (7)</a></li><li><a href='/blog/categories/php/'>php (1)</a></li><li><a href='/blog/categories/python/'>python (5)</a></li><li><a href='/blog/categories/zanata/'>zanata (6)</a></li></ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/116331365568613992424?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+<section>
+  <h1>Stack Overflow</h1>
+  <p><a href="http://stackoverflow.com/users/1862166/sundeep"><img src="http://stackoverflow.com/users/flair/1862166.png" width="208" height="58" alt="profile for sundeep at Stack Overflow"></a></p>
+</section>
+
+<section>
+  <h1>Copyrights</h1>
+  <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</section>
+<section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/events' style='font-size: 160.0%'>events(7)</a> <a href='/blog/categories/fedora' style='font-size: 142.85714285714286%'>fedora(5)</a> <a href='/blog/categories/i18n-slash-l10n' style='font-size: 160.0%'>i18n/l10n(7)</a> <a href='/blog/categories/php' style='font-size: 108.57142857142857%'>php(1)</a> <a href='/blog/categories/python' style='font-size: 142.85714285714286%'>python(5)</a> <a href='/blog/categories/zanata' style='font-size: 151.42857142857144%'>zanata(6)</a> </span>
+</section>
+
+<section>
+  <h1>On Twitter</h1>
+  <div>
+    <p><br /><a href="http://twitter.com/sundeep_co_in" target="_blank">My Latest Tweets</a></p>
+    <a href="http://twitter.com/sundeep_co_in" class="twitter-follow-button" data-show-count="">Follow @sundeep_co_in</a>
+  </div>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2019 - Sundeep Anand -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'sundeep-co-in';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata/';
+        var disqus_url = 'http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

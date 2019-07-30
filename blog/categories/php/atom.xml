@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Php | sundeep's blog]]></title>
+  <link href="http://sundeep.co.in/blog/categories/php/atom.xml" rel="self"/>
+  <link href="http://sundeep.co.in/"/>
+  <updated>2019-07-30T14:00:13+05:30</updated>
+  <id>http://sundeep.co.in/</id>
+  <author>
+    <name><![CDATA[Sundeep Anand]]></name>
+    <email><![CDATA[sundeep.co.in@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Working With TMGMT Zanata]]></title>
+    <link href="http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata/"/>
+    <updated>2016-02-25T11:53:55+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata</id>
+    <content type="html"><![CDATA[<p>TMGMT Zanata is a plugin for Drupal&rsquo;s Translation Management Module TMGMT. The plugin allows TMGMT to send content to a configured Zanata project for translation, and can download translations as they are ready.</p>
+
+<p>Zanata is a web-based system for translators, content creators and developers to manage localization projects.</p>
+
+<ol>
+<li>Installation</li>
+<li>Set Up</li>
+<li>Configuration</li>
+<li>Translation Jobs</li>
+</ol>
+
+
+<!--more-->
+
+
+<h2>Installation</h2>
+
+<p>TMGMT Zanata requires the Translation Management Tool module (TMGMT) to be enabled. And to use Translation Management (Node Translation), the following modules must be installed:</p>
+
+<ul>
+<li>Entity API</li>
+<li>Views</li>
+<li>Chaos Tools (Required for Views)</li>
+<li>Views Bulk Operations</li>
+<li>Rules</li>
+<li>Content Translation (enable only, part of core)</li>
+<li>Locale (enable only, part of core)</li>
+</ul>
+
+
+<p>TMGMT also requires some other modules to be enabled:</p>
+
+<ul>
+<li>Translation Management UI</li>
+<li>Content Source User Interface</li>
+<li>Export / Import File</li>
+</ul>
+
+
+<p>This will automatically trigger the activation of Translation Management Core, Content Source and Translation Management Field modules.</p>
+
+<p>TMGMT Zanata Installation is similar to any Drupal module.</p>
+
+<p>Installed and enabled TMGMT with Zanata Plugin will look something similar to screenshot below:</p>
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/1_tmgmt.png" alt="Drupal TMGMT Module" /></p>
+
+<p>TMGMT Zanata plugin appears as <code>Zanata translator</code> and if enabled, can be used as one of the available translators to TMGMT module.</p>
+
+<h2>Set Up</h2>
+
+<h3>Enable translation for content types</h3>
+
+<p>To make each content type translatable, the publishing options for the content type must be set appropriately. To do so:</p>
+
+<ol>
+<li>In the administration menu, navigate to &ldquo;Structure&rdquo; > &ldquo;Content types&rdquo;.</li>
+<li>Find the content type you wish to make translatable and open its edit page.</li>
+<li>Change to the &ldquo;Publishing options&rdquo; tab</li>
+<li>Under &ldquo;Multilingual support, select "Enabled, with translation&rdquo;.</li>
+<li>Click &ldquo;Save content type&rdquo;</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/2_content_type.png" alt="Content Type" /></p>
+
+<h3>Add languages</h3>
+
+<p>To allow translation, your site must have one or more languages enabled, in addition to the default language. To enable a language:</p>
+
+<ol>
+<li>In the administration menu, navigate to &ldquo;Configuration&rdquo; > &ldquo;Regional and language&rdquo; > &ldquo;Languages&rdquo;.</li>
+<li>Open the &ldquo;Add language&rdquo; page</li>
+<li>Select an existing language or enter details for a custom language.</li>
+<li>Click &ldquo;Add language&rdquo; or &ldquo;Add custom language&rdquo;</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/3_languages.png" alt="Enable Languages" /></p>
+
+<h3>Enable the TMGMT Zanata plugin module</h3>
+
+<p>Once the code for the plugin module has been installed, enable the module. To do so, open &ldquo;Modules&rdquo; in the Administration menu, scroll to the &ldquo;Translation Management&rdquo; section, and ensure that &ldquo;Zanata translator&rdquo; is checked. Also ensure that TMGMT and its dependencies are checked. Click &ldquo;Save configuration&rdquo; to finalize the change.</p>
+
+<h3>Cron</h3>
+
+<p>Set up cron to automatically fetch new translations from Zanata server every time it runs.
+There are two separate ways to run Drupal&rsquo;s cron tasks:</p>
+
+<h4>Automated Cron</h4>
+
+<p>The automated cron system is compatible with all systems because it doesn&rsquo;t actually involve the system&rsquo;s cron daemon. It works by checking at the end of each Drupal request to see when cron last ran and, if it has been too long, processing the cron tasks as part of that request. The two down-sides are
+cron tasks will only run when Drupal is processing requests, and
+the &lsquo;weight&rsquo; (processing and memory) of running the cron tasks will be added to some arbitrary unknown page request, which may slow down those requests, which may slow down those requests, and has the potential to exceed memory limits on a complex site.</p>
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/4_cron.png" alt="Cron" /></p>
+
+<h4>External Cron</h4>
+
+<p>Create a cron job, or use some other external (to Drupal) method of triggering its cron tasks, such as an external cron job service like EasyCron or Cronless. This is the more reliable because it will always run on schedule. Note that if you create a cron job, you may want to disable the &ldquo;automated cron&rdquo; system entirely.</p>
+
+<p>Easiest way to setup external cron it to add following in system crontab:</p>
+
+<p><code>0 * * * * wget -O - -q -t 1 http://{your_drupal_server}/cron.php</code></p>
+
+<p>This would run every hour. Replace {your_drupal_server} with the url of your server.</p>
+
+<h2>Configuration</h2>
+
+<p>Before the module can be used, it must be configured with some details about Zanata - user and project. These are set on the translator configuration page.</p>
+
+<p>If you do not yet have a Zanata username or API key, or you have not yet created a project or project-version on Zanata for your website, use the following instructions to do so before you continue:</p>
+
+<ul>
+<li>To get a Zanata account, see Signing Up.</li>
+<li>For instructions on finding your API key, see &ldquo;User Configuration&rdquo; on the Configure the Client help page.
+
+<ul>
+<li>User settings are accessed through the Dashboard.</li>
+<li>Note that you do not need to create any config files for this plugin.</li>
+</ul>
+</li>
+<li>For help creating a project, see Project Creation.</li>
+<li>For help creating a version, see Version Creation.</li>
+</ul>
+
+
+<p>To open the translator configuration page and enter configuration:</p>
+
+<ol>
+<li>Open the Administration menu</li>
+<li>Navigate to &ldquo;Configuration&rdquo; -> &ldquo;Regional and language&rdquo; -> &ldquo;Translation Management Translators&rdquo;</li>
+<li>You will see a list of translator plugins that have been added to TMGMT. Look for &ldquo;Zanata translator&rdquo; in the list.</li>
+<li>If you see an auto-created Zanata translator, open the configuration page by clicking &ldquo;edit&rdquo;.</li>
+<li>If you do not see an auto-created Zanata translator, create one. To create a Zanata translator, click &ldquo;Add translator&rdquo;, enter an appropriate label such as &ldquo;Zanata translator&rdquo;, and in &ldquo;Translator plugin&rdquo; select &ldquo;Zanata translator&rdquo;. When you select &ldquo;Zanata translator&rdquo; its configuration page will be displayed below.</li>
+<li>If you do not wish to perform translation review in Drupal, for example if review will be done in Zanata, ensure that &ldquo;Auto accept finished translations&rdquo; is checked. This setting can be changed later.</li>
+<li>Ensure that the Zanata server URL shows the correct Zanata server on which you have an account and have created a project for your website. To find the full URL, open the Zanata server and click the Zanata logo to open the homepage. The URL shown in your browser address bar is the server URL, but do not include a / at the end. For example, the homepage for the main Zanata server is at &ldquo;<a href="http://translate.zanata.org/zanata/">http://translate.zanata.org/zanata/</a>&rdquo; so the URL for this server is &ldquo;<a href="http://translate.zanata.org/zanata">http://translate.zanata.org/zanata</a>&rdquo;.</li>
+<li>Enter your username, your API key, your project ID and your project-version ID. Be careful to use your Zanata username rather than your display name, and the Project ID rather than the Project Name. See the links above for directions that may help to find this information.</li>
+<li>Click &ldquo;Save translator&rdquo; to complete the configuration.</li>
+<li>You are now able to create translation jobs that use Zanata translator.</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/5_settings.png" alt="Plugin Configuration" /></p>
+
+<p>Feature, <code>Translation Periodic Check</code> depends upon Cron setup and it fetches new translations from Zanata server every time cron runs.</p>
+
+<h2>Translation Jobs</h2>
+
+<p>TMGMT Zanata is a plugin for the Translation Management Tool (TMGMT), so most of the directions for creating and interacting with translation jobs can be taken directly from TMGMT&rsquo;s documentation. Let’s see translation of an article using TMGMT Zanata.</p>
+
+<ul>
+<li>In your website, navigate to article&rsquo;s page (you want to translate) and click on <code>Translate</code>. If <code>Translate</code> is not appearing please see configurations and complete the steps.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/6_page.png" alt="Page" /></p>
+
+<ul>
+<li>Clicking on <code>Translate</code> would take you to this page. Here, you can select language and request translation. Translation job would be created as soon as you request translation.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/7_select_lang.png" alt="Select Language" /></p>
+
+<ul>
+<li>Upon request, translation job would be added to cart. Here we can select translator for the added job and submit it. Job items and target language should be verified. As soon as we submit or checkout, page’s content would be pushed to server for translation.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/8_submit.png" alt="Submit Job" /></p>
+
+<ul>
+<li>After submission we receive confirmation which looks something like:</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/9_confirmation.png" alt="Submit Confirmation" /></p>
+
+<ul>
+<li>In Zanata, we can navigate to the document uploaded.
+
+<ul>
+<li>As mentioned in Zanata Translator Plugin Settings, select Project and Version.</li>
+<li>Select the language for which job is created.</li>
+<li>Here, we can see list of documents uploaded for the given language.</li>
+<li>Select the document which belongs to submitted job.
+
+<ul>
+<li>Please refer submission confirmation notes to identify document name, as it may differ than the article’s heading.</li>
+</ul>
+</li>
+<li>This would take you to Zanata translation page. Here, you can translate the article.
+Upon translation of content, mark complete to make them available for pull.</li>
+</ul>
+</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/10_zanata.png" alt="Zanata" /></p>
+
+<ul>
+<li>If <code>Auto accept finished translations</code> and <code>Translation Periodic Check</code> are checked in translators settings, new translations delta are fetched every time cron runs and article will be published automatically once it reach 100% translated. We can fetch new translations and/or re-submit it to translator for active translation jobs.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/11_manage.png" alt="Manage Job" /></p>
+
+<ul>
+<li>Once translations are fetched from Zanata, it would be available for review. This step can be skipped by checking <code>Auto accept finished translations</code>. Accepted translations look like the screen below. Acceptance of translation makes a translation job finished.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/12_fetch.png" alt="Fetch Translation" /></p>
+
+<ul>
+<li>As soon as a translation job finishes, TMGMT publishes it and a navigation is added to the page which takes user to translated version of the article of intended language.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/13_publish.png" alt="Publish Translation" /></p>
+
+<ul>
+<li>Summary of translation jobs looks similar to below screen.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/14_summary.png" alt="Job Summary" /></p>
+
+<h3>References</h3>
+
+<ul>
+<li><a href="https://www.drupal.org/project/tmgmt_zanata">https://www.drupal.org/project/tmgmt_zanata</a></li>
+<li><a href="https://www.drupal.org/node/1490024">https://www.drupal.org/node/1490024</a></li>
+<li><a href="https://www.drupal.org/cron">https://www.drupal.org/cron</a></li>
+<li><a href="https://www.drupal.org/node/1547632">https://www.drupal.org/node/1547632</a></li>
+</ul>
+
+
+<p>Happy Website Translation!!</p>
+]]></content>
+  </entry>
+  
+</feed>

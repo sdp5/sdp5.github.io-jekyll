@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Python | sundeep's blog]]></title>
+  <link href="http://sundeep.co.in/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://sundeep.co.in/"/>
+  <updated>2019-07-30T14:00:13+05:30</updated>
+  <id>http://sundeep.co.in/</id>
+  <author>
+    <name><![CDATA[Sundeep Anand]]></name>
+    <email><![CDATA[sundeep.co.in@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Manage Yourself]]></title>
+    <link href="http://sundeep.co.in/blog/2017/05/24/manage-yourself/"/>
+    <updated>2017-05-24T13:58:16+05:30</updated>
+    <id>http://sundeep.co.in/blog/2017/05/24/manage-yourself</id>
+    <content type="html"><![CDATA[<p>All throughout schooling we learn to work hard preparing for exams and celebrate the results! This induces tendency to set short term goals and put some efforts achieving it. Almost every one has some method to plan and execute what ever goals one has. For some goals rigorous efforts are required whereas some require small but continuous inputs. Overall if we find some balance where we keep our daily activities doing and in parallel meet goals requirements, that certainly would be awesome.</p>
+
+<p>In another words, how about developing a tool which may keep us on track minimising random efforts and keep ourselves more focused towards some goals we have in mind for coming 2-3 yrs? <a href="http://makegoalsdaily.com/">make-goals-daily</a> is a small effort towards the same. This keeps a backlog (goals) and log our daily activities. In return it tries to calculate how much work is remaining for completion of goals. Also, it summaries tasks performed in a month grouped by goals. Thus making it personal activity logger to chase short term goals!!</p>
+
+<p>Give it a try <code>$ docker pull suanand/makegoalsdaily</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PythonPune MeetUp - Oct '16]]></title>
+    <link href="http://sundeep.co.in/blog/2016/10/22/pythonpune-meetup-oct-16/"/>
+    <updated>2016-10-22T15:58:02+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/10/22/pythonpune-meetup-oct-16</id>
+    <content type="html"><![CDATA[<p>It has been long attending some talks - specially around <strong>Python</strong>!! And PythonPune looks perfect to meet some folks working with Python in the happening city - PUNE. If I remember correctly it was 6:30 I woke up and dropped text to my friend at Baner - <em>planning to spend latter half of the day at your place</em> - as venue was at GSLabs, Baner.</p>
+
+<h3>Opening</h3>
+
+<p>Chandan Kumar greeted everyone there and with some backgrounds/purpose of this meetup called for a round of introduction - <em>we had the strength of 50</em> - with some new faces. Nevertheless common goal was to <strong>learn new things</strong>. Akshay Goel started the talks with his discussions around <code>pyautogui</code> - an awesome module to automate keyboard/mouse events.</p>
+
+<!--more-->
+
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/pypune2016/pypune_oct16_1.jpg" alt="opening" /></p>
+
+<h3>My Talk</h3>
+
+<p>And then came my turn. Again <a href="https://speakerdeck.com/sundeep/zanata-python-client">Zanata-Python-Client</a> but with more insights to why localization, what purpose Zanata solves and how to start contributing to python-client project. This includes <a href="https://youtu.be/LpyDF6u6DN8">walk-through</a> of interacting with Zanata using python-client. I think everyone enjoyed slides/demo. Got a few questions as well.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/pypune2016/pypune_oct16_2.jpg" alt="my talk" /></p>
+
+<h3>Remainder</h3>
+
+<p>This was followed by Narayan Behara, who demo&rsquo;d working of <code>Boto3 python library for AWS</code>. And Kiran Yallabandi presented his experiences on <code>decorators</code> - this was a deep dive. With some more topics the meetup concluded in an informative one, and I guess - everyone enjoyed sharing thoughts with morning tea/coffee.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/pypune2016/pypune_oct16_3.jpg" alt="closing" /></p>
+
+<p>With hope to meet all in the next meetup, I headed friend&rsquo;s place - and had a great time there as well - indeed :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zanata-Python-Client v1.5.0]]></title>
+    <link href="http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0/"/>
+    <updated>2016-04-20T10:25:08+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0</id>
+    <content type="html"><![CDATA[<p>This release makes z-p-c little more stable with some major bugfixes. Feature wise we have <code>translation files mapping rules</code> added.</p>
+
+<blockquote><p>Translation Files Mapping Rules</p></blockquote>
+
+<p>Customize the way translation files are found when pushing, as well as the location they will be saved to when pulling.</p>
+
+<p>```</p>
+
+<!-- example rules definition in zanata.xml -->
+
+
+<p><rules>
+  <rule pattern="**/pot/*.pot">{locale}/{path}/{filename}.po</rule>
+  <rule pattern="**/po/*.pot">{path}/{locale_with_underscore}.po</rule>
+</rules>
+```</p>
+
+<!--more-->
+
+
+<p>In the example above, <code>pattern</code> identifies a source file, and the contents of the rule element specify how translation files will be stored.</p>
+
+<p>The <code>pattern</code> attribute is a <strong>glob</strong> matching pattern to your source document file(s). You can define more than one rule and apply each rule to a specific set of source documents using different patterns. The first matched rule will be applied to the file.</p>
+
+<p>Please note pattern value will be tested against file path relative to project root, not <code>src-dir</code>.</p>
+
+<p><code>pattern</code> is optional. If not specified, the rule will be applied to all source documents in your project. The actual rule consists of literal path and placeholders/variables.</p>
+
+<p>Supported placeholders/variables are:</p>
+
+<ul>
+<li><code>{path}</code> is the path between source document root (what you define as src-dir option) and the final file.</li>
+<li><code>{filename}</code> the source document name without leading path and extension.</li>
+<li><code>{locale}</code> the locale for the translation file. If you use &ldquo;map-from&rdquo; argument in your locale mapping, this will be the map-from value.</li>
+<li><code>{locale_with_underscore}</code> same as above except all hyphens &lsquo;-&rsquo; will be replaced with underscores &lsquo;_&rsquo;. This is typically used in properties and gettext projects.</li>
+<li><code>{extension}</code> the source document file extension</li>
+</ul>
+
+
+<p>For example, if you have the following file structure (where <code>{projectRoot}</code> is the root directory of your project and contains zanata.xml):</p>
+
+<pre><code>{projectRoot}/
+              templates/messages/kdeedu/kalzium.pot
+              templates/messages/kdeedu/artikulate.pot
+              de-DE/messages/kdeedu/kalzium.po
+              de-DE/messages/keeedu/artikulate.po
+              ...
+              zanata.xml
+</code></pre>
+
+<p>Here we have two source documents (with <code>pot</code> extension) and two translation documents (with <code>po</code> extension) for the locale <code>de-DE</code>.</p>
+
+<p>You can then use below configuration:</p>
+
+<pre><code>&lt;src-dir&gt;templates&lt;/src-dir&gt;
+&lt;trans-dir&gt;.&lt;/trans-dir&gt;
+&lt;rules&gt;
+    &lt;rule pattern="**/*.pot"&gt;{locale}/{path}/{filename}.po&lt;/rule&gt;
+&lt;/rules&gt;
+</code></pre>
+
+<p>Explanation: Since you have defined <code>&lt;src-dir&gt;</code> as templates, the source document <code>templates/messages/kdeedu/kalzium.pot</code> will have its path extracted relative to <code>{projectRoot}/templates</code>, which gives the relative path <code>messages/kdeedu/kalzium.pot</code>. The relative path then will be partitioned into several tokens to form the following variables:</p>
+
+<pre><code>{path}                          = 'messages/kdeedu/'
+{filename}                      = 'kalzium'
+{locale}                        = 'de-DE'
+{locale_with_underscore}        = 'de_DE'
+{extension}                     = 'pot'
+</code></pre>
+
+<p>NOTE the relative path <code>messages/kdeedu/kalzium.pot</code> will be the document&rsquo;s unique identifier inside Zanata. If you change src-dir setting later, e.g. to &ldquo;<strong>.</strong>&rdquo;, which results in a change of the relative path to <code>templates/messages/kdeedu/kalzium.pot</code>, pushing again will create a new document with the new path as its unique identifier, and the old document will be considered obsolete and will not be visible to anyone. The old document&rsquo;s translations will not be copied to the new document automatically, but they will appear as <strong>Translation Memory</strong> matches. This can be confusing and frustrating for translators.</p>
+
+<p>As the rule is defined as <code>{locale}/{path}/{filename}.po</code>, for locale <code>de-DE</code>,</p>
+
+<p>source file kalzium.pot&rsquo;s translation file will be written to or read from <code>{projectRoot}/de-DE/messages/kdeedu/kalzium.po</code>.
+source file artikulate.pot&rsquo;s translation file will be written to or read from <code>{projectRoot}/de-DE/messages/kdeedu/artikulate.po</code></p>
+
+<p>You can also replace <code>{locale}</code> with <code>{locale_with_underscore}</code> if you want all your locales to use underscore instead of hyphen. e.g. <strong>de-DE</strong> will become <strong>de_DE</strong> which results in translation files written to or read from <code>{projectRoot}/de_DE/messages/kdeedu/kalzium.po</code></p>
+
+<p>The mapping rules configuration is optional in <code>zanata.xml</code>. If not specified, standard rules are applied according to your project type.</p>
+
+<ul>
+<li>gettext: <code>{path}/{locale_with_underscore}.po</code></li>
+<li>podir: <code>{locale}/{path}/{filename}.po</code></li>
+<li>properties: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>utf8properties: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>xliff: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>xml: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>file: <code>{locale}/{path}/{filename}.{extension}</code></li>
+</ul>
+
+
+<p>Feel free to give it a try and file bugs if you feel any.</p>
+
+<p>Happing Translation!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zanata-Python-Client v1.4.1]]></title>
+    <link href="http://sundeep.co.in/blog/2016/01/14/zanata-python-client-v1-dot-4-1/"/>
+    <updated>2016-01-14T16:15:14+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/01/14/zanata-python-client-v1-dot-4-1</id>
+    <content type="html"><![CDATA[<p>A new release - v1.4.1 is <strong>out</strong>. This brings feature which makes getting started with <strong>ZPC</strong> more fun. GitHub Release <a href="https://github.com/zanata/zanata-python-client/releases/tag/zpc-v1.4.1">Link</a></p>
+
+<h2>What&rsquo;s New</h2>
+
+<ul>
+<li>commands - init, stats - enhances <strong>CLI</strong> experiences.</li>
+<li>Some bug fixes - including critical issues.</li>
+<li>Now the code is more robust, and better to understand.</li>
+</ul>
+
+
+<h2>Getting Started with Zanata and Python Client</h2>
+
+<p>Starting out with translation project is a breeze with Zanata. Let&rsquo;s get started&hellip;</p>
+
+<!--more-->
+
+
+<blockquote><p>Server Side - User Settings</p></blockquote>
+
+<p>Point your favorite browser to <a href="https://translate.zanata.org/zanata/"><code>https://translate.zanata.org/zanata/</code></a> and login (<em>signup for a new account</em>). You may find <a href="http://zanata-client.readthedocs.org/en/latest/configuration/#user-configuration">this</a> useful.</p>
+
+<ul>
+<li>Navigate to <code>Settings</code> and see for <code>Client</code>.</li>
+<li>Generate a new <strong>API</strong> key, <em>ignore if it is already there</em>.</li>
+<li>Look for user configuration contents for <code>zanata.ini</code>.</li>
+</ul>
+
+
+<p><em>Done! Let&rsquo;s move on&hellip;</em></p>
+
+<blockquote><p>Client Side - CLI tasks</p></blockquote>
+
+<p>Create a file <code>zanata.ini</code> at <code>$HOME/.config/</code> and copy the contents. Now, have <strong>ZPC</strong> in place.</p>
+
+<ul>
+<li>Download and Install</li>
+</ul>
+
+
+<pre><code class="sh">$ wget https://github.com/zanata/zanata-python-client/archive/zpc-v1.4.1.zip
+$ unzip zpc-v1.4.1.zip
+$ cd zanata-python-client-zpc-v1.4.1
+$ make install
+</code></pre>
+
+<ul>
+<li>By now, we should have zanata python client installed. Time to roll translation project.</li>
+</ul>
+
+
+<pre><code class="sh">$ zanata help
+$ zanata &lt;command&gt; --help
+</code></pre>
+
+<p><em>Done! Let&rsquo;s move on&hellip;</em></p>
+
+<blockquote><p>Initialize Project Configuration</p></blockquote>
+
+<p>With <code>zanata init</code> it&rsquo;s much convenient to specify project details or create a new profile.</p>
+
+<pre><code class="sh">$ zanata init --user-config /path/to/zanata.ini
+</code></pre>
+
+<p>This takes you for an interaction about&hellip;</p>
+
+<ul>
+<li>Project&rsquo;s id, name, description (<em>option to create a brand new project</em>).</li>
+<li>Project version (<em>option to create new version within project selected</em>).</li>
+<li>Set project type {<code>gettext</code> or <code>podir</code>}</li>
+<li>Set <code>translation template</code> and <code>translation target</code> directories.</li>
+</ul>
+
+
+<p>Aha, just <code>ls</code> your directory and you can see <code>zanata.xml</code> created. Now, language resources can be pushed.</p>
+
+<p><em>Done! Let&rsquo;s move on&hellip;</em></p>
+
+<blockquote><p>Get Documents Translated</p></blockquote>
+
+<ul>
+<li>Push all templates, translations (if flagged) onto server. Cool! translation activities can be started, now. Get translations back, may be to compile lang-packs.</li>
+</ul>
+
+
+<pre><code class="sh">$ zanata push --help
+$ zanata push [OPTIONS] 
+$ zanata pull --help
+$ zanata pull [OPTIONS]
+</code></pre>
+
+<h2>Tracking Translation Progress</h2>
+
+<p>With this version translators can track translation progress for enabled <code>locales</code> for a <code>project-version</code>. Considering <code>zanata.ini</code> and <code>zanata.xml</code> in place, following commands will display stats.</p>
+
+<pre><code class="sh">$ zanata stats
+$ zanata stats --help 
+$ zanata stats --details    # statistics for all docs in project version
+$ zanata stats --word       # include word level statistics as well
+$ zanata stats --docid      # statistics will be fetched for doc specified
+$ zanata stats --lang       # stats for specified locales will be fetched
+</code></pre>
+
+<p>Happy Translation !!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zanata-Python-Client v1.4.0]]></title>
+    <link href="http://sundeep.co.in/blog/2015/12/15/zanata-python-client-v1-dot-4-0/"/>
+    <updated>2015-12-15T16:40:42+05:30</updated>
+    <id>http://sundeep.co.in/blog/2015/12/15/zanata-python-client-v1-dot-4-0</id>
+    <content type="html"><![CDATA[<p><strong>ZPC</strong> is a convenient way to communicate with Zanata server to push text for translation and pull translated text back for inclusion in software or documentation builds. This release brings fresh experiences to translators and contributors. GitHub Release <a href="https://github.com/zanata/zanata-python-client/releases/tag/v1.4.0">Link</a></p>
+
+<h2>What&rsquo;s New</h2>
+
+<ul>
+<li>Use latest list of languages defined in the server for a project when using the client.</li>
+<li>Should be able to specify minimum percentage of messages translated on pull.</li>
+<li>Keep source and target dir paths in <code>zanata.xml</code></li>
+<li>Code improvements for better maintainability.</li>
+</ul>
+
+
+<!--more-->
+
+
+<h2>Translators</h2>
+
+<p>I am sure, your search for translations platform, which can cater all your requirements, would come to an end, when you look at <a href="http://zanata.org">Zanata</a>, and if your project is already here - we have some new exciting features waiting for you to check them out. Let&rsquo;s get started&hellip;</p>
+
+<blockquote><p>Preparation</p></blockquote>
+
+<p>Keep your language resources ready (POT file/s or folder/s). Have <code>zanata.ini</code> in-place, details <a href="http://zanata-client.readthedocs.org/en/latest/configuration/#user-configuration">here</a>. Write your project configuration <code>zanata.xml</code> and keep it at root directory of your project, this helps ZPC to have some prior information of the project while talking to Zanata Server. Structure would be&hellip;
+<code>
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;config xmlns="http://zanata.org/namespace/config/"&gt;
+        &lt;url&gt;ZANATA_SERVER_URL&lt;/url&gt;
+        &lt;project&gt;PROJECT_ID&lt;/project&gt;
+        &lt;project-version&gt;PROJECT_VERSION_ID&lt;/project-version&gt;
+        &lt;src-dir&gt;SOURCE_DIR&lt;/src-dir&gt;
+        &lt;trans-dir&gt;TRANS_DIR&lt;/trans-dir&gt;
+&lt;/config&gt;
+</code>
+<a href="http://zanata-client.readthedocs.org/en/latest/configuration/#project-version-configuration">This</a> may help you here.
+<em>Done! Let&rsquo;s move on&hellip;</em></p>
+
+<blockquote><p>Get ZPC Running</p></blockquote>
+
+<ul>
+<li>Download and Install
+<code>sh
+$ wget https://github.com/zanata/zanata-python-client/archive/v1.4.0.zip
+$ unzip v1.4.0.zip
+$ cd zanata-python-client-1.4.0
+$ make install
+</code></li>
+<li>Now, we should have ZPC installed. Help will guide us: how we can communicate. <code>list</code>, <code>project {create, info}</code>, <code>version {create, info}</code>, <code>push</code>, <code>pull</code> and <code>glossary push</code> are the commands we have. You may find <a href="https://github.com/zanata/zanata-python-client/wiki#use-cases">this</a> interesting.
+<code>sh
+$ zanata help
+$ zanata &lt;command&gt; --help
+</code>
+<em>Done! Let&rsquo;s move on&hellip;</em></li>
+</ul>
+
+
+<blockquote><p>Push - Translate - Pull</p></blockquote>
+
+<ul>
+<li>Create project and version, can be done on server as well.
+<code>sh
+$ zanata project create {project_id} --project-name={project_name} --project-desc={project_description}
+$ zanata version create {version_id} --project-id={project_id}
+</code></li>
+<li>Push language resources to server: please check for user <code>zanata.ini</code> and project <code>zanata.xml</code> details. <em>Note</em>: Locale aliases need to be created and maintained at server and hence keeping locale_mapping in <code>zanata.xml</code> is deprecated. Mention project type {<code>podir</code> or <code>gettext</code>} in command line or in <code>zanata.xml</code>, and indicate the same in project settings at server.
+<code>sh
+$ zanata push --help
+$ zanata push [OPTIONS]
+</code></li>
+<li>This should push all templates, translations (if flagged) onto server. Cool! translation activities for the enabled languages can now, be started. Get translations back to compile lang-packs.
+<code>sh
+$ zanata pull --help
+$ zanata pull [OPTIONS]
+</code></li>
+<li>Aha, by now we should have translations done.</li>
+</ul>
+
+
+<h2>Contributors</h2>
+
+<p>Hi! Zanata Python Client is purely written in Python. Pull Requests are always welcome. Travis checks for flake8 and tests. Just two steps {<code>code-review</code>, <code>QA</code>} to get it merged.</p>
+
+<blockquote><p>Python-Zanata-Client Code Structure v1.4.0</p></blockquote>
+
+<ul>
+<li>Configuration (Remote, Local: zanata.ini, zanata.xml, command-line)
+
+<ul>
+<li><code>context.py</code>, <code>parseconfig.py</code></li>
+</ul>
+</li>
+<li>Commands - Interface and their implementation
+
+<ul>
+<li><code>zanata.py</code>, <code>command.py</code>, <code>zanatacmd.py</code>, <code>cmdbase.py</code>, <code>pushcmd.py</code>, <code>pullcmd.py</code></li>
+</ul>
+</li>
+<li>REST APIs - Commands Logic to REST Resource mapping
+
+<ul>
+<li><code>zanatalib/rest</code>, <code>resource.py</code>, <code>service.py</code>, <code>{doc,...}service.py</code></li>
+</ul>
+</li>
+<li>Others: utilities, converters, parsers, logger, error
+
+<ul>
+<li><code>projectutils.py</code>, <code>csvconverter.py</code>, <code>parseconfig.py</code>, <code>logger.py</code>, <code>error.py</code></li>
+</ul>
+</li>
+</ul>
+
+
+<p>This helps us where to look into the code - required for adding feature and/or bug fix.</p>
+
+<p>Happy Coding !!</p>
+]]></content>
+  </entry>
+  
+</feed>

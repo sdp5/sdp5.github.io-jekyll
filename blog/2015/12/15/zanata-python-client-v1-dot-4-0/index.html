@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Zanata-Python-Client v1.4.0 - sundeep's blog</title>
+  <meta name="author" content="Sundeep Anand">
+
+  
+  <meta name="description" content="ZPC is a convenient way to communicate with Zanata server to push text for translation and pull translated text back for inclusion in software or &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sundeep.co.in/blog/2015/12/15/zanata-python-client-v1-dot-4-0/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="sundeep's blog" type="application/atom+xml">
+  <link href="/fedora-feed.xml" rel="alternate" title="sundeep's blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-52687204-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sundeep's blog</a></h1>
+  
+    <h2>Open source developer and linux enthusiast</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="sundeep.co.in">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <!--<li><a href="/resume">Resume</a></li>-->
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Zanata-Python-Client v1.4.0</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-12-15T16:40:42+05:30'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:40 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://sundeep.co.in">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><strong>ZPC</strong> is a convenient way to communicate with Zanata server to push text for translation and pull translated text back for inclusion in software or documentation builds. This release brings fresh experiences to translators and contributors. GitHub Release <a href="https://github.com/zanata/zanata-python-client/releases/tag/v1.4.0">Link</a></p>
+
+<h2>What&rsquo;s New</h2>
+
+<ul>
+<li>Use latest list of languages defined in the server for a project when using the client.</li>
+<li>Should be able to specify minimum percentage of messages translated on pull.</li>
+<li>Keep source and target dir paths in <code>zanata.xml</code></li>
+<li>Code improvements for better maintainability.</li>
+</ul>
+
+
+<!--more-->
+
+
+<h2>Translators</h2>
+
+<p>I am sure, your search for translations platform, which can cater all your requirements, would come to an end, when you look at <a href="http://zanata.org">Zanata</a>, and if your project is already here - we have some new exciting features waiting for you to check them out. Let&rsquo;s get started&hellip;</p>
+
+<blockquote><p>Preparation</p></blockquote>
+
+<p>Keep your language resources ready (POT file/s or folder/s). Have <code>zanata.ini</code> in-place, details <a href="http://zanata-client.readthedocs.org/en/latest/configuration/#user-configuration">here</a>. Write your project configuration <code>zanata.xml</code> and keep it at root directory of your project, this helps ZPC to have some prior information of the project while talking to Zanata Server. Structure would be&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+</span><span class='line'>&lt;config xmlns="http://zanata.org/namespace/config/"&gt;
+</span><span class='line'>        &lt;url&gt;ZANATA_SERVER_URL&lt;/url&gt;
+</span><span class='line'>        &lt;project&gt;PROJECT_ID&lt;/project&gt;
+</span><span class='line'>        &lt;project-version&gt;PROJECT_VERSION_ID&lt;/project-version&gt;
+</span><span class='line'>        &lt;src-dir&gt;SOURCE_DIR&lt;/src-dir&gt;
+</span><span class='line'>        &lt;trans-dir&gt;TRANS_DIR&lt;/trans-dir&gt;
+</span><span class='line'>&lt;/config&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://zanata-client.readthedocs.org/en/latest/configuration/#project-version-configuration">This</a> may help you here.
+<em>Done! Let&rsquo;s move on&hellip;</em></p>
+
+<blockquote><p>Get ZPC Running</p></blockquote>
+
+<ul>
+<li>Download and Install</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>wget https://github.com/zanata/zanata-python-client/archive/v1.4.0.zip
+</span><span class='line'><span class="nv">$ </span>unzip v1.4.0.zip
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd </span>zanata-python-client-1.4.0
+</span><span class='line'><span class="nv">$ </span>make install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Now, we should have ZPC installed. Help will guide us: how we can communicate. <code>list</code>, <code>project {create, info}</code>, <code>version {create, info}</code>, <code>push</code>, <code>pull</code> and <code>glossary push</code> are the commands we have. You may find <a href="https://github.com/zanata/zanata-python-client/wiki#use-cases">this</a> interesting.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>zanata <span class="nb">help</span>
+</span><span class='line'><span class="nv">$ </span>zanata &lt;<span class="nb">command</span>&gt; --help
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Done! Let&rsquo;s move on&hellip;</em></p>
+
+<blockquote><p>Push - Translate - Pull</p></blockquote>
+
+<ul>
+<li>Create project and version, can be done on server as well.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>zanata project create <span class="o">{</span>project_id<span class="o">}</span> --project-name<span class="o">={</span>project_name<span class="o">}</span> --project-desc<span class="o">={</span>project_description<span class="o">}</span>
+</span><span class='line'><span class="nv">$ </span>zanata version create <span class="o">{</span>version_id<span class="o">}</span> --project-id<span class="o">={</span>project_id<span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Push language resources to server: please check for user <code>zanata.ini</code> and project <code>zanata.xml</code> details. <em>Note</em>: Locale aliases need to be created and maintained at server and hence keeping locale_mapping in <code>zanata.xml</code> is deprecated. Mention project type {<code>podir</code> or <code>gettext</code>} in command line or in <code>zanata.xml</code>, and indicate the same in project settings at server.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>zanata push --help
+</span><span class='line'><span class="nv">$ </span>zanata push <span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>This should push all templates, translations (if flagged) onto server. Cool! translation activities for the enabled languages can now, be started. Get translations back to compile lang-packs.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>zanata pull --help
+</span><span class='line'><span class="nv">$ </span>zanata pull <span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Aha, by now we should have translations done.</li>
+</ul>
+
+
+<h2>Contributors</h2>
+
+<p>Hi! Zanata Python Client is purely written in Python. Pull Requests are always welcome. Travis checks for flake8 and tests. Just two steps {<code>code-review</code>, <code>QA</code>} to get it merged.</p>
+
+<blockquote><p>Python-Zanata-Client Code Structure v1.4.0</p></blockquote>
+
+<ul>
+<li>Configuration (Remote, Local: zanata.ini, zanata.xml, command-line)
+
+<ul>
+<li><code>context.py</code>, <code>parseconfig.py</code></li>
+</ul>
+</li>
+<li>Commands - Interface and their implementation
+
+<ul>
+<li><code>zanata.py</code>, <code>command.py</code>, <code>zanatacmd.py</code>, <code>cmdbase.py</code>, <code>pushcmd.py</code>, <code>pullcmd.py</code></li>
+</ul>
+</li>
+<li>REST APIs - Commands Logic to REST Resource mapping
+
+<ul>
+<li><code>zanatalib/rest</code>, <code>resource.py</code>, <code>service.py</code>, <code>{doc,...}service.py</code></li>
+</ul>
+</li>
+<li>Others: utilities, converters, parsers, logger, error
+
+<ul>
+<li><code>projectutils.py</code>, <code>csvconverter.py</code>, <code>parseconfig.py</code>, <code>logger.py</code>, <code>error.py</code></li>
+</ul>
+</li>
+</ul>
+
+
+<p>This helps us where to look into the code - required for adding feature and/or bug fix.</p>
+
+<p>Happy Coding !!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Sundeep Anand</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-12-15T16:40:42+05:30'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:40 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/i18n-slash-l10n/'>i18n/l10n</a>, <a class='category' href='/blog/categories/python/'>python</a>, <a class='category' href='/blog/categories/zanata/'>zanata</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sundeep.co.in/blog/2015/12/15/zanata-python-client-v1-dot-4-0/" data-via="sundeep_co_in" data-counturl="http://sundeep.co.in/blog/2015/12/15/zanata-python-client-v1-dot-4-0/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2016/01/14/zanata-python-client-v1-dot-4-1/" title="Next Post: Zanata-Python-Client v1.4.1">Zanata-Python-Client v1.4.1 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="sundeep-anand"><a class="LI-simple-link" href='https://in.linkedin.com/in/sundeep-anand?trk=profile-badge'></a></p>
+  <p>Interests in linux, i18n, web, containers, devops. IRC #freenode nick suanand.</p>
+  <p>Fedora <a href="https://fedoraproject.org/wiki/User:Sundeep" target="_blank">Page</a></p>
+  <p>Speaker <a href="https://speakerdeck.com/sundeep" target="_blank">Deck</a></p>
+</section>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sundeep-co-in">@sundeep-co-in</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sundeep-co-in',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/03/16/fossasia-2019/">FOSSASIA 2019</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/02/06/transtats-getting-started/">Transtats - Getting Started</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/20/flock-2018/">Flock 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/03/31/fossasia-2018/">FOSSASIA 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/11/28/i18n-fad/">I18n FAD</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/blog/categories/events/'>events (7)</a></li><li><a href='/blog/categories/fedora/'>fedora (5)</a></li><li><a href='/blog/categories/i18n-slash-l10n/'>i18n/l10n (7)</a></li><li><a href='/blog/categories/php/'>php (1)</a></li><li><a href='/blog/categories/python/'>python (5)</a></li><li><a href='/blog/categories/zanata/'>zanata (6)</a></li></ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/116331365568613992424?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+<section>
+  <h1>Stack Overflow</h1>
+  <p><a href="http://stackoverflow.com/users/1862166/sundeep"><img src="http://stackoverflow.com/users/flair/1862166.png" width="208" height="58" alt="profile for sundeep at Stack Overflow"></a></p>
+</section>
+
+<section>
+  <h1>Copyrights</h1>
+  <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</section>
+<section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/events' style='font-size: 160.0%'>events(7)</a> <a href='/blog/categories/fedora' style='font-size: 142.85714285714286%'>fedora(5)</a> <a href='/blog/categories/i18n-slash-l10n' style='font-size: 160.0%'>i18n/l10n(7)</a> <a href='/blog/categories/php' style='font-size: 108.57142857142857%'>php(1)</a> <a href='/blog/categories/python' style='font-size: 142.85714285714286%'>python(5)</a> <a href='/blog/categories/zanata' style='font-size: 151.42857142857144%'>zanata(6)</a> </span>
+</section>
+
+<section>
+  <h1>On Twitter</h1>
+  <div>
+    <p><br /><a href="http://twitter.com/sundeep_co_in" target="_blank">My Latest Tweets</a></p>
+    <a href="http://twitter.com/sundeep_co_in" class="twitter-follow-button" data-show-count="">Follow @sundeep_co_in</a>
+  </div>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2019 - Sundeep Anand -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'sundeep-co-in';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://sundeep.co.in/blog/2015/12/15/zanata-python-client-v1-dot-4-0/';
+        var disqus_url = 'http://sundeep.co.in/blog/2015/12/15/zanata-python-client-v1-dot-4-0/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

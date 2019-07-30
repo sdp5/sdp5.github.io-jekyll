@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Events | sundeep's blog]]></title>
+  <link href="http://sundeep.co.in/blog/categories/events/atom.xml" rel="self"/>
+  <link href="http://sundeep.co.in/"/>
+  <updated>2019-07-30T14:00:13+05:30</updated>
+  <id>http://sundeep.co.in/</id>
+  <author>
+    <name><![CDATA[Sundeep Anand]]></name>
+    <email><![CDATA[sundeep.co.in@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FOSSASIA 2019]]></title>
+    <link href="http://sundeep.co.in/blog/2019/03/16/fossasia-2019/"/>
+    <updated>2019-03-16T13:26:08+05:30</updated>
+    <id>http://sundeep.co.in/blog/2019/03/16/fossasia-2019</id>
+    <content type="html"><![CDATA[<p>March 14, 2019 - the new warm day - when FOSSASIA turns 10! Floks, celebrating the eve with great enthusiasm and passion at the same venue that of last year, <a href="https://www.lli.sg/">LifeLong Learning Institute Singapore</a>. People queued up at the registration desk this morning waiting to collect their badges.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image1.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image1.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<!-- more -->
+
+
+<p>The summit opened up with a series of keynotes. First one featured <code>Dr Koh Tat Suan</code> (<em>Director Lifelong Learning Institute</em>) who talked about contribution of FOSSASIA and SkillsFuture among Singaporeans. Moreover, he described functions of LLI.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image2.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image2.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<p>Followed by second keynote: <code>Harish Pillay</code>’s (<em>Head Community Leadership, Red Hat</em>) talk on 10 years and back to the future! He explained, very interestingly, how a new generation of technologists and developers is growing up and participating in the community. What are the challenges today and how do we connect them to the previous generations of FOSS developers?</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image3.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image3.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<p>Then, <code>Hong Phuc</code> (<em>Founder FOSSASIA</em>) welcomed everyone at FOSSASIA and threw lights on every year’s FOSSASIA’s memories. She recapped the journey of 10 years and mentioned what is coming next?</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image4.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image4.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<p><code>Mario Behling</code> (<em>CEO of OpnTec</em>) talked about State of Open Tech. He went on describing various open source projects going on in various parts across Asia. And how these projects changing lives to create new possibilities.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image5.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image5.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<p>Next keynote was: The Open Source Industrial AI Capabilities with IBM by <code>Rahul Akolkar</code> (<em>Worldwide Technical Sales Leader</em>). He touched upon various products and offerings, what IBM has brought together a set of industrial AI capabilities and tools that provide a robust open AI platform for the enterprise. Furthermore, he covered many hybrid and multi-cloud hybrid and multi-cloud architectures.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image6.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image6.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<p>In the afternoon, various tracks opened up with a variety of talks. One of them, I participated was Serverless with knative by <code>Mete Atamel</code> (<em>Developer Advocate Google</em>). He explained how Knative extends Kubernetes to provide a set of middleware components (build, serving, events) for modern, source-centric, and container-based apps that can run anywhere.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image7.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image7.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<p>Next day, kernel and platform track caught my attention. One of the talks was on BuildStream - The all purpose build and integration tool by <code>Tristan Van Berkom</code> (<em>Lead Software Engineer Codethink</em>). He briefly explained the problems which revolve around the software build space from the perspective of the developer and the perspective of the system integrator. Furthermore, he introduced the BuildStream project; which is now used to build the base Flatpak runtimes and GNOME releases.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image8.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image8.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<p>This year I presented Transtats as a tool to ensure package translation completeness. Touched upon internationalization frameworks and described package localization cycle in detail. <a href="https://www.youtube.com/watch?v=RHPtsIHNIgg">Demo</a> was good. <a href="https://speakerdeck.com/sundeep/using-transtats-to-ensure-package-translation-completeness">Here</a> are the slides. Project website is <a href="http://transtats.org/">transtats.org</a></p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image9.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image9.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<p>From long time, but just wanted to learn deploying apps using Kubernetes. I got this chance in a workshop on Fundamentals of deploying applications to Kubernetes by <code>Graham Dumpleton</code> (<em>Developer Evangelist Red Hat</em>) and <code>Jorge Morales</code> (<em>Developer Advocate Red Hat</em>). The workshop covered many topics like What are containers and pods, Accessing pods for an application via a service, Scaling up applications to many instances, Automatic recovery from application failure, Exposing a web application to the public, Application lifecycle management and Monitoring health of an application. They provided really easy-to-follow workshop environment.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image10.jpeg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2019/image10.jpeg?raw=true</a>" width="450" height="280"></p>
+
+<p>Around Google Big Query, this year we had a talk on Protecting sensitive data in huge datasets: Cloud tools you can use by <code>Felipe Hoffa</code> (<em>Developer Advocate Google</em>). He was amazing! He explained how to handle massive public datasets, from theory to real life showcasing newly available tools that help with PII detection and brings concepts like k-anonymity and l-diversity.</p>
+
+<p>Third day at FOSSASIA, however, things were as fresh as of the first. I mostly participated in CyberSecurity talks and enjoyed them. Due to some last minute changes in my return flight schedule I had to leave early and hence here my FOSSASIA Summit 2019 journey concluded. It’s always great to be a part of such an event. Many thanks to organizers and sponsors. :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Flock 2018]]></title>
+    <link href="http://sundeep.co.in/blog/2018/08/20/flock-2018/"/>
+    <updated>2018-08-20T14:46:46+05:30</updated>
+    <id>http://sundeep.co.in/blog/2018/08/20/flock-2018</id>
+    <content type="html"><![CDATA[<p>After the US, I was really excited to visit Europe this time for fedora flock conference. A lot of preparation: air tickets, stay, documents for VISA and more. Unfortunately we got our VISA declined and everything hanged. We re-applied and got it approved in second time that to just two days before to the planned take off. Nevertheless did all of slides/demo, shopping &amp; packing and was ready for cab pickup. This time Pune to Mumbai was really relaxing and we reached <a href="https://csia.in/">Mumbai Airport</a> before time! With some flight delay, reached <a href="https://www.frankfurt-airport.com/en.html">Frankfurt Airport</a> <em>landing was really smooth</em>. By evening we reached the beautiful city - <a href="https://www.dresden-airport.de/">Dresden</a>. Venue for the conference this year was - The Radisson Blu Park Hotel &amp; Conference Centre at Radebeul.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/dresden-hotel.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/dresden-hotel.jpg?raw=true</a>" width="450" height="280"></p>
+
+<!--more-->
+
+
+<p>The conference started with warm welcome by <code>Brian Exelbierd</code> and keynote by <code>Matthew Miller</code>. He took us on states of fedora. How fedora performed last year and how was the last year in comparison to last few years. Community involvement and usage, statistics graphs. Further discussions were around fedora modularity, rings, coreOS, atomic host etc.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/keynote.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/keynote.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p><code>Dusty Maybe</code> discussed cri-o, kubernetes, container runtimes, podman, builddah and app-containers. <code>Matthias Clasen</code> from desktop team joined and discussed various aspects of the new <a href="https://teamsilverblue.org/">silverblue</a> project. Fedora Silverblue uses rpm-ostree and Flatpaks to create an image-based &ldquo;git-like&rdquo; operating system with easy rollbacks and workflows.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/silverblue.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/silverblue.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Post lunch, we had a talk on &ldquo;Advanced Ansible: Extending with Plugins&rdquo; by <code>Adam Miller</code>. Ansible is a radically simple IT agentless automation system. It handles configuration-management, application deployment, cloud provisioning, ad-hoc task-execution, and multinode orchestration - including trivializing things like zero-downtime rolling updates with load balancers. He discussed how to extend Ansible core functionalities with Plugins which can be a catalyst in solving problems.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/ansible.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/ansible.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Next morning, was my talk after <code>Amitosh Swain Mahapatra</code>&rsquo;s State of SELinux in fedora desktop, modularity and containers. My topic was &ldquo;Using Transtats to track translation string change&rdquo;. <code>Parag Nemade</code> joined me to deliver the talk. I introduced Transtats Jobs. Here are the <a href="https://speakerdeck.com/sundeep/using-transtats-to-track-translation-string-change">slides</a> and <a href="https://www.youtube.com/watch?v=D1sHpxfxrk4">demo</a>. Transtats Jobs are flexible, YML based, which can solve many problems in i18n/l10n space! As-in tracking string change, inspecting SRPM for i18n/translation errors etc.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/talk.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/talk.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Post lunch on Day 2, we attended &ldquo;Modularity Release Train&rdquo; by <code>Stephen Gallagher</code> and <code>Mohan Boddu</code>. Followed by building &ldquo;Fedora CoreOS&rdquo; by <code>Dusty Maybe</code>. In the evening we head to the Dresden city center, to explore and sightseeing - Zwinger, Church, Opera House and Castle.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/city-center.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/city-center.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Next morning, of flock day 3, started with the session by <code>Owen Taylor</code> on &ldquo;Building flatpaks from fedora packages&rdquo;. Had joined <code>Adam Miller</code>&rsquo;s session on &ldquo;Jumpstart your fedora contribution by learning Ansible&rdquo;. He touched upon using <em>ansible-test</em> module. Post lunch, we had our hackathon on &ldquo;i18n development and testing&rdquo;. <code>Pooja</code> and <code>Pravin</code> discussed i18n test automation using openQA and some plans to integrate test cases with fedora CI. This evening flock had dinner plans at the great <a href="http://www.rollercoasterrestaurant.com/en/">Rollercoaster</a> restaurant. An amazing experience!</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/roller-coster.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/roller-coster.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>The last day - day 4 - flock 2018. I was really interested in talks from fedora infrastructure team. First session was about migrating apps to new fedmsg architecture &ldquo;fedora messaging&rdquo; by <code>Aurelien Bompard</code> and <code>Jeremy Cline</code>. Its Python ZeroMQ libraries underline. <em>fedmsg-migration-tools</em> are really helpful here! Then we had a talk on &ldquo;How fedora infrastructure is using OpenShift to mode 2 shift&rdquo; by <code>Randy Barlow</code> and <code>Patrick Uiterwijk</code>. They use Ansible playbooks to push object definitions to OpenShift. And thus we came to the wrap up of flock twenty eighteen. Everyone gathered in the main hall for conclusion by fedora council members!</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/leaving.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/leaving.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Each fedora flock conference is unique, which helps the vibrant community meet and greet!!  With some hopes and plans for next year, boarded flight back to home.</p>
+
+<p>thanks fedora :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FOSSASIA 2018]]></title>
+    <link href="http://sundeep.co.in/blog/2018/03/31/fossasia-2018/"/>
+    <updated>2018-03-31T16:58:50+05:30</updated>
+    <id>http://sundeep.co.in/blog/2018/03/31/fossasia-2018</id>
+    <content type="html"><![CDATA[<p>After March 2016, this year I get chance to come back to this beautiful city - <a href="https://en.wikipedia.org/wiki/Singapore">Singapore</a> !! The country continues to hold best rankings in commerce, finance, transport &amp; technology.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/singapore-city-1.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/singapore-city-1.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>The premier open source summit <a href="https://2018.fossasia.org/">FOSSASIA</a> held on 22nd March to 25th March. This year <code>Life Long Learning Institute</code> hosted the event. <a href="https://www.lli.sg/">LLI</a> is located at Paya Lebar and serves gateway to learning opportunities since long time. It is very nearby to MRT and in the heart of city.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/lli-singapore.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/lli-singapore.jpg?raw=true</a>" width="450" height="280"></p>
+
+<!--more-->
+
+
+<p>Opening of FOSSASIA 2018 was really warm and welcoming. People across the world makes it really special for all of us, to gather and share experiences. <code>Harish Pillay</code> (Head Community Leadership, Red Hat) and <code>Damini Satya</code> (SE - Salesforce) started the summit with an schedule overview and free &amp; open source background, advancements across Asia Pacific.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-1.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-1.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Special guest <code>Teo Ser Luck</code> (Member of Parliament) gave an overview on Open Technology in Singapore Govt. How they work with open source software to bring several developments and automation. This was a quick deep dive into on-going projects and, really inspiring.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-2.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-2.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Then come keynotes. Started by <code>Jonas von Malottki</code> (Senior Manager Daimler). He shared how Daimler uses Free and Open Source software within several of its products. Daimler is the first German automaker that joined the development of Automotive Grade Linux to help build the next generation connected car platform. This was very interesting to learn!</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-3.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-3.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Followed by this, we had the keynote from FOSSASIA founder <code>Hong Phuc Dang</code>. She talked about how FOSSASIA scaled up and what are the future plans. Also, how FOSSASIA collaborates and develops open source solutions for Event Management, AI, Big Data and others.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-4.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-4.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Next morning, we had talks started for the summit. There were multiple tracks: Artificial Intelligence, Blockchain, Open Design, IoT, Hardware, Imaging, Cloud, Container, DevOps, Kernel &amp; Platform, Open Data, Internet Society, Community. So, really an awesome job by organisers. I started the day with the talk by <code>Chris Aniszczyk</code> (CTO Cloud Native Computing Foundation). He spoke on &lsquo;Rise of Kubernetes and the Cloud Native Computing Foundation&rsquo;.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-5.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-5.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>I remained in lecture theatre as talks were so cool and technical. &lsquo;Working with Cloud Dataprep&rsquo;, &lsquo;What can we learn from 1.1 billion GitHub events and 42 TB of code?&rsquo;, &lsquo;CloudML Engine: Qwik Start&rsquo; all by Google Advocates made my day. Learnt a lot, these cleared many of my concepts.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-6.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-6.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>On Sunday, I jumped on security track and joined &lsquo;BlueBorne: Beware of Bluetooth!&rsquo; talk by <code>Huzaifa Sidhpurwala</code> (Principal Software Engineer, Red Hat). He described a security flaw affecting bluetooth stacks of Linux, Android, iOS and Windows. The impact was evident by the fact that the attacker did not even need to be paired to the victims device in order to exploit it.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-7.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-7.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>From Open Data &amp; Community track, I attended <code>Brian Proffitt</code> (Principal Program Manager, Red Hat) talk. Where he shared his thoughts and experiences on &lsquo;How to measure a community&rsquo;s health&rsquo;. How to use metrics more regularly to measure the health and activity levels of projects and their attendant communities. How to figure out what we need from the data.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-8.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-8.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>In-between I tried listening a few talks from Cloud / Container / DevOps track. &lsquo;Running OpenStack in Containers&rsquo; and &lsquo;Delivering a bleeding edge community-led openstack distribution: RDO&rsquo; were really informative. Then came talks by <code>Chris Van Tuin</code> (Chief Technologist, Red Hat). He described Microservices, Containers and Kubernetes. How they are connected in DevOps success. He also touched upon continuous security with kubernetes.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-9.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-9.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>Here comes my talk. I try introducing <code>Transtats</code> project and thank <a href="https://engineers.sg/">engineers.sg</a> for recording the <a href="https://engineers.sg/video/introduction-to-transtats-sundeep-anand-fossasia-2018--2457">session</a>. Then we had an interesting talk &lsquo;The Four Temperaments of human beings&rsquo; by <code>Jens Petersen</code> (Engineering Manager, Red Hat) who explained the four classical temperaments: Melancholic, Phlegmatic, Sanguine and Choleric. Also their unique qualities, strengths, etc.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-10.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/fossasia2018/fossasia18-10.jpg?raw=true</a>" width="450" height="280"></p>
+
+<p>With this FOSSASIA Summit 2018, came closure to get concluded. Its great to be a part of such an event to feel, experience and learn open source!! together :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I18n FAD]]></title>
+    <link href="http://sundeep.co.in/blog/2017/11/28/i18n-fad/"/>
+    <updated>2017-11-28T14:22:51+05:30</updated>
+    <id>http://sundeep.co.in/blog/2017/11/28/i18n-fad</id>
+    <content type="html"><![CDATA[<p>This time <a href="https://en.wikipedia.org/wiki/Pune">Pune, India</a> was selected for <a href="https://fedoraproject.org/wiki/FAD_I18N_2017">Fedora Activity Day</a> 2017 of Internationalization (i18n) Engineering. Folks from all over APAC and EMEA joined together to exchange ideas, fix long pending bugs and hack on new ideas. Thanks to Fedora Council for approving budget and to <a href="https://fedoraproject.org/wiki/User:Bex">Bex</a> for coordinating &amp; moving i18n FAD arrangements further! <a href="https://fedoraproject.org/wiki/User:Petersen">Jens</a>, <a href="https://fedoraproject.org/wiki/User:Pnemade">Parag</a> and <a href="https://fedoraproject.org/wiki/User:Pravins">Pravin</a> played vital roles in organising everything required to make it happen.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_0.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_0.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>I was really excited to meet my entire team for the first time! And it was Sunday evening, 19th Nov 2017 we all met together and went <a href="http://www.amanoramall.com/">Amanora</a> Food Court to share evening moments over snacks.</p>
+
+<!--more-->
+
+
+<h3>Day 1st, Talks</h3>
+
+<p>Everyone was busy finishing their slides and demo as projector/screen was waiting to show some really cool i18n stuffs.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_1.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_1.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p><code>Pravin</code> started the day with welcome greetings and reminded on earlier <a href="https://fedoraproject.org/wiki/FAD_G11N_2015">g11n FAD</a>. After quick logistics by <code>Parag</code> everyone queued up for their introductions. <code>Jens-Ulrik Petersen</code> covered i18n FAD intro and took us on evolution of Fedora i18n.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_2.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_2.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p><code>Akira Tagoh</code> started the session with highlights on fonts development. He discussed some really interesting topics like fontconfig cache, flatpack support and font-tweak-tool. <code>Peng Wu</code> took over to catch up on Pango development plans: Unicode 10 support and bidirectional algorithm. After a quick Tea break, we continued with sessions on Input Methods. <code>Takao Fujiwara</code> shared ibus 1.6 plans: API deprecation, Extending ibus compose tests to other engines, etc. He demo'ed anthy test triggered by focus event and emoji input. <code>Peng Wu</code> seemed interested in fixing Qt5 ForwardKeyEvent issue. <code>Mike Fabian</code> explained and demo'ed ibus-typing-booster and emoji-picker.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_3.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_3.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>And then talks turned towards Locales. <code>Mike Fabian</code> explained about Latvian collation: CLDR vs glibc. <code>Rafal Luzynski</code> brought focus on dates rendered wrong in desktop UI (gnome etc) for many languages. Further, he explained genitive &amp; nominative cases and mentioned one long pending <a href="https://sourceware.org/bugzilla/show_bug.cgi?id=18666">bug</a>.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_4.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_4.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>After lunch, I started with Transtats. Here are my <a href="https://speakerdeck.com/sundeep/transtats">slides</a>. <code>Parag</code> joined the discussion for CLI demo and <code>Sachin</code> demo'ed Automation Testing. After this, <code>Pravin</code> touched upon i18n test automation and covered fonts testing and UTTRS. <code>Pooja</code> joined and explained about input method test automation. In the next session we had discussions around Fedora Test Cases. <code>Satya</code> and <code>Sandeep</code> quickly recap Fedora 27 test days and explain about some gap analysis including Wayland, new ibus version and Flatpak. <code>Bhushan</code> talked about input tests, rendering and DRTC. <code>Vishal</code> demo'ed tool for web scraping and shared plans for Kimchi web client for kvm. And with this we concluded sessions.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_5.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_5.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>Quickly everyone wrote down the projects/parts they are interested in to collaborate and hack on. In the evening we had a quick walk, followed by a team dinner at <a href="http://www.magarhospitality.com/deccanharvest/">Deccan Harvest</a>.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_6.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_6.JPG?raw=true</a>" width="450" height="280"></p>
+
+<h3>Day 2nd and 3rd, Hacking</h3>
+
+<p>A couple of days of collaboration and demo&rsquo;s. People join their hands on several objectives: Fonts testing automation, Glibc Unicode CLDR sync, Desktop langpacks on installation, Input Method Automation, Fedora i18n test cases gap analysis and updates, Filipino language support, Transtats, IBus 1.6 plans and implementation, Update font packaging guidelines, Emoji enhancements, Random deps issue for font packages, and Testsuite for ibus-table.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_7.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_7.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>Surprisingly, along with we had discussions around <code>Modularity</code> also. On third day of FAD - we had <code>Fedora 27 release party</code>. Cake cutting and round table discussions. Several folks joined us for the celebration.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/F27_release_party.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/F27_release_party.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>Last day, in the last hour we had series of demos, people showing their progress over two days of hacking. The second day evening we had FAD Game Night :)</p>
+
+<h3>FAD Evening Activity</h3>
+
+<p>We went to <a href="https://www.tripadvisor.in/LocationPhotoDirectLink-g297654-d4090582-i221160816-Amanora_Mall-Pune_Pune_District_Maharashtra.html">Amoeba</a> - Amanora Game Zone for bowling. Superb fun moment for all of us. Congrats to <code>Jens</code> and <code>Mike</code> for making a century on scoreboard. And then, we had a wonderful dinner at <a href="http://www.barbequenation.com/">Barbeque Nation</a>.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_8.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_8.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>All thanks to <a href="https://getfedora.org/">Fedora</a> to care for their contributors that much! And bringing them together .. :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Flock 2017]]></title>
+    <link href="http://sundeep.co.in/blog/2017/09/01/flock-2017/"/>
+    <updated>2017-09-01T19:37:10+05:30</updated>
+    <id>http://sundeep.co.in/blog/2017/09/01/flock-2017</id>
+    <content type="html"><![CDATA[<p>&ldquo;Reporting time was 7:30pm and its 7:50, still your are saying it will take another 15 mins&rdquo; this was my words while I was waiting and talking with cab driver. I was travelling to US for the very first time, and was little excited. We covered the distance between Pune and Mumbai Airport in decent time and managed to reach there by 12:30 midnight. Our zone was E in the plane and it was Emirates. We reached Dubai early morning. I tried to capture <a href="https://en.wikipedia.org/wiki/Burj_Khalifa">Burj Khalifa</a>.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2170.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2170.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>And then was starting of a long journey - Dubai to Boston. It was 5-6 movies long. Had great food and drinks. And a decent 3 hrs nap. All thanks to Emirates crew and services! We landed Boston 15 past 14 hrs, in the afternoon and waited for 25-30 mins at Bus stop to Hyannis, Cape Cod. Sun was about to sign-off for the day and street lights were yet to glow when we had great MacD burger, and headed towards <strong>The resort and conference center</strong> - flock'17 venue!</p>
+
+<!--more-->
+
+
+<h3>29th Aug &lsquo;17</h3>
+
+<p><em>Brian Exelbierd</em> welcome and greet all of us. <em>Matthew Miller</em> took us on a tour, how fedora did in last few releases. Its state, community engagements and future plans. Everyone was enthusiastic about the sessions to come and the registration desk was really busy!</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2196.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2196.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>Just after coffee break, speakers queued up and briefly advertised their sessions. And after lunch, we joined <em>Adam Williamson</em> on his talk <code>Packagers: working with automated test systems</code>.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2205.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2205.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>The talk was around Python version checks, framework for automated tests execution: Taskotron, rpmdeplint which is a tool to find errors in RPM packages in the context of their dependency graph. Though rpmdeplint doesnot check &lsquo;reverse&rsquo; dependencies. Rpmgrill - utility to catch koji problems. And OpenQA tests. OpenQA are designed for operating-system level automated testing. Adam&rsquo;s talk was quite informative about different test frameworks actively being used in fedora. After this talk, we rushed to join <em>Josh Berkus</em> on his talk about <code>Become a container maintainer</code>.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2206.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2206.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>He started his session with <a href="https://fedoraproject.org/wiki/Container:Guidelines">container guidelines</a>. Fixing Dockerfile for registry, labels and entry point. And briefly explained container <a href="https://fedoraproject.org/wiki/Container:Review_Process">review process</a>. This was a do session, and we had to write Dockerfile and review others. Many developers write Dockerfile for various apps but they hardly bother to submit it to fedora registry, this session filled this gap.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2207.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2207.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>In the evening we had game night and drinks. Many participated in swapping candies as well.</p>
+
+<h3>30th Aug &lsquo;17</h3>
+
+<p>A day of containers and atomic host talks. This track opened with <em>Dan Walsh</em>&rsquo;s talk on <code>New Container Technologies</code>. He covered System containers, Skopeo, Buildah, CRI-O, storage and images. A real deep-dive!</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2216.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2216.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>Highlights of the talk include linux, containers should be open, openshift, standard container image format, push and pull, moving images between registries, execute container image: runc runtime, PGP signing of images, system containers, standalone containers (service specific), improved storage: read-only and read-write containers, in-prod containers should be immutable, shared file systems: run same images on multiple servers, instantaneous updates, building OCI image, buildah, APIs to manage containers, <a href="https://github.com/kubernetes-incubator/cri-o">CRI-O</a> effort: support multiple runtime and KPOD - mgmt tool for CRI-O. After this, we continued with <code>System Containers</code> and <code>Discussing Kubernetes &amp; Origin Deployment Options</code> talks. During lunch we stepped to parking area and made a few clicks!</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2244.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2244.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>And then was the Atomic track. <em>Dusty Mabe</em> started the track with his talk <code>Atomic Host 101</code> and covered topics like Atomic Upgrades/Rollbacks, Browsing OS History, Package Layering, Live filesystem updates, Configuring Storage for Containers and Viewing Changes to your deployed files. This was also a <a href="https://dustymabe.com/2017/08/29/atomic-host-101-lab-part-0-preparation/">do session</a>. After this we had <code>Setup your own Atomic Workstation</code> and <code>Automate Building Custom Atomic Host with Ansible</code> talks. The evening ended in social gathering, playing games and tasty dinner all organised by flock.</p>
+
+<h3>31st Aug &lsquo;17</h3>
+
+<p>This is the day I was waiting for! <a href="https://fedoraproject.org/wiki/G11N">Globalization</a> track and my talk. Before lunch I was part of <code>Fedora Infrastructure: To infinity and Beyond</code> and <code>How do we restore Fedora to factory settings?</code> sessions. G11N track started with <em>Jens Petersen</em> and <em>Parag Nemade</em> talk about <code>Fedora i18n</code>. Where they covered some interesting topics like Langpacks auto-installation, libpinyin-2, Emoji, ibus, Glibc locales, Flatpak i18n, and others. Jens shared some ideas around Dynamic locale switching, Separation of translations (workflow and packaging) and Multilingual configuration (fallback, fonts).</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2275.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2275.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>And here come <a href="https://www.youtube.com/watch?v=Ln9e3LM2Ht8">my talk</a> on <code>Introduction to Transtats</code>. Tool to track translation progress of packages across releases. You can find slides <a href="https://speakerdeck.com/sundeep/introduction-to-transtats">here</a>. This was followed by l10n talk by <em>Pravin Satpute</em>, <em>Alex Eng</em> and <em>Jean-Baptiste</em>. Alex demo&rsquo;d Jenkins-Zanata plugin. Jean makes us feel what processes are required to make fedora localization community a better place. Thank you Jean!</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2281.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2281.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>We had a long discussion and managed to figure-out action items towards the same. The team went for dinner together and I must say we had a great evening. And this called for conclusion of talks and do-sessions at flock 2017.</p>
+
+<p>An incredible conference: <code>flock @hyannis</code> :-)</p>
+]]></content>
+  </entry>
+  
+</feed>

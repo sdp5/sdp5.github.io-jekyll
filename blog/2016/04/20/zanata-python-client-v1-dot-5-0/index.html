@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Zanata-Python-Client v1.5.0 - sundeep's blog</title>
+  <meta name="author" content="Sundeep Anand">
+
+  
+  <meta name="description" content="This release makes z-p-c little more stable with some major bugfixes. Feature wise we have translation files mapping rules added. Translation Files &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="sundeep's blog" type="application/atom+xml">
+  <link href="/fedora-feed.xml" rel="alternate" title="sundeep's blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-52687204-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sundeep's blog</a></h1>
+  
+    <h2>Open source developer and linux enthusiast</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="sundeep.co.in">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <!--<li><a href="/resume">Resume</a></li>-->
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Zanata-Python-Client v1.5.0</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-04-20T10:25:08+05:30'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:25 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://sundeep.co.in">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This release makes z-p-c little more stable with some major bugfixes. Feature wise we have <code>translation files mapping rules</code> added.</p>
+
+<blockquote><p>Translation Files Mapping Rules</p></blockquote>
+
+<p>Customize the way translation files are found when pushing, as well as the location they will be saved to when pulling.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;!-- example rules definition in zanata.xml --&gt;
+</span><span class='line'>&lt;rules&gt;
+</span><span class='line'>  &lt;rule pattern="**/pot/*.pot"&gt;{locale}/{path}/{filename}.po&lt;/rule&gt;
+</span><span class='line'>  &lt;rule pattern="**/po/*.pot"&gt;{path}/{locale_with_underscore}.po&lt;/rule&gt;
+</span><span class='line'>&lt;/rules&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!--more-->
+
+
+<p>In the example above, <code>pattern</code> identifies a source file, and the contents of the rule element specify how translation files will be stored.</p>
+
+<p>The <code>pattern</code> attribute is a <strong>glob</strong> matching pattern to your source document file(s). You can define more than one rule and apply each rule to a specific set of source documents using different patterns. The first matched rule will be applied to the file.</p>
+
+<p>Please note pattern value will be tested against file path relative to project root, not <code>src-dir</code>.</p>
+
+<p><code>pattern</code> is optional. If not specified, the rule will be applied to all source documents in your project. The actual rule consists of literal path and placeholders/variables.</p>
+
+<p>Supported placeholders/variables are:</p>
+
+<ul>
+<li><code>{path}</code> is the path between source document root (what you define as src-dir option) and the final file.</li>
+<li><code>{filename}</code> the source document name without leading path and extension.</li>
+<li><code>{locale}</code> the locale for the translation file. If you use &ldquo;map-from&rdquo; argument in your locale mapping, this will be the map-from value.</li>
+<li><code>{locale_with_underscore}</code> same as above except all hyphens &lsquo;-&rsquo; will be replaced with underscores &lsquo;_&rsquo;. This is typically used in properties and gettext projects.</li>
+<li><code>{extension}</code> the source document file extension</li>
+</ul>
+
+
+<p>For example, if you have the following file structure (where <code>{projectRoot}</code> is the root directory of your project and contains zanata.xml):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{projectRoot}/
+</span><span class='line'>              templates/messages/kdeedu/kalzium.pot
+</span><span class='line'>              templates/messages/kdeedu/artikulate.pot
+</span><span class='line'>              de-DE/messages/kdeedu/kalzium.po
+</span><span class='line'>              de-DE/messages/keeedu/artikulate.po
+</span><span class='line'>              ...
+</span><span class='line'>              zanata.xml</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here we have two source documents (with <code>pot</code> extension) and two translation documents (with <code>po</code> extension) for the locale <code>de-DE</code>.</p>
+
+<p>You can then use below configuration:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;src-dir&gt;templates&lt;/src-dir&gt;
+</span><span class='line'>&lt;trans-dir&gt;.&lt;/trans-dir&gt;
+</span><span class='line'>&lt;rules&gt;
+</span><span class='line'>    &lt;rule pattern="**/*.pot"&gt;{locale}/{path}/{filename}.po&lt;/rule&gt;
+</span><span class='line'>&lt;/rules&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Explanation: Since you have defined <code>&lt;src-dir&gt;</code> as templates, the source document <code>templates/messages/kdeedu/kalzium.pot</code> will have its path extracted relative to <code>{projectRoot}/templates</code>, which gives the relative path <code>messages/kdeedu/kalzium.pot</code>. The relative path then will be partitioned into several tokens to form the following variables:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{path}                          = 'messages/kdeedu/'
+</span><span class='line'>{filename}                      = 'kalzium'
+</span><span class='line'>{locale}                        = 'de-DE'
+</span><span class='line'>{locale_with_underscore}        = 'de_DE'
+</span><span class='line'>{extension}                     = 'pot'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>NOTE the relative path <code>messages/kdeedu/kalzium.pot</code> will be the document&rsquo;s unique identifier inside Zanata. If you change src-dir setting later, e.g. to &ldquo;<strong>.</strong>&rdquo;, which results in a change of the relative path to <code>templates/messages/kdeedu/kalzium.pot</code>, pushing again will create a new document with the new path as its unique identifier, and the old document will be considered obsolete and will not be visible to anyone. The old document&rsquo;s translations will not be copied to the new document automatically, but they will appear as <strong>Translation Memory</strong> matches. This can be confusing and frustrating for translators.</p>
+
+<p>As the rule is defined as <code>{locale}/{path}/{filename}.po</code>, for locale <code>de-DE</code>,</p>
+
+<p>source file kalzium.pot&rsquo;s translation file will be written to or read from <code>{projectRoot}/de-DE/messages/kdeedu/kalzium.po</code>.
+source file artikulate.pot&rsquo;s translation file will be written to or read from <code>{projectRoot}/de-DE/messages/kdeedu/artikulate.po</code></p>
+
+<p>You can also replace <code>{locale}</code> with <code>{locale_with_underscore}</code> if you want all your locales to use underscore instead of hyphen. e.g. <strong>de-DE</strong> will become <strong>de_DE</strong> which results in translation files written to or read from <code>{projectRoot}/de_DE/messages/kdeedu/kalzium.po</code></p>
+
+<p>The mapping rules configuration is optional in <code>zanata.xml</code>. If not specified, standard rules are applied according to your project type.</p>
+
+<ul>
+<li>gettext: <code>{path}/{locale_with_underscore}.po</code></li>
+<li>podir: <code>{locale}/{path}/{filename}.po</code></li>
+<li>properties: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>utf8properties: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>xliff: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>xml: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>file: <code>{locale}/{path}/{filename}.{extension}</code></li>
+</ul>
+
+
+<p>Feel free to give it a try and file bugs if you feel any.</p>
+
+<p>Happing Translation!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Sundeep Anand</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-04-20T10:25:08+05:30'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:25 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/i18n-slash-l10n/'>i18n/l10n</a>, <a class='category' href='/blog/categories/python/'>python</a>, <a class='category' href='/blog/categories/zanata/'>zanata</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0/" data-via="sundeep_co_in" data-counturl="http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/03/28/fossasia-2016/" title="Previous Post: FOSSASIA 2016">&laquo; FOSSASIA 2016</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2016/10/22/pythonpune-meetup-oct-16/" title="Next Post: PythonPune MeetUp - Oct '16">PythonPune MeetUp - Oct '16 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="sundeep-anand"><a class="LI-simple-link" href='https://in.linkedin.com/in/sundeep-anand?trk=profile-badge'></a></p>
+  <p>Interests in linux, i18n, web, containers, devops. IRC #freenode nick suanand.</p>
+  <p>Fedora <a href="https://fedoraproject.org/wiki/User:Sundeep" target="_blank">Page</a></p>
+  <p>Speaker <a href="https://speakerdeck.com/sundeep" target="_blank">Deck</a></p>
+</section>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sundeep-co-in">@sundeep-co-in</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sundeep-co-in',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/03/16/fossasia-2019/">FOSSASIA 2019</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/02/06/transtats-getting-started/">Transtats - Getting Started</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/20/flock-2018/">Flock 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/03/31/fossasia-2018/">FOSSASIA 2018</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/11/28/i18n-fad/">I18n FAD</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/blog/categories/events/'>events (7)</a></li><li><a href='/blog/categories/fedora/'>fedora (5)</a></li><li><a href='/blog/categories/i18n-slash-l10n/'>i18n/l10n (7)</a></li><li><a href='/blog/categories/php/'>php (1)</a></li><li><a href='/blog/categories/python/'>python (5)</a></li><li><a href='/blog/categories/zanata/'>zanata (6)</a></li></ul>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/116331365568613992424?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+<section>
+  <h1>Stack Overflow</h1>
+  <p><a href="http://stackoverflow.com/users/1862166/sundeep"><img src="http://stackoverflow.com/users/flair/1862166.png" width="208" height="58" alt="profile for sundeep at Stack Overflow"></a></p>
+</section>
+
+<section>
+  <h1>Copyrights</h1>
+  <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</section>
+<section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/events' style='font-size: 160.0%'>events(7)</a> <a href='/blog/categories/fedora' style='font-size: 142.85714285714286%'>fedora(5)</a> <a href='/blog/categories/i18n-slash-l10n' style='font-size: 160.0%'>i18n/l10n(7)</a> <a href='/blog/categories/php' style='font-size: 108.57142857142857%'>php(1)</a> <a href='/blog/categories/python' style='font-size: 142.85714285714286%'>python(5)</a> <a href='/blog/categories/zanata' style='font-size: 151.42857142857144%'>zanata(6)</a> </span>
+</section>
+
+<section>
+  <h1>On Twitter</h1>
+  <div>
+    <p><br /><a href="http://twitter.com/sundeep_co_in" target="_blank">My Latest Tweets</a></p>
+    <a href="http://twitter.com/sundeep_co_in" class="twitter-follow-button" data-show-count="">Follow @sundeep_co_in</a>
+  </div>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2019 - Sundeep Anand -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'sundeep-co-in';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0/';
+        var disqus_url = 'http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

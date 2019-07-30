@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Zanata | sundeep's blog]]></title>
+  <link href="http://sundeep.co.in/blog/categories/zanata/atom.xml" rel="self"/>
+  <link href="http://sundeep.co.in/"/>
+  <updated>2019-07-30T14:00:13+05:30</updated>
+  <id>http://sundeep.co.in/</id>
+  <author>
+    <name><![CDATA[Sundeep Anand]]></name>
+    <email><![CDATA[sundeep.co.in@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PythonPune MeetUp - Oct '16]]></title>
+    <link href="http://sundeep.co.in/blog/2016/10/22/pythonpune-meetup-oct-16/"/>
+    <updated>2016-10-22T15:58:02+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/10/22/pythonpune-meetup-oct-16</id>
+    <content type="html"><![CDATA[<p>It has been long attending some talks - specially around <strong>Python</strong>!! And PythonPune looks perfect to meet some folks working with Python in the happening city - PUNE. If I remember correctly it was 6:30 I woke up and dropped text to my friend at Baner - <em>planning to spend latter half of the day at your place</em> - as venue was at GSLabs, Baner.</p>
+
+<h3>Opening</h3>
+
+<p>Chandan Kumar greeted everyone there and with some backgrounds/purpose of this meetup called for a round of introduction - <em>we had the strength of 50</em> - with some new faces. Nevertheless common goal was to <strong>learn new things</strong>. Akshay Goel started the talks with his discussions around <code>pyautogui</code> - an awesome module to automate keyboard/mouse events.</p>
+
+<!--more-->
+
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/pypune2016/pypune_oct16_1.jpg" alt="opening" /></p>
+
+<h3>My Talk</h3>
+
+<p>And then came my turn. Again <a href="https://speakerdeck.com/sundeep/zanata-python-client">Zanata-Python-Client</a> but with more insights to why localization, what purpose Zanata solves and how to start contributing to python-client project. This includes <a href="https://youtu.be/LpyDF6u6DN8">walk-through</a> of interacting with Zanata using python-client. I think everyone enjoyed slides/demo. Got a few questions as well.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/pypune2016/pypune_oct16_2.jpg" alt="my talk" /></p>
+
+<h3>Remainder</h3>
+
+<p>This was followed by Narayan Behara, who demo&rsquo;d working of <code>Boto3 python library for AWS</code>. And Kiran Yallabandi presented his experiences on <code>decorators</code> - this was a deep dive. With some more topics the meetup concluded in an informative one, and I guess - everyone enjoyed sharing thoughts with morning tea/coffee.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/pypune2016/pypune_oct16_3.jpg" alt="closing" /></p>
+
+<p>With hope to meet all in the next meetup, I headed friend&rsquo;s place - and had a great time there as well - indeed :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zanata-Python-Client v1.5.0]]></title>
+    <link href="http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0/"/>
+    <updated>2016-04-20T10:25:08+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0</id>
+    <content type="html"><![CDATA[<p>This release makes z-p-c little more stable with some major bugfixes. Feature wise we have <code>translation files mapping rules</code> added.</p>
+
+<blockquote><p>Translation Files Mapping Rules</p></blockquote>
+
+<p>Customize the way translation files are found when pushing, as well as the location they will be saved to when pulling.</p>
+
+<p>```</p>
+
+<!-- example rules definition in zanata.xml -->
+
+
+<p><rules>
+  <rule pattern="**/pot/*.pot">{locale}/{path}/{filename}.po</rule>
+  <rule pattern="**/po/*.pot">{path}/{locale_with_underscore}.po</rule>
+</rules>
+```</p>
+
+<!--more-->
+
+
+<p>In the example above, <code>pattern</code> identifies a source file, and the contents of the rule element specify how translation files will be stored.</p>
+
+<p>The <code>pattern</code> attribute is a <strong>glob</strong> matching pattern to your source document file(s). You can define more than one rule and apply each rule to a specific set of source documents using different patterns. The first matched rule will be applied to the file.</p>
+
+<p>Please note pattern value will be tested against file path relative to project root, not <code>src-dir</code>.</p>
+
+<p><code>pattern</code> is optional. If not specified, the rule will be applied to all source documents in your project. The actual rule consists of literal path and placeholders/variables.</p>
+
+<p>Supported placeholders/variables are:</p>
+
+<ul>
+<li><code>{path}</code> is the path between source document root (what you define as src-dir option) and the final file.</li>
+<li><code>{filename}</code> the source document name without leading path and extension.</li>
+<li><code>{locale}</code> the locale for the translation file. If you use &ldquo;map-from&rdquo; argument in your locale mapping, this will be the map-from value.</li>
+<li><code>{locale_with_underscore}</code> same as above except all hyphens &lsquo;-&rsquo; will be replaced with underscores &lsquo;_&rsquo;. This is typically used in properties and gettext projects.</li>
+<li><code>{extension}</code> the source document file extension</li>
+</ul>
+
+
+<p>For example, if you have the following file structure (where <code>{projectRoot}</code> is the root directory of your project and contains zanata.xml):</p>
+
+<pre><code>{projectRoot}/
+              templates/messages/kdeedu/kalzium.pot
+              templates/messages/kdeedu/artikulate.pot
+              de-DE/messages/kdeedu/kalzium.po
+              de-DE/messages/keeedu/artikulate.po
+              ...
+              zanata.xml
+</code></pre>
+
+<p>Here we have two source documents (with <code>pot</code> extension) and two translation documents (with <code>po</code> extension) for the locale <code>de-DE</code>.</p>
+
+<p>You can then use below configuration:</p>
+
+<pre><code>&lt;src-dir&gt;templates&lt;/src-dir&gt;
+&lt;trans-dir&gt;.&lt;/trans-dir&gt;
+&lt;rules&gt;
+    &lt;rule pattern="**/*.pot"&gt;{locale}/{path}/{filename}.po&lt;/rule&gt;
+&lt;/rules&gt;
+</code></pre>
+
+<p>Explanation: Since you have defined <code>&lt;src-dir&gt;</code> as templates, the source document <code>templates/messages/kdeedu/kalzium.pot</code> will have its path extracted relative to <code>{projectRoot}/templates</code>, which gives the relative path <code>messages/kdeedu/kalzium.pot</code>. The relative path then will be partitioned into several tokens to form the following variables:</p>
+
+<pre><code>{path}                          = 'messages/kdeedu/'
+{filename}                      = 'kalzium'
+{locale}                        = 'de-DE'
+{locale_with_underscore}        = 'de_DE'
+{extension}                     = 'pot'
+</code></pre>
+
+<p>NOTE the relative path <code>messages/kdeedu/kalzium.pot</code> will be the document&rsquo;s unique identifier inside Zanata. If you change src-dir setting later, e.g. to &ldquo;<strong>.</strong>&rdquo;, which results in a change of the relative path to <code>templates/messages/kdeedu/kalzium.pot</code>, pushing again will create a new document with the new path as its unique identifier, and the old document will be considered obsolete and will not be visible to anyone. The old document&rsquo;s translations will not be copied to the new document automatically, but they will appear as <strong>Translation Memory</strong> matches. This can be confusing and frustrating for translators.</p>
+
+<p>As the rule is defined as <code>{locale}/{path}/{filename}.po</code>, for locale <code>de-DE</code>,</p>
+
+<p>source file kalzium.pot&rsquo;s translation file will be written to or read from <code>{projectRoot}/de-DE/messages/kdeedu/kalzium.po</code>.
+source file artikulate.pot&rsquo;s translation file will be written to or read from <code>{projectRoot}/de-DE/messages/kdeedu/artikulate.po</code></p>
+
+<p>You can also replace <code>{locale}</code> with <code>{locale_with_underscore}</code> if you want all your locales to use underscore instead of hyphen. e.g. <strong>de-DE</strong> will become <strong>de_DE</strong> which results in translation files written to or read from <code>{projectRoot}/de_DE/messages/kdeedu/kalzium.po</code></p>
+
+<p>The mapping rules configuration is optional in <code>zanata.xml</code>. If not specified, standard rules are applied according to your project type.</p>
+
+<ul>
+<li>gettext: <code>{path}/{locale_with_underscore}.po</code></li>
+<li>podir: <code>{locale}/{path}/{filename}.po</code></li>
+<li>properties: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>utf8properties: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>xliff: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>xml: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>file: <code>{locale}/{path}/{filename}.{extension}</code></li>
+</ul>
+
+
+<p>Feel free to give it a try and file bugs if you feel any.</p>
+
+<p>Happing Translation!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FOSSASIA 2016]]></title>
+    <link href="http://sundeep.co.in/blog/2016/03/28/fossasia-2016/"/>
+    <updated>2016-03-28T18:20:17+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/03/28/fossasia-2016</id>
+    <content type="html"><![CDATA[<p><em>AI 380 Delhi to Singapore 5:30 AM</em> All were sleeping and cabin crew announces <code>we are about to land at Singapore Changi Airport in 15 minutes</code>. This thrills almost all passengers travelling to Singapore for the first time including me. Within seconds fog started appearing on windows and we landed smoothly. This took 10 mins getting from the arrival gate to immigration post. And after 20 mins or so I completed baggage claim and was heading Terminal 3 arrivals. Met with my colleagues there and by 10:15 AM we boarded MRT to <code>Red Hat Singapore Office</code>. In the evening explored <code>Bugis Street</code> and enjoyed food at <code>Little India</code> - this lead to end of 0th day.</p>
+
+<!--more-->
+
+
+<h4>Day 1</h4>
+
+<p>Started at <code>Singapore Science Center</code> - wonders of science, technology, engineering and mathematics. At the opening ceremony hosted at The Marquee, Science Centre Singapore <em>Hong Phuc Dang</em> welcomed everyone in <a href="http://fossasia.org/">FOSSASIA</a> 2016. <em>Justin Lee</em> cheer the crowd and every one felt the enthusiasm being at Asia&rsquo;s premier open source event.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_2850.JPG" alt="Welcome" /></p>
+
+<p><em>Harish Pillay</em> the president of the Internet Society Singapore Chapter delivered keynote and spoke about phases of Free and Open Source Software. This took us through the journey! the revolution!!</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_2851.JPG" alt="Keynote" /></p>
+
+<p>Tea and Coffee break gave us time to network and have refreshments. We went inside Science Center and experienced Interactive 360 × 360 degree Virtual Reality. At 12 noon we saw Tesla Electric Lightning Demonstration - amazing electric arcs from the Tesla Coil at 3500000 Volts - how it light up fluorescent light, explode the balloons and how people sit in cage without getting hurt when the electric touch the cage.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_2853.JPG" alt="Snacks" /></p>
+
+<p><em>Jan Nikolai Nelles</em> (Artist of &ldquo;The Other Nefertiti&rdquo;) spoke about #NefertitiHack and Cultural Commons. With regard to the notion of belonging and possession of material objects of other cultures, the Other Nefertiti is to make cultural objects publicly accessible and to promote a contemporary and critical approach on how the “Global North“ deals with heritage and the representation of “the Other”.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_2854.JPG" alt="Nefertiti" /></p>
+
+<p>Thereafter every one enjoyed lunch - chicken was tasty I must say. Here we had beginning of talks and workshops. I followed DevOps Track: oVirt Integrations, Comparing virtualization and containers, Globalizing your software, Containers and systemd. In the evening we rushed to <code>clarke quay</code></p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_2867.JPG" alt="Clarke Quay" /></p>
+
+<p>A wonderful day at Singapore full of knowledge, fun and enjoyment.</p>
+
+<h4>Day 2</h4>
+
+<p>We got up early, took MRT and reached Science Center. At 12 noon we had group photo - all faces (different geography) in a frame (common cause) is itself unique mark of participation and collaboration. Collected T-Shirt and had lunch. Time for the talk.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_2860.JPG" alt="Clarke Quay" /></p>
+
+<p>Covered introduction to Zanata Server, Push and Pull operations using Python Client and how to start contributing to Zanata Python Client project. Had some Q&amp;A also. In the evening we left with some time and went to <code>marina bay sands</code>.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_3025.JPG" alt="Marina Bay Sands" /></p>
+
+<p>Earned great learning and ideas to make talks better.</p>
+
+<h4>Day 3</h4>
+
+<p>Had healthy breakfast, took MRT and reached Science Center - the third and final day. This day I followed Privacy and Security track: Functionality, Security, Usability: Choose any two. Or GNOME, Not all security flaws are born equal and Privly - Share Privately. Today we had plans for Sentosa - The Fun Island.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_2902.JPG" alt="Sentosa" /></p>
+
+<p>It rocks!! SEA Aquarium, Universal Studio, Rides and many more make this place awesome tourist destination. We enjoyed <code>The Blue Band Group</code> performance which made our evening. Sentosa Express is a monorail line connecting this island.</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/fossasia2016/IMG_3049.JPG" alt="Airport" /></p>
+
+<p>And its time to depart. Had a great time, and with the hope to visit Singapore again some time, <em>boarded AI 381</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Working With TMGMT Zanata]]></title>
+    <link href="http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata/"/>
+    <updated>2016-02-25T11:53:55+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata</id>
+    <content type="html"><![CDATA[<p>TMGMT Zanata is a plugin for Drupal&rsquo;s Translation Management Module TMGMT. The plugin allows TMGMT to send content to a configured Zanata project for translation, and can download translations as they are ready.</p>
+
+<p>Zanata is a web-based system for translators, content creators and developers to manage localization projects.</p>
+
+<ol>
+<li>Installation</li>
+<li>Set Up</li>
+<li>Configuration</li>
+<li>Translation Jobs</li>
+</ol>
+
+
+<!--more-->
+
+
+<h2>Installation</h2>
+
+<p>TMGMT Zanata requires the Translation Management Tool module (TMGMT) to be enabled. And to use Translation Management (Node Translation), the following modules must be installed:</p>
+
+<ul>
+<li>Entity API</li>
+<li>Views</li>
+<li>Chaos Tools (Required for Views)</li>
+<li>Views Bulk Operations</li>
+<li>Rules</li>
+<li>Content Translation (enable only, part of core)</li>
+<li>Locale (enable only, part of core)</li>
+</ul>
+
+
+<p>TMGMT also requires some other modules to be enabled:</p>
+
+<ul>
+<li>Translation Management UI</li>
+<li>Content Source User Interface</li>
+<li>Export / Import File</li>
+</ul>
+
+
+<p>This will automatically trigger the activation of Translation Management Core, Content Source and Translation Management Field modules.</p>
+
+<p>TMGMT Zanata Installation is similar to any Drupal module.</p>
+
+<p>Installed and enabled TMGMT with Zanata Plugin will look something similar to screenshot below:</p>
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/1_tmgmt.png" alt="Drupal TMGMT Module" /></p>
+
+<p>TMGMT Zanata plugin appears as <code>Zanata translator</code> and if enabled, can be used as one of the available translators to TMGMT module.</p>
+
+<h2>Set Up</h2>
+
+<h3>Enable translation for content types</h3>
+
+<p>To make each content type translatable, the publishing options for the content type must be set appropriately. To do so:</p>
+
+<ol>
+<li>In the administration menu, navigate to &ldquo;Structure&rdquo; > &ldquo;Content types&rdquo;.</li>
+<li>Find the content type you wish to make translatable and open its edit page.</li>
+<li>Change to the &ldquo;Publishing options&rdquo; tab</li>
+<li>Under &ldquo;Multilingual support, select "Enabled, with translation&rdquo;.</li>
+<li>Click &ldquo;Save content type&rdquo;</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/2_content_type.png" alt="Content Type" /></p>
+
+<h3>Add languages</h3>
+
+<p>To allow translation, your site must have one or more languages enabled, in addition to the default language. To enable a language:</p>
+
+<ol>
+<li>In the administration menu, navigate to &ldquo;Configuration&rdquo; > &ldquo;Regional and language&rdquo; > &ldquo;Languages&rdquo;.</li>
+<li>Open the &ldquo;Add language&rdquo; page</li>
+<li>Select an existing language or enter details for a custom language.</li>
+<li>Click &ldquo;Add language&rdquo; or &ldquo;Add custom language&rdquo;</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/3_languages.png" alt="Enable Languages" /></p>
+
+<h3>Enable the TMGMT Zanata plugin module</h3>
+
+<p>Once the code for the plugin module has been installed, enable the module. To do so, open &ldquo;Modules&rdquo; in the Administration menu, scroll to the &ldquo;Translation Management&rdquo; section, and ensure that &ldquo;Zanata translator&rdquo; is checked. Also ensure that TMGMT and its dependencies are checked. Click &ldquo;Save configuration&rdquo; to finalize the change.</p>
+
+<h3>Cron</h3>
+
+<p>Set up cron to automatically fetch new translations from Zanata server every time it runs.
+There are two separate ways to run Drupal&rsquo;s cron tasks:</p>
+
+<h4>Automated Cron</h4>
+
+<p>The automated cron system is compatible with all systems because it doesn&rsquo;t actually involve the system&rsquo;s cron daemon. It works by checking at the end of each Drupal request to see when cron last ran and, if it has been too long, processing the cron tasks as part of that request. The two down-sides are
+cron tasks will only run when Drupal is processing requests, and
+the &lsquo;weight&rsquo; (processing and memory) of running the cron tasks will be added to some arbitrary unknown page request, which may slow down those requests, which may slow down those requests, and has the potential to exceed memory limits on a complex site.</p>
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/4_cron.png" alt="Cron" /></p>
+
+<h4>External Cron</h4>
+
+<p>Create a cron job, or use some other external (to Drupal) method of triggering its cron tasks, such as an external cron job service like EasyCron or Cronless. This is the more reliable because it will always run on schedule. Note that if you create a cron job, you may want to disable the &ldquo;automated cron&rdquo; system entirely.</p>
+
+<p>Easiest way to setup external cron it to add following in system crontab:</p>
+
+<p><code>0 * * * * wget -O - -q -t 1 http://{your_drupal_server}/cron.php</code></p>
+
+<p>This would run every hour. Replace {your_drupal_server} with the url of your server.</p>
+
+<h2>Configuration</h2>
+
+<p>Before the module can be used, it must be configured with some details about Zanata - user and project. These are set on the translator configuration page.</p>
+
+<p>If you do not yet have a Zanata username or API key, or you have not yet created a project or project-version on Zanata for your website, use the following instructions to do so before you continue:</p>
+
+<ul>
+<li>To get a Zanata account, see Signing Up.</li>
+<li>For instructions on finding your API key, see &ldquo;User Configuration&rdquo; on the Configure the Client help page.
+
+<ul>
+<li>User settings are accessed through the Dashboard.</li>
+<li>Note that you do not need to create any config files for this plugin.</li>
+</ul>
+</li>
+<li>For help creating a project, see Project Creation.</li>
+<li>For help creating a version, see Version Creation.</li>
+</ul>
+
+
+<p>To open the translator configuration page and enter configuration:</p>
+
+<ol>
+<li>Open the Administration menu</li>
+<li>Navigate to &ldquo;Configuration&rdquo; -> &ldquo;Regional and language&rdquo; -> &ldquo;Translation Management Translators&rdquo;</li>
+<li>You will see a list of translator plugins that have been added to TMGMT. Look for &ldquo;Zanata translator&rdquo; in the list.</li>
+<li>If you see an auto-created Zanata translator, open the configuration page by clicking &ldquo;edit&rdquo;.</li>
+<li>If you do not see an auto-created Zanata translator, create one. To create a Zanata translator, click &ldquo;Add translator&rdquo;, enter an appropriate label such as &ldquo;Zanata translator&rdquo;, and in &ldquo;Translator plugin&rdquo; select &ldquo;Zanata translator&rdquo;. When you select &ldquo;Zanata translator&rdquo; its configuration page will be displayed below.</li>
+<li>If you do not wish to perform translation review in Drupal, for example if review will be done in Zanata, ensure that &ldquo;Auto accept finished translations&rdquo; is checked. This setting can be changed later.</li>
+<li>Ensure that the Zanata server URL shows the correct Zanata server on which you have an account and have created a project for your website. To find the full URL, open the Zanata server and click the Zanata logo to open the homepage. The URL shown in your browser address bar is the server URL, but do not include a / at the end. For example, the homepage for the main Zanata server is at &ldquo;<a href="http://translate.zanata.org/zanata/">http://translate.zanata.org/zanata/</a>&rdquo; so the URL for this server is &ldquo;<a href="http://translate.zanata.org/zanata">http://translate.zanata.org/zanata</a>&rdquo;.</li>
+<li>Enter your username, your API key, your project ID and your project-version ID. Be careful to use your Zanata username rather than your display name, and the Project ID rather than the Project Name. See the links above for directions that may help to find this information.</li>
+<li>Click &ldquo;Save translator&rdquo; to complete the configuration.</li>
+<li>You are now able to create translation jobs that use Zanata translator.</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/5_settings.png" alt="Plugin Configuration" /></p>
+
+<p>Feature, <code>Translation Periodic Check</code> depends upon Cron setup and it fetches new translations from Zanata server every time cron runs.</p>
+
+<h2>Translation Jobs</h2>
+
+<p>TMGMT Zanata is a plugin for the Translation Management Tool (TMGMT), so most of the directions for creating and interacting with translation jobs can be taken directly from TMGMT&rsquo;s documentation. Let’s see translation of an article using TMGMT Zanata.</p>
+
+<ul>
+<li>In your website, navigate to article&rsquo;s page (you want to translate) and click on <code>Translate</code>. If <code>Translate</code> is not appearing please see configurations and complete the steps.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/6_page.png" alt="Page" /></p>
+
+<ul>
+<li>Clicking on <code>Translate</code> would take you to this page. Here, you can select language and request translation. Translation job would be created as soon as you request translation.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/7_select_lang.png" alt="Select Language" /></p>
+
+<ul>
+<li>Upon request, translation job would be added to cart. Here we can select translator for the added job and submit it. Job items and target language should be verified. As soon as we submit or checkout, page’s content would be pushed to server for translation.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/8_submit.png" alt="Submit Job" /></p>
+
+<ul>
+<li>After submission we receive confirmation which looks something like:</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/9_confirmation.png" alt="Submit Confirmation" /></p>
+
+<ul>
+<li>In Zanata, we can navigate to the document uploaded.
+
+<ul>
+<li>As mentioned in Zanata Translator Plugin Settings, select Project and Version.</li>
+<li>Select the language for which job is created.</li>
+<li>Here, we can see list of documents uploaded for the given language.</li>
+<li>Select the document which belongs to submitted job.
+
+<ul>
+<li>Please refer submission confirmation notes to identify document name, as it may differ than the article’s heading.</li>
+</ul>
+</li>
+<li>This would take you to Zanata translation page. Here, you can translate the article.
+Upon translation of content, mark complete to make them available for pull.</li>
+</ul>
+</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/10_zanata.png" alt="Zanata" /></p>
+
+<ul>
+<li>If <code>Auto accept finished translations</code> and <code>Translation Periodic Check</code> are checked in translators settings, new translations delta are fetched every time cron runs and article will be published automatically once it reach 100% translated. We can fetch new translations and/or re-submit it to translator for active translation jobs.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/11_manage.png" alt="Manage Job" /></p>
+
+<ul>
+<li>Once translations are fetched from Zanata, it would be available for review. This step can be skipped by checking <code>Auto accept finished translations</code>. Accepted translations look like the screen below. Acceptance of translation makes a translation job finished.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/12_fetch.png" alt="Fetch Translation" /></p>
+
+<ul>
+<li>As soon as a translation job finishes, TMGMT publishes it and a navigation is added to the page which takes user to translated version of the article of intended language.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/13_publish.png" alt="Publish Translation" /></p>
+
+<ul>
+<li>Summary of translation jobs looks similar to below screen.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/14_summary.png" alt="Job Summary" /></p>
+
+<h3>References</h3>
+
+<ul>
+<li><a href="https://www.drupal.org/project/tmgmt_zanata">https://www.drupal.org/project/tmgmt_zanata</a></li>
+<li><a href="https://www.drupal.org/node/1490024">https://www.drupal.org/node/1490024</a></li>
+<li><a href="https://www.drupal.org/cron">https://www.drupal.org/cron</a></li>
+<li><a href="https://www.drupal.org/node/1547632">https://www.drupal.org/node/1547632</a></li>
+</ul>
+
+
+<p>Happy Website Translation!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zanata-Python-Client v1.4.1]]></title>
+    <link href="http://sundeep.co.in/blog/2016/01/14/zanata-python-client-v1-dot-4-1/"/>
+    <updated>2016-01-14T16:15:14+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/01/14/zanata-python-client-v1-dot-4-1</id>
+    <content type="html"><![CDATA[<p>A new release - v1.4.1 is <strong>out</strong>. This brings feature which makes getting started with <strong>ZPC</strong> more fun. GitHub Release <a href="https://github.com/zanata/zanata-python-client/releases/tag/zpc-v1.4.1">Link</a></p>
+
+<h2>What&rsquo;s New</h2>
+
+<ul>
+<li>commands - init, stats - enhances <strong>CLI</strong> experiences.</li>
+<li>Some bug fixes - including critical issues.</li>
+<li>Now the code is more robust, and better to understand.</li>
+</ul>
+
+
+<h2>Getting Started with Zanata and Python Client</h2>
+
+<p>Starting out with translation project is a breeze with Zanata. Let&rsquo;s get started&hellip;</p>
+
+<!--more-->
+
+
+<blockquote><p>Server Side - User Settings</p></blockquote>
+
+<p>Point your favorite browser to <a href="https://translate.zanata.org/zanata/"><code>https://translate.zanata.org/zanata/</code></a> and login (<em>signup for a new account</em>). You may find <a href="http://zanata-client.readthedocs.org/en/latest/configuration/#user-configuration">this</a> useful.</p>
+
+<ul>
+<li>Navigate to <code>Settings</code> and see for <code>Client</code>.</li>
+<li>Generate a new <strong>API</strong> key, <em>ignore if it is already there</em>.</li>
+<li>Look for user configuration contents for <code>zanata.ini</code>.</li>
+</ul>
+
+
+<p><em>Done! Let&rsquo;s move on&hellip;</em></p>
+
+<blockquote><p>Client Side - CLI tasks</p></blockquote>
+
+<p>Create a file <code>zanata.ini</code> at <code>$HOME/.config/</code> and copy the contents. Now, have <strong>ZPC</strong> in place.</p>
+
+<ul>
+<li>Download and Install</li>
+</ul>
+
+
+<pre><code class="sh">$ wget https://github.com/zanata/zanata-python-client/archive/zpc-v1.4.1.zip
+$ unzip zpc-v1.4.1.zip
+$ cd zanata-python-client-zpc-v1.4.1
+$ make install
+</code></pre>
+
+<ul>
+<li>By now, we should have zanata python client installed. Time to roll translation project.</li>
+</ul>
+
+
+<pre><code class="sh">$ zanata help
+$ zanata &lt;command&gt; --help
+</code></pre>
+
+<p><em>Done! Let&rsquo;s move on&hellip;</em></p>
+
+<blockquote><p>Initialize Project Configuration</p></blockquote>
+
+<p>With <code>zanata init</code> it&rsquo;s much convenient to specify project details or create a new profile.</p>
+
+<pre><code class="sh">$ zanata init --user-config /path/to/zanata.ini
+</code></pre>
+
+<p>This takes you for an interaction about&hellip;</p>
+
+<ul>
+<li>Project&rsquo;s id, name, description (<em>option to create a brand new project</em>).</li>
+<li>Project version (<em>option to create new version within project selected</em>).</li>
+<li>Set project type {<code>gettext</code> or <code>podir</code>}</li>
+<li>Set <code>translation template</code> and <code>translation target</code> directories.</li>
+</ul>
+
+
+<p>Aha, just <code>ls</code> your directory and you can see <code>zanata.xml</code> created. Now, language resources can be pushed.</p>
+
+<p><em>Done! Let&rsquo;s move on&hellip;</em></p>
+
+<blockquote><p>Get Documents Translated</p></blockquote>
+
+<ul>
+<li>Push all templates, translations (if flagged) onto server. Cool! translation activities can be started, now. Get translations back, may be to compile lang-packs.</li>
+</ul>
+
+
+<pre><code class="sh">$ zanata push --help
+$ zanata push [OPTIONS] 
+$ zanata pull --help
+$ zanata pull [OPTIONS]
+</code></pre>
+
+<h2>Tracking Translation Progress</h2>
+
+<p>With this version translators can track translation progress for enabled <code>locales</code> for a <code>project-version</code>. Considering <code>zanata.ini</code> and <code>zanata.xml</code> in place, following commands will display stats.</p>
+
+<pre><code class="sh">$ zanata stats
+$ zanata stats --help 
+$ zanata stats --details    # statistics for all docs in project version
+$ zanata stats --word       # include word level statistics as well
+$ zanata stats --docid      # statistics will be fetched for doc specified
+$ zanata stats --lang       # stats for specified locales will be fetched
+</code></pre>
+
+<p>Happy Translation !!</p>
+]]></content>
+  </entry>
+  
+</feed>

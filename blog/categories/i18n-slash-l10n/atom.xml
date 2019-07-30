@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: I18n/l10n | sundeep's blog]]></title>
+  <link href="http://sundeep.co.in/blog/categories/i18n-slash-l10n/atom.xml" rel="self"/>
+  <link href="http://sundeep.co.in/"/>
+  <updated>2019-07-30T14:00:13+05:30</updated>
+  <id>http://sundeep.co.in/</id>
+  <author>
+    <name><![CDATA[Sundeep Anand]]></name>
+    <email><![CDATA[sundeep.co.in@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Transtats - Getting Started]]></title>
+    <link href="http://sundeep.co.in/blog/2019/02/06/transtats-getting-started/"/>
+    <updated>2019-02-06T11:49:23+05:30</updated>
+    <id>http://sundeep.co.in/blog/2019/02/06/transtats-getting-started</id>
+    <content type="html"><![CDATA[<p>Helps in tracking translation completeness of your packages. These packages may participate in product releases, so a few Transtats UI group statistics to create at-a-glance translation progress picture - <em>for the release</em>! It has tools to detect translation deficiency in ready-to-ship packages.</p>
+
+<h2>Getting Started</h2>
+
+<p>Transtats Fedora instance is running at <a href="https://transtats.fedoraproject.org">https://transtats.fedoraproject.org</a><br/>And <code>fedora-30</code> release is already added.</p>
+
+<!--more-->
+
+
+<h5>First step is to add your package in Transtats.</h5>
+
+<ul>
+<li>Click on <code>Fedora Login</code> button and login into the system using your Fedora Credentials.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/1-fedora-login.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/1-fedora-login.png?raw=true?raw=true</a>" width="350" height="180"></p>
+
+<ul>
+<li>After logged-in, click on <code>Packages</code> link. (<em>This will take you to packages list page</em>)</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/2-packages-link.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/2-packages-link.png?raw=true?raw=true</a>" width="350" height="180"></p>
+
+<ul>
+<li>Click on <code>Add Package</code> button to add your package in Transtats.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/3-add-package.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/3-add-package.png?raw=true?raw=true</a>" width="350" height="180"></p>
+
+<ul>
+<li>Enter <code>Package Name</code> and <code>Upstream URL</code>. Select <code>Translation Platform</code> and check <code>Fedora</code>.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/4-package-form.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/4-package-form.png?raw=true?raw=true</a>" width="520" height="400"></p>
+
+<ul>
+<li>Finally, click on <code>Add Package</code> button to validate and register the package with Transtats.</li>
+<li>Go back to list packages page and locate newly added package. Click on package name.
+
+<ul>
+<li>This will take you to the package details page. (<em>Use dropdown to navigate between packages</em>)</li>
+</ul>
+</li>
+</ul>
+
+
+<h5>Secondly, sync your package with Translation Platform, Build System and Upstream.</h5>
+
+<ul>
+<li>Sync the package with <code>Translation Platform</code>; this will generate <code>Branch Mapping</code> also.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/5-sync-platform.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/5-sync-platform.png?raw=true?raw=true</a>" width="420" height="280"></p>
+
+<ul>
+<li>Once branch mapping is created, sync the package with <code>Koji</code> build system.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/6-sync-buildsys.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/6-sync-buildsys.png?raw=true?raw=true</a>" width="420" height="280"></p>
+
+<ul>
+<li> This will take you to the syncdownstream YML job; uncheck <em>Dry Run</em> and run the job!</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/7-job-run.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/7-job-run.png?raw=true?raw=true</a>" width="520" height="400"></p>
+
+<ul>
+<li>Go back to package&rsquo;s detail page and locate statistics from <code>koji</code> build system.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/8-locate-stats.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/8-locate-stats.png?raw=true?raw=true</a>" width="420" height="280"></p>
+
+<ul>
+<li>Click on <code>Statistics Diff</code> to update diff and know - which languages need attention.
+
+<ul>
+<li>This is based on branch mapping generated of the respective package.</li>
+</ul>
+</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/9-stats-diff.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/9-stats-diff.png?raw=true?raw=true</a>" width="420" height="280"></p>
+
+<ul>
+<li> This will indicate languages in which the package is out of sync.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/10-out-of-sync.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/10-out-of-sync.png?raw=true?raw=true</a>" width="420" height="280"></p>
+
+<h5>Finally, update releases and packages summary.</h5>
+
+<ul>
+<li>Go to <code>Dashboard</code> (<em>landing page</em>) and click to refresh summary.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/11-release-summary.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/11-release-summary.png?raw=true?raw=true</a>" width="520" height="400"></p>
+
+<ul>
+<li>Similary for packages - click on <code>Packages - Translation Completeness</code> tab and refresh summary.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/12-package-summary.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/12-package-summary.png?raw=true?raw=true</a>" width="520" height="400"></p>
+
+<h2>Limitations</h2>
+
+<p>As of now following are the limitations (<em>shall be eliminated in coming Transtats releases</em>):</p>
+
+<ul>
+<li>Packages could not auto sync (with Platform, Build System etc.) and need manual effort.</li>
+<li>Branch mapping and Statistics Diff need to be updated manually for each package.</li>
+<li>Releases and Packages summary also need manual effort to get updated.</li>
+</ul>
+
+
+<h4>Sync Order</h4>
+
+<ol>
+<li>Sync package with Translation Platform, Build System and Upstream.</li>
+<li>Update Statistics Diff and then, Releases &amp; Packages Summaries.</li>
+</ol>
+
+
+<h4>Jobs</h4>
+
+<p>While running job uncheck <code>Dry Run</code> only when the package is added in Transtats - to save stats.
+<code>Sync Package Build System</code> job can be dry run for any package and any build tag (<em>including rawhide</em>).</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/13-yml-job.png?raw=true?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/ts-get-started/13-yml-job.png?raw=true?raw=true</a>" width="420" height="280"></p>
+
+<ul>
+<li>Job log URL will be generated for dry runs too, and can be shared.</li>
+</ul>
+
+
+<h2>More resources</h2>
+
+<ul>
+<li><a href="https://transtats.fedoraproject.org/quick-start">https://transtats.fedoraproject.org/quick-start</a></li>
+<li><a href="http://docs.transtats.org/en/latest/">http://docs.transtats.org/en/latest/</a></li>
+</ul>
+
+
+<h2>Issues</h2>
+
+<ul>
+<li>Please report issues / feature ideas here: <a href="https://github.com/transtats/transtats/issues/new">https://github.com/transtats/transtats/issues/new</a></li>
+<li>Join <code>#transtats</code> channel in IRC freenode. Or, drop queries at <code>#fedora-g11n</code> channel.</li>
+</ul>
+
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://speakerdeck.com/sundeep/using-transtats-to-track-translation-string-change">https://speakerdeck.com/sundeep/using-transtats-to-track-translation-string-change</a></li>
+<li><a href="https://www.youtube.com/watch?v=8q9cg-wsrUg">https://www.youtube.com/watch?v=8q9cg-wsrUg</a></li>
+</ul>
+
+
+<p>Thanks!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I18n FAD]]></title>
+    <link href="http://sundeep.co.in/blog/2017/11/28/i18n-fad/"/>
+    <updated>2017-11-28T14:22:51+05:30</updated>
+    <id>http://sundeep.co.in/blog/2017/11/28/i18n-fad</id>
+    <content type="html"><![CDATA[<p>This time <a href="https://en.wikipedia.org/wiki/Pune">Pune, India</a> was selected for <a href="https://fedoraproject.org/wiki/FAD_I18N_2017">Fedora Activity Day</a> 2017 of Internationalization (i18n) Engineering. Folks from all over APAC and EMEA joined together to exchange ideas, fix long pending bugs and hack on new ideas. Thanks to Fedora Council for approving budget and to <a href="https://fedoraproject.org/wiki/User:Bex">Bex</a> for coordinating &amp; moving i18n FAD arrangements further! <a href="https://fedoraproject.org/wiki/User:Petersen">Jens</a>, <a href="https://fedoraproject.org/wiki/User:Pnemade">Parag</a> and <a href="https://fedoraproject.org/wiki/User:Pravins">Pravin</a> played vital roles in organising everything required to make it happen.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_0.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_0.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>I was really excited to meet my entire team for the first time! And it was Sunday evening, 19th Nov 2017 we all met together and went <a href="http://www.amanoramall.com/">Amanora</a> Food Court to share evening moments over snacks.</p>
+
+<!--more-->
+
+
+<h3>Day 1st, Talks</h3>
+
+<p>Everyone was busy finishing their slides and demo as projector/screen was waiting to show some really cool i18n stuffs.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_1.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_1.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p><code>Pravin</code> started the day with welcome greetings and reminded on earlier <a href="https://fedoraproject.org/wiki/FAD_G11N_2015">g11n FAD</a>. After quick logistics by <code>Parag</code> everyone queued up for their introductions. <code>Jens-Ulrik Petersen</code> covered i18n FAD intro and took us on evolution of Fedora i18n.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_2.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_2.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p><code>Akira Tagoh</code> started the session with highlights on fonts development. He discussed some really interesting topics like fontconfig cache, flatpack support and font-tweak-tool. <code>Peng Wu</code> took over to catch up on Pango development plans: Unicode 10 support and bidirectional algorithm. After a quick Tea break, we continued with sessions on Input Methods. <code>Takao Fujiwara</code> shared ibus 1.6 plans: API deprecation, Extending ibus compose tests to other engines, etc. He demo'ed anthy test triggered by focus event and emoji input. <code>Peng Wu</code> seemed interested in fixing Qt5 ForwardKeyEvent issue. <code>Mike Fabian</code> explained and demo'ed ibus-typing-booster and emoji-picker.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_3.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_3.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>And then talks turned towards Locales. <code>Mike Fabian</code> explained about Latvian collation: CLDR vs glibc. <code>Rafal Luzynski</code> brought focus on dates rendered wrong in desktop UI (gnome etc) for many languages. Further, he explained genitive &amp; nominative cases and mentioned one long pending <a href="https://sourceware.org/bugzilla/show_bug.cgi?id=18666">bug</a>.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_4.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_4.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>After lunch, I started with Transtats. Here are my <a href="https://speakerdeck.com/sundeep/transtats">slides</a>. <code>Parag</code> joined the discussion for CLI demo and <code>Sachin</code> demo'ed Automation Testing. After this, <code>Pravin</code> touched upon i18n test automation and covered fonts testing and UTTRS. <code>Pooja</code> joined and explained about input method test automation. In the next session we had discussions around Fedora Test Cases. <code>Satya</code> and <code>Sandeep</code> quickly recap Fedora 27 test days and explain about some gap analysis including Wayland, new ibus version and Flatpak. <code>Bhushan</code> talked about input tests, rendering and DRTC. <code>Vishal</code> demo'ed tool for web scraping and shared plans for Kimchi web client for kvm. And with this we concluded sessions.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_5.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_5.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>Quickly everyone wrote down the projects/parts they are interested in to collaborate and hack on. In the evening we had a quick walk, followed by a team dinner at <a href="http://www.magarhospitality.com/deccanharvest/">Deccan Harvest</a>.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_6.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_6.JPG?raw=true</a>" width="450" height="280"></p>
+
+<h3>Day 2nd and 3rd, Hacking</h3>
+
+<p>A couple of days of collaboration and demo&rsquo;s. People join their hands on several objectives: Fonts testing automation, Glibc Unicode CLDR sync, Desktop langpacks on installation, Input Method Automation, Fedora i18n test cases gap analysis and updates, Filipino language support, Transtats, IBus 1.6 plans and implementation, Update font packaging guidelines, Emoji enhancements, Random deps issue for font packages, and Testsuite for ibus-table.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_7.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_7.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>Surprisingly, along with we had discussions around <code>Modularity</code> also. On third day of FAD - we had <code>Fedora 27 release party</code>. Cake cutting and round table discussions. Several folks joined us for the celebration.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/F27_release_party.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/F27_release_party.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>Last day, in the last hour we had series of demos, people showing their progress over two days of hacking. The second day evening we had FAD Game Night :)</p>
+
+<h3>FAD Evening Activity</h3>
+
+<p>We went to <a href="https://www.tripadvisor.in/LocationPhotoDirectLink-g297654-d4090582-i221160816-Amanora_Mall-Pune_Pune_District_Maharashtra.html">Amoeba</a> - Amanora Game Zone for bowling. Superb fun moment for all of us. Congrats to <code>Jens</code> and <code>Mike</code> for making a century on scoreboard. And then, we had a wonderful dinner at <a href="http://www.barbequenation.com/">Barbeque Nation</a>.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_8.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_8.JPG?raw=true</a>" width="450" height="280"></p>
+
+<p>All thanks to <a href="https://getfedora.org/">Fedora</a> to care for their contributors that much! And bringing them together .. :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Transtats]]></title>
+    <link href="http://sundeep.co.in/blog/2017/03/17/introduction-to-transtats/"/>
+    <updated>2017-03-17T15:56:42+05:30</updated>
+    <id>http://sundeep.co.in/blog/2017/03/17/introduction-to-transtats</id>
+    <content type="html"><![CDATA[<p>From last few months, working on an idea. Globalization market is evolving and we have better translation platforms out in the market, some of them are closed source but some are open. In the whole process, success is defined when users identify some-software xyz-release is now available in so and so languages. The complexity increases when a project involves various packages. Is translation progress of all involved packages up-to-the-mark for the project&rsquo;s next release? <a href="http://transtats.org/">Transtats</a> is an answer to this!</p>
+
+<p>Though it is just started and in very initial stage, one can use it for tracking translation progress. <strong>Transtats</strong> tries to create mapping between upstream project - translation platform and release streams. You may checkout <a href="http://docs.transtats.org/en/latest/">docs</a> for deeper insights. It has some inventory on which jobs operate, to create graphs. Lets see few steps how we get started using it.</p>
+
+<!--more-->
+
+
+<h4>Check Inventory</h4>
+
+<p>Graphs will be generated for enabled languages, aliases are used while syncing. One can create a language set, which can be associated with a release branch. Multiple instances of a translation platform can be added. RHEL and Fedora are release streams whereas Fedora 26 is a branch. A release branch should have a language set and a schedule. Transtats jobs sync at intervals for keeping stats and schedule latest.</p>
+
+<p style="text-align:center;"><img src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/transtats/inventory.png?raw=true" alt="inventory" /></p>
+
+<h4>Add and Configure Packages</h4>
+
+<p>While adding a package, upstream URL is required. And package name is verified with selected translation platform. Translation of a package can be tracked for multiple release streams. Package can be sync&rsquo;d while adding itself. Refreshing a package updates its details, translation stats and creates branch mapping. It maps Transtats release branches with most suitable project versions available at translation platform.</p>
+
+<p style="text-align:center;"><img src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/transtats/package.png?raw=true" alt="package" /></p>
+
+<h4>Add Graph Rule</h4>
+
+<p>Slug form of rule name would be saved. This should be specific for a release branch. Packages having branch mapping created can only be included here. Either languages would be picked from associated language set with release branch or can be chosen. Somehow if a package is not tracked for a release stream and selected for inclusion Transtats would show an error.</p>
+
+<p style="text-align:center;"><img src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/transtats/graphrule.png?raw=true" alt="graphrule" /></p>
+
+<h4>Experience</h4>
+
+<p>Transtats has two graph views: specific to a package in all languages for all branches and another specific to a release branch in chosen languages for selected packages. Latter is a graph rule representation and its accuracy depends on branch mapping of packages. A sync&rsquo;d package can appear in former view whereas branch mapping is necessary for latter.</p>
+
+<p style="text-align:center;"><img src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/transtats/graph.png?raw=true" alt="graph" /></p>
+
+<p>Transtats has reached <strong>0.1.0 release</strong>. If you like the idea and got something to share/contribute feel free to make it <a href="https://github.com/transtats">together</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zanata-Python-Client v1.5.0]]></title>
+    <link href="http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0/"/>
+    <updated>2016-04-20T10:25:08+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/04/20/zanata-python-client-v1-dot-5-0</id>
+    <content type="html"><![CDATA[<p>This release makes z-p-c little more stable with some major bugfixes. Feature wise we have <code>translation files mapping rules</code> added.</p>
+
+<blockquote><p>Translation Files Mapping Rules</p></blockquote>
+
+<p>Customize the way translation files are found when pushing, as well as the location they will be saved to when pulling.</p>
+
+<p>```</p>
+
+<!-- example rules definition in zanata.xml -->
+
+
+<p><rules>
+  <rule pattern="**/pot/*.pot">{locale}/{path}/{filename}.po</rule>
+  <rule pattern="**/po/*.pot">{path}/{locale_with_underscore}.po</rule>
+</rules>
+```</p>
+
+<!--more-->
+
+
+<p>In the example above, <code>pattern</code> identifies a source file, and the contents of the rule element specify how translation files will be stored.</p>
+
+<p>The <code>pattern</code> attribute is a <strong>glob</strong> matching pattern to your source document file(s). You can define more than one rule and apply each rule to a specific set of source documents using different patterns. The first matched rule will be applied to the file.</p>
+
+<p>Please note pattern value will be tested against file path relative to project root, not <code>src-dir</code>.</p>
+
+<p><code>pattern</code> is optional. If not specified, the rule will be applied to all source documents in your project. The actual rule consists of literal path and placeholders/variables.</p>
+
+<p>Supported placeholders/variables are:</p>
+
+<ul>
+<li><code>{path}</code> is the path between source document root (what you define as src-dir option) and the final file.</li>
+<li><code>{filename}</code> the source document name without leading path and extension.</li>
+<li><code>{locale}</code> the locale for the translation file. If you use &ldquo;map-from&rdquo; argument in your locale mapping, this will be the map-from value.</li>
+<li><code>{locale_with_underscore}</code> same as above except all hyphens &lsquo;-&rsquo; will be replaced with underscores &lsquo;_&rsquo;. This is typically used in properties and gettext projects.</li>
+<li><code>{extension}</code> the source document file extension</li>
+</ul>
+
+
+<p>For example, if you have the following file structure (where <code>{projectRoot}</code> is the root directory of your project and contains zanata.xml):</p>
+
+<pre><code>{projectRoot}/
+              templates/messages/kdeedu/kalzium.pot
+              templates/messages/kdeedu/artikulate.pot
+              de-DE/messages/kdeedu/kalzium.po
+              de-DE/messages/keeedu/artikulate.po
+              ...
+              zanata.xml
+</code></pre>
+
+<p>Here we have two source documents (with <code>pot</code> extension) and two translation documents (with <code>po</code> extension) for the locale <code>de-DE</code>.</p>
+
+<p>You can then use below configuration:</p>
+
+<pre><code>&lt;src-dir&gt;templates&lt;/src-dir&gt;
+&lt;trans-dir&gt;.&lt;/trans-dir&gt;
+&lt;rules&gt;
+    &lt;rule pattern="**/*.pot"&gt;{locale}/{path}/{filename}.po&lt;/rule&gt;
+&lt;/rules&gt;
+</code></pre>
+
+<p>Explanation: Since you have defined <code>&lt;src-dir&gt;</code> as templates, the source document <code>templates/messages/kdeedu/kalzium.pot</code> will have its path extracted relative to <code>{projectRoot}/templates</code>, which gives the relative path <code>messages/kdeedu/kalzium.pot</code>. The relative path then will be partitioned into several tokens to form the following variables:</p>
+
+<pre><code>{path}                          = 'messages/kdeedu/'
+{filename}                      = 'kalzium'
+{locale}                        = 'de-DE'
+{locale_with_underscore}        = 'de_DE'
+{extension}                     = 'pot'
+</code></pre>
+
+<p>NOTE the relative path <code>messages/kdeedu/kalzium.pot</code> will be the document&rsquo;s unique identifier inside Zanata. If you change src-dir setting later, e.g. to &ldquo;<strong>.</strong>&rdquo;, which results in a change of the relative path to <code>templates/messages/kdeedu/kalzium.pot</code>, pushing again will create a new document with the new path as its unique identifier, and the old document will be considered obsolete and will not be visible to anyone. The old document&rsquo;s translations will not be copied to the new document automatically, but they will appear as <strong>Translation Memory</strong> matches. This can be confusing and frustrating for translators.</p>
+
+<p>As the rule is defined as <code>{locale}/{path}/{filename}.po</code>, for locale <code>de-DE</code>,</p>
+
+<p>source file kalzium.pot&rsquo;s translation file will be written to or read from <code>{projectRoot}/de-DE/messages/kdeedu/kalzium.po</code>.
+source file artikulate.pot&rsquo;s translation file will be written to or read from <code>{projectRoot}/de-DE/messages/kdeedu/artikulate.po</code></p>
+
+<p>You can also replace <code>{locale}</code> with <code>{locale_with_underscore}</code> if you want all your locales to use underscore instead of hyphen. e.g. <strong>de-DE</strong> will become <strong>de_DE</strong> which results in translation files written to or read from <code>{projectRoot}/de_DE/messages/kdeedu/kalzium.po</code></p>
+
+<p>The mapping rules configuration is optional in <code>zanata.xml</code>. If not specified, standard rules are applied according to your project type.</p>
+
+<ul>
+<li>gettext: <code>{path}/{locale_with_underscore}.po</code></li>
+<li>podir: <code>{locale}/{path}/{filename}.po</code></li>
+<li>properties: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>utf8properties: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>xliff: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>xml: <code>{path}/{filename}_{locale_with_underscore}.{extension}</code></li>
+<li>file: <code>{locale}/{path}/{filename}.{extension}</code></li>
+</ul>
+
+
+<p>Feel free to give it a try and file bugs if you feel any.</p>
+
+<p>Happing Translation!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Working With TMGMT Zanata]]></title>
+    <link href="http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata/"/>
+    <updated>2016-02-25T11:53:55+05:30</updated>
+    <id>http://sundeep.co.in/blog/2016/02/25/working-with-tmgmt-zanata</id>
+    <content type="html"><![CDATA[<p>TMGMT Zanata is a plugin for Drupal&rsquo;s Translation Management Module TMGMT. The plugin allows TMGMT to send content to a configured Zanata project for translation, and can download translations as they are ready.</p>
+
+<p>Zanata is a web-based system for translators, content creators and developers to manage localization projects.</p>
+
+<ol>
+<li>Installation</li>
+<li>Set Up</li>
+<li>Configuration</li>
+<li>Translation Jobs</li>
+</ol>
+
+
+<!--more-->
+
+
+<h2>Installation</h2>
+
+<p>TMGMT Zanata requires the Translation Management Tool module (TMGMT) to be enabled. And to use Translation Management (Node Translation), the following modules must be installed:</p>
+
+<ul>
+<li>Entity API</li>
+<li>Views</li>
+<li>Chaos Tools (Required for Views)</li>
+<li>Views Bulk Operations</li>
+<li>Rules</li>
+<li>Content Translation (enable only, part of core)</li>
+<li>Locale (enable only, part of core)</li>
+</ul>
+
+
+<p>TMGMT also requires some other modules to be enabled:</p>
+
+<ul>
+<li>Translation Management UI</li>
+<li>Content Source User Interface</li>
+<li>Export / Import File</li>
+</ul>
+
+
+<p>This will automatically trigger the activation of Translation Management Core, Content Source and Translation Management Field modules.</p>
+
+<p>TMGMT Zanata Installation is similar to any Drupal module.</p>
+
+<p>Installed and enabled TMGMT with Zanata Plugin will look something similar to screenshot below:</p>
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/1_tmgmt.png" alt="Drupal TMGMT Module" /></p>
+
+<p>TMGMT Zanata plugin appears as <code>Zanata translator</code> and if enabled, can be used as one of the available translators to TMGMT module.</p>
+
+<h2>Set Up</h2>
+
+<h3>Enable translation for content types</h3>
+
+<p>To make each content type translatable, the publishing options for the content type must be set appropriately. To do so:</p>
+
+<ol>
+<li>In the administration menu, navigate to &ldquo;Structure&rdquo; > &ldquo;Content types&rdquo;.</li>
+<li>Find the content type you wish to make translatable and open its edit page.</li>
+<li>Change to the &ldquo;Publishing options&rdquo; tab</li>
+<li>Under &ldquo;Multilingual support, select "Enabled, with translation&rdquo;.</li>
+<li>Click &ldquo;Save content type&rdquo;</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/2_content_type.png" alt="Content Type" /></p>
+
+<h3>Add languages</h3>
+
+<p>To allow translation, your site must have one or more languages enabled, in addition to the default language. To enable a language:</p>
+
+<ol>
+<li>In the administration menu, navigate to &ldquo;Configuration&rdquo; > &ldquo;Regional and language&rdquo; > &ldquo;Languages&rdquo;.</li>
+<li>Open the &ldquo;Add language&rdquo; page</li>
+<li>Select an existing language or enter details for a custom language.</li>
+<li>Click &ldquo;Add language&rdquo; or &ldquo;Add custom language&rdquo;</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/3_languages.png" alt="Enable Languages" /></p>
+
+<h3>Enable the TMGMT Zanata plugin module</h3>
+
+<p>Once the code for the plugin module has been installed, enable the module. To do so, open &ldquo;Modules&rdquo; in the Administration menu, scroll to the &ldquo;Translation Management&rdquo; section, and ensure that &ldquo;Zanata translator&rdquo; is checked. Also ensure that TMGMT and its dependencies are checked. Click &ldquo;Save configuration&rdquo; to finalize the change.</p>
+
+<h3>Cron</h3>
+
+<p>Set up cron to automatically fetch new translations from Zanata server every time it runs.
+There are two separate ways to run Drupal&rsquo;s cron tasks:</p>
+
+<h4>Automated Cron</h4>
+
+<p>The automated cron system is compatible with all systems because it doesn&rsquo;t actually involve the system&rsquo;s cron daemon. It works by checking at the end of each Drupal request to see when cron last ran and, if it has been too long, processing the cron tasks as part of that request. The two down-sides are
+cron tasks will only run when Drupal is processing requests, and
+the &lsquo;weight&rsquo; (processing and memory) of running the cron tasks will be added to some arbitrary unknown page request, which may slow down those requests, which may slow down those requests, and has the potential to exceed memory limits on a complex site.</p>
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/4_cron.png" alt="Cron" /></p>
+
+<h4>External Cron</h4>
+
+<p>Create a cron job, or use some other external (to Drupal) method of triggering its cron tasks, such as an external cron job service like EasyCron or Cronless. This is the more reliable because it will always run on schedule. Note that if you create a cron job, you may want to disable the &ldquo;automated cron&rdquo; system entirely.</p>
+
+<p>Easiest way to setup external cron it to add following in system crontab:</p>
+
+<p><code>0 * * * * wget -O - -q -t 1 http://{your_drupal_server}/cron.php</code></p>
+
+<p>This would run every hour. Replace {your_drupal_server} with the url of your server.</p>
+
+<h2>Configuration</h2>
+
+<p>Before the module can be used, it must be configured with some details about Zanata - user and project. These are set on the translator configuration page.</p>
+
+<p>If you do not yet have a Zanata username or API key, or you have not yet created a project or project-version on Zanata for your website, use the following instructions to do so before you continue:</p>
+
+<ul>
+<li>To get a Zanata account, see Signing Up.</li>
+<li>For instructions on finding your API key, see &ldquo;User Configuration&rdquo; on the Configure the Client help page.
+
+<ul>
+<li>User settings are accessed through the Dashboard.</li>
+<li>Note that you do not need to create any config files for this plugin.</li>
+</ul>
+</li>
+<li>For help creating a project, see Project Creation.</li>
+<li>For help creating a version, see Version Creation.</li>
+</ul>
+
+
+<p>To open the translator configuration page and enter configuration:</p>
+
+<ol>
+<li>Open the Administration menu</li>
+<li>Navigate to &ldquo;Configuration&rdquo; -> &ldquo;Regional and language&rdquo; -> &ldquo;Translation Management Translators&rdquo;</li>
+<li>You will see a list of translator plugins that have been added to TMGMT. Look for &ldquo;Zanata translator&rdquo; in the list.</li>
+<li>If you see an auto-created Zanata translator, open the configuration page by clicking &ldquo;edit&rdquo;.</li>
+<li>If you do not see an auto-created Zanata translator, create one. To create a Zanata translator, click &ldquo;Add translator&rdquo;, enter an appropriate label such as &ldquo;Zanata translator&rdquo;, and in &ldquo;Translator plugin&rdquo; select &ldquo;Zanata translator&rdquo;. When you select &ldquo;Zanata translator&rdquo; its configuration page will be displayed below.</li>
+<li>If you do not wish to perform translation review in Drupal, for example if review will be done in Zanata, ensure that &ldquo;Auto accept finished translations&rdquo; is checked. This setting can be changed later.</li>
+<li>Ensure that the Zanata server URL shows the correct Zanata server on which you have an account and have created a project for your website. To find the full URL, open the Zanata server and click the Zanata logo to open the homepage. The URL shown in your browser address bar is the server URL, but do not include a / at the end. For example, the homepage for the main Zanata server is at &ldquo;<a href="http://translate.zanata.org/zanata/">http://translate.zanata.org/zanata/</a>&rdquo; so the URL for this server is &ldquo;<a href="http://translate.zanata.org/zanata">http://translate.zanata.org/zanata</a>&rdquo;.</li>
+<li>Enter your username, your API key, your project ID and your project-version ID. Be careful to use your Zanata username rather than your display name, and the Project ID rather than the Project Name. See the links above for directions that may help to find this information.</li>
+<li>Click &ldquo;Save translator&rdquo; to complete the configuration.</li>
+<li>You are now able to create translation jobs that use Zanata translator.</li>
+</ol>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/5_settings.png" alt="Plugin Configuration" /></p>
+
+<p>Feature, <code>Translation Periodic Check</code> depends upon Cron setup and it fetches new translations from Zanata server every time cron runs.</p>
+
+<h2>Translation Jobs</h2>
+
+<p>TMGMT Zanata is a plugin for the Translation Management Tool (TMGMT), so most of the directions for creating and interacting with translation jobs can be taken directly from TMGMT&rsquo;s documentation. Let’s see translation of an article using TMGMT Zanata.</p>
+
+<ul>
+<li>In your website, navigate to article&rsquo;s page (you want to translate) and click on <code>Translate</code>. If <code>Translate</code> is not appearing please see configurations and complete the steps.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/6_page.png" alt="Page" /></p>
+
+<ul>
+<li>Clicking on <code>Translate</code> would take you to this page. Here, you can select language and request translation. Translation job would be created as soon as you request translation.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/7_select_lang.png" alt="Select Language" /></p>
+
+<ul>
+<li>Upon request, translation job would be added to cart. Here we can select translator for the added job and submit it. Job items and target language should be verified. As soon as we submit or checkout, page’s content would be pushed to server for translation.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/8_submit.png" alt="Submit Job" /></p>
+
+<ul>
+<li>After submission we receive confirmation which looks something like:</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/9_confirmation.png" alt="Submit Confirmation" /></p>
+
+<ul>
+<li>In Zanata, we can navigate to the document uploaded.
+
+<ul>
+<li>As mentioned in Zanata Translator Plugin Settings, select Project and Version.</li>
+<li>Select the language for which job is created.</li>
+<li>Here, we can see list of documents uploaded for the given language.</li>
+<li>Select the document which belongs to submitted job.
+
+<ul>
+<li>Please refer submission confirmation notes to identify document name, as it may differ than the article’s heading.</li>
+</ul>
+</li>
+<li>This would take you to Zanata translation page. Here, you can translate the article.
+Upon translation of content, mark complete to make them available for pull.</li>
+</ul>
+</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/10_zanata.png" alt="Zanata" /></p>
+
+<ul>
+<li>If <code>Auto accept finished translations</code> and <code>Translation Periodic Check</code> are checked in translators settings, new translations delta are fetched every time cron runs and article will be published automatically once it reach 100% translated. We can fetch new translations and/or re-submit it to translator for active translation jobs.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/11_manage.png" alt="Manage Job" /></p>
+
+<ul>
+<li>Once translations are fetched from Zanata, it would be available for review. This step can be skipped by checking <code>Auto accept finished translations</code>. Accepted translations look like the screen below. Acceptance of translation makes a translation job finished.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/12_fetch.png" alt="Fetch Translation" /></p>
+
+<ul>
+<li>As soon as a translation job finishes, TMGMT publishes it and a navigation is added to the page which takes user to translated version of the article of intended language.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/13_publish.png" alt="Publish Translation" /></p>
+
+<ul>
+<li>Summary of translation jobs looks similar to below screen.</li>
+</ul>
+
+
+<p><img src="https://raw.githubusercontent.com/sundeep-co-in/sundeep-co-in.github.io/source/source/images/tmgmt_zanata/14_summary.png" alt="Job Summary" /></p>
+
+<h3>References</h3>
+
+<ul>
+<li><a href="https://www.drupal.org/project/tmgmt_zanata">https://www.drupal.org/project/tmgmt_zanata</a></li>
+<li><a href="https://www.drupal.org/node/1490024">https://www.drupal.org/node/1490024</a></li>
+<li><a href="https://www.drupal.org/cron">https://www.drupal.org/cron</a></li>
+<li><a href="https://www.drupal.org/node/1547632">https://www.drupal.org/node/1547632</a></li>
+</ul>
+
+
+<p>Happy Website Translation!!</p>
+]]></content>
+  </entry>
+  
+</feed>
