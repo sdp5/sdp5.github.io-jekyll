@@ -3,7 +3,7 @@ layout: post
 title: "flock 2017"
 date: 2017-09-01 19:37:10 +0530
 comments: true
-categories: events fedora
+categories: events
 ---
 "Reporting time was 7:30pm and its 7:50, still your are saying it will take another 15 mins" this was my words while I was waiting and talking with cab driver. I was travelling to US for the very first time, and was little excited. We covered the distance between Pune and Mumbai Airport in decent time and managed to reach there by 12:30 midnight. Our zone was E in the plane and it was Emirates. We reached Dubai early morning. I tried to capture [Burj Khalifa](https://en.wikipedia.org/wiki/Burj_Khalifa).
 

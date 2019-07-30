@@ -3,7 +3,7 @@ layout: post
 title: "flock 2018"
 date: 2018-08-20 14:46:46 +0530
 comments: true
-categories: events fedora
+categories: events
 ---
 
 After the US, I was really excited to visit Europe this time for fedora flock conference. A lot of preparation: air tickets, stay, documents for VISA and more. Unfortunately we got our VISA declined and everything hanged. We re-applied and got it approved in second time that to just two days before to the planned take off. Nevertheless did all of slides/demo, shopping & packing and was ready for cab pickup. This time Pune to Mumbai was really relaxing and we reached [Mumbai Airport](https://csia.in/) before time! With some flight delay, reached [Frankfurt Airport](https://www.frankfurt-airport.com/en.html) *landing was really smooth*. By evening we reached the beautiful city - [Dresden](https://www.dresden-airport.de/). Venue for the conference this year was - The Radisson Blu Park Hotel & Conference Centre at Radebeul.
