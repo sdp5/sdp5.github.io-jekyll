@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Fedora | sundeep's blog]]></title>
   <link href="http://sundeep.co.in/blog/categories/fedora/atom.xml" rel="self"/>
   <link href="http://sundeep.co.in/"/>
-  <updated>2019-07-30T14:00:13+05:30</updated>
+  <updated>2019-07-30T14:54:06+05:30</updated>
   <id>http://sundeep.co.in/</id>
   <author>
     <name><![CDATA[Sundeep Anand]]></name>
@@ -193,52 +193,6 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Flock 2018]]></title>
-    <link href="http://sundeep.co.in/blog/2018/08/20/flock-2018/"/>
-    <updated>2018-08-20T14:46:46+05:30</updated>
-    <id>http://sundeep.co.in/blog/2018/08/20/flock-2018</id>
-    <content type="html"><![CDATA[<p>After the US, I was really excited to visit Europe this time for fedora flock conference. A lot of preparation: air tickets, stay, documents for VISA and more. Unfortunately we got our VISA declined and everything hanged. We re-applied and got it approved in second time that to just two days before to the planned take off. Nevertheless did all of slides/demo, shopping &amp; packing and was ready for cab pickup. This time Pune to Mumbai was really relaxing and we reached <a href="https://csia.in/">Mumbai Airport</a> before time! With some flight delay, reached <a href="https://www.frankfurt-airport.com/en.html">Frankfurt Airport</a> <em>landing was really smooth</em>. By evening we reached the beautiful city - <a href="https://www.dresden-airport.de/">Dresden</a>. Venue for the conference this year was - The Radisson Blu Park Hotel &amp; Conference Centre at Radebeul.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/dresden-hotel.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/dresden-hotel.jpg?raw=true</a>" width="450" height="280"></p>
-
-<!--more-->
-
-
-<p>The conference started with warm welcome by <code>Brian Exelbierd</code> and keynote by <code>Matthew Miller</code>. He took us on states of fedora. How fedora performed last year and how was the last year in comparison to last few years. Community involvement and usage, statistics graphs. Further discussions were around fedora modularity, rings, coreOS, atomic host etc.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/keynote.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/keynote.jpg?raw=true</a>" width="450" height="280"></p>
-
-<p><code>Dusty Maybe</code> discussed cri-o, kubernetes, container runtimes, podman, builddah and app-containers. <code>Matthias Clasen</code> from desktop team joined and discussed various aspects of the new <a href="https://teamsilverblue.org/">silverblue</a> project. Fedora Silverblue uses rpm-ostree and Flatpaks to create an image-based &ldquo;git-like&rdquo; operating system with easy rollbacks and workflows.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/silverblue.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/silverblue.jpg?raw=true</a>" width="450" height="280"></p>
-
-<p>Post lunch, we had a talk on &ldquo;Advanced Ansible: Extending with Plugins&rdquo; by <code>Adam Miller</code>. Ansible is a radically simple IT agentless automation system. It handles configuration-management, application deployment, cloud provisioning, ad-hoc task-execution, and multinode orchestration - including trivializing things like zero-downtime rolling updates with load balancers. He discussed how to extend Ansible core functionalities with Plugins which can be a catalyst in solving problems.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/ansible.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/ansible.jpg?raw=true</a>" width="450" height="280"></p>
-
-<p>Next morning, was my talk after <code>Amitosh Swain Mahapatra</code>&rsquo;s State of SELinux in fedora desktop, modularity and containers. My topic was &ldquo;Using Transtats to track translation string change&rdquo;. <code>Parag Nemade</code> joined me to deliver the talk. I introduced Transtats Jobs. Here are the <a href="https://speakerdeck.com/sundeep/using-transtats-to-track-translation-string-change">slides</a> and <a href="https://www.youtube.com/watch?v=D1sHpxfxrk4">demo</a>. Transtats Jobs are flexible, YML based, which can solve many problems in i18n/l10n space! As-in tracking string change, inspecting SRPM for i18n/translation errors etc.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/talk.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/talk.jpg?raw=true</a>" width="450" height="280"></p>
-
-<p>Post lunch on Day 2, we attended &ldquo;Modularity Release Train&rdquo; by <code>Stephen Gallagher</code> and <code>Mohan Boddu</code>. Followed by building &ldquo;Fedora CoreOS&rdquo; by <code>Dusty Maybe</code>. In the evening we head to the Dresden city center, to explore and sightseeing - Zwinger, Church, Opera House and Castle.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/city-center.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/city-center.jpg?raw=true</a>" width="450" height="280"></p>
-
-<p>Next morning, of flock day 3, started with the session by <code>Owen Taylor</code> on &ldquo;Building flatpaks from fedora packages&rdquo;. Had joined <code>Adam Miller</code>&rsquo;s session on &ldquo;Jumpstart your fedora contribution by learning Ansible&rdquo;. He touched upon using <em>ansible-test</em> module. Post lunch, we had our hackathon on &ldquo;i18n development and testing&rdquo;. <code>Pooja</code> and <code>Pravin</code> discussed i18n test automation using openQA and some plans to integrate test cases with fedora CI. This evening flock had dinner plans at the great <a href="http://www.rollercoasterrestaurant.com/en/">Rollercoaster</a> restaurant. An amazing experience!</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/roller-coster.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/roller-coster.jpg?raw=true</a>" width="450" height="280"></p>
-
-<p>The last day - day 4 - flock 2018. I was really interested in talks from fedora infrastructure team. First session was about migrating apps to new fedmsg architecture &ldquo;fedora messaging&rdquo; by <code>Aurelien Bompard</code> and <code>Jeremy Cline</code>. Its Python ZeroMQ libraries underline. <em>fedmsg-migration-tools</em> are really helpful here! Then we had a talk on &ldquo;How fedora infrastructure is using OpenShift to mode 2 shift&rdquo; by <code>Randy Barlow</code> and <code>Patrick Uiterwijk</code>. They use Ansible playbooks to push object definitions to OpenShift. And thus we came to the wrap up of flock twenty eighteen. Everyone gathered in the main hall for conclusion by fedora council members!</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/leaving.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2018/leaving.jpg?raw=true</a>" width="450" height="280"></p>
-
-<p>Each fedora flock conference is unique, which helps the vibrant community meet and greet!!  With some hopes and plans for next year, boarded flight back to home.</p>
-
-<p>thanks fedora :-)</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[I18n FAD]]></title>
     <link href="http://sundeep.co.in/blog/2017/11/28/i18n-fad/"/>
     <updated>2017-11-28T14:22:51+05:30</updated>
@@ -297,108 +251,6 @@
 <p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_8.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/i18nfad17/FAD_8.JPG?raw=true</a>" width="450" height="280"></p>
 
 <p>All thanks to <a href="https://getfedora.org/">Fedora</a> to care for their contributors that much! And bringing them together .. :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Flock 2017]]></title>
-    <link href="http://sundeep.co.in/blog/2017/09/01/flock-2017/"/>
-    <updated>2017-09-01T19:37:10+05:30</updated>
-    <id>http://sundeep.co.in/blog/2017/09/01/flock-2017</id>
-    <content type="html"><![CDATA[<p>&ldquo;Reporting time was 7:30pm and its 7:50, still your are saying it will take another 15 mins&rdquo; this was my words while I was waiting and talking with cab driver. I was travelling to US for the very first time, and was little excited. We covered the distance between Pune and Mumbai Airport in decent time and managed to reach there by 12:30 midnight. Our zone was E in the plane and it was Emirates. We reached Dubai early morning. I tried to capture <a href="https://en.wikipedia.org/wiki/Burj_Khalifa">Burj Khalifa</a>.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2170.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2170.JPG?raw=true</a>" width="450" height="280"></p>
-
-<p>And then was starting of a long journey - Dubai to Boston. It was 5-6 movies long. Had great food and drinks. And a decent 3 hrs nap. All thanks to Emirates crew and services! We landed Boston 15 past 14 hrs, in the afternoon and waited for 25-30 mins at Bus stop to Hyannis, Cape Cod. Sun was about to sign-off for the day and street lights were yet to glow when we had great MacD burger, and headed towards <strong>The resort and conference center</strong> - flock'17 venue!</p>
-
-<!--more-->
-
-
-<h3>29th Aug &lsquo;17</h3>
-
-<p><em>Brian Exelbierd</em> welcome and greet all of us. <em>Matthew Miller</em> took us on a tour, how fedora did in last few releases. Its state, community engagements and future plans. Everyone was enthusiastic about the sessions to come and the registration desk was really busy!</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2196.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2196.JPG?raw=true</a>" width="450" height="280"></p>
-
-<p>Just after coffee break, speakers queued up and briefly advertised their sessions. And after lunch, we joined <em>Adam Williamson</em> on his talk <code>Packagers: working with automated test systems</code>.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2205.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2205.JPG?raw=true</a>" width="450" height="280"></p>
-
-<p>The talk was around Python version checks, framework for automated tests execution: Taskotron, rpmdeplint which is a tool to find errors in RPM packages in the context of their dependency graph. Though rpmdeplint doesnot check &lsquo;reverse&rsquo; dependencies. Rpmgrill - utility to catch koji problems. And OpenQA tests. OpenQA are designed for operating-system level automated testing. Adam&rsquo;s talk was quite informative about different test frameworks actively being used in fedora. After this talk, we rushed to join <em>Josh Berkus</em> on his talk about <code>Become a container maintainer</code>.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2206.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2206.JPG?raw=true</a>" width="450" height="280"></p>
-
-<p>He started his session with <a href="https://fedoraproject.org/wiki/Container:Guidelines">container guidelines</a>. Fixing Dockerfile for registry, labels and entry point. And briefly explained container <a href="https://fedoraproject.org/wiki/Container:Review_Process">review process</a>. This was a do session, and we had to write Dockerfile and review others. Many developers write Dockerfile for various apps but they hardly bother to submit it to fedora registry, this session filled this gap.</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2207.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2207.JPG?raw=true</a>" width="450" height="280"></p>
-
-<p>In the evening we had game night and drinks. Many participated in swapping candies as well.</p>
-
-<h3>30th Aug &lsquo;17</h3>
-
-<p>A day of containers and atomic host talks. This track opened with <em>Dan Walsh</em>&rsquo;s talk on <code>New Container Technologies</code>. He covered System containers, Skopeo, Buildah, CRI-O, storage and images. A real deep-dive!</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2216.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2216.JPG?raw=true</a>" width="450" height="280"></p>
-
-<p>Highlights of the talk include linux, containers should be open, openshift, standard container image format, push and pull, moving images between registries, execute container image: runc runtime, PGP signing of images, system containers, standalone containers (service specific), improved storage: read-only and read-write containers, in-prod containers should be immutable, shared file systems: run same images on multiple servers, instantaneous updates, building OCI image, buildah, APIs to manage containers, <a href="https://github.com/kubernetes-incubator/cri-o">CRI-O</a> effort: support multiple runtime and KPOD - mgmt tool for CRI-O. After this, we continued with <code>System Containers</code> and <code>Discussing Kubernetes &amp; Origin Deployment Options</code> talks. During lunch we stepped to parking area and made a few clicks!</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2244.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2244.JPG?raw=true</a>" width="450" height="280"></p>
-
-<p>And then was the Atomic track. <em>Dusty Mabe</em> started the track with his talk <code>Atomic Host 101</code> and covered topics like Atomic Upgrades/Rollbacks, Browsing OS History, Package Layering, Live filesystem updates, Configuring Storage for Containers and Viewing Changes to your deployed files. This was also a <a href="https://dustymabe.com/2017/08/29/atomic-host-101-lab-part-0-preparation/">do session</a>. After this we had <code>Setup your own Atomic Workstation</code> and <code>Automate Building Custom Atomic Host with Ansible</code> talks. The evening ended in social gathering, playing games and tasty dinner all organised by flock.</p>
-
-<h3>31st Aug &lsquo;17</h3>
-
-<p>This is the day I was waiting for! <a href="https://fedoraproject.org/wiki/G11N">Globalization</a> track and my talk. Before lunch I was part of <code>Fedora Infrastructure: To infinity and Beyond</code> and <code>How do we restore Fedora to factory settings?</code> sessions. G11N track started with <em>Jens Petersen</em> and <em>Parag Nemade</em> talk about <code>Fedora i18n</code>. Where they covered some interesting topics like Langpacks auto-installation, libpinyin-2, Emoji, ibus, Glibc locales, Flatpak i18n, and others. Jens shared some ideas around Dynamic locale switching, Separation of translations (workflow and packaging) and Multilingual configuration (fallback, fonts).</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2275.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2275.JPG?raw=true</a>" width="450" height="280"></p>
-
-<p>And here come <a href="https://www.youtube.com/watch?v=Ln9e3LM2Ht8">my talk</a> on <code>Introduction to Transtats</code>. Tool to track translation progress of packages across releases. You can find slides <a href="https://speakerdeck.com/sundeep/introduction-to-transtats">here</a>. This was followed by l10n talk by <em>Pravin Satpute</em>, <em>Alex Eng</em> and <em>Jean-Baptiste</em>. Alex demo&rsquo;d Jenkins-Zanata plugin. Jean makes us feel what processes are required to make fedora localization community a better place. Thank you Jean!</p>
-
-<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2281.JPG?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/flock2017/IMG_2281.JPG?raw=true</a>" width="450" height="280"></p>
-
-<p>We had a long discussion and managed to figure-out action items towards the same. The team went for dinner together and I must say we had a great evening. And this called for conclusion of talks and do-sessions at flock 2017.</p>
-
-<p>An incredible conference: <code>flock @hyannis</code> :-)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Transtats]]></title>
-    <link href="http://sundeep.co.in/blog/2017/03/17/introduction-to-transtats/"/>
-    <updated>2017-03-17T15:56:42+05:30</updated>
-    <id>http://sundeep.co.in/blog/2017/03/17/introduction-to-transtats</id>
-    <content type="html"><![CDATA[<p>From last few months, working on an idea. Globalization market is evolving and we have better translation platforms out in the market, some of them are closed source but some are open. In the whole process, success is defined when users identify some-software xyz-release is now available in so and so languages. The complexity increases when a project involves various packages. Is translation progress of all involved packages up-to-the-mark for the project&rsquo;s next release? <a href="http://transtats.org/">Transtats</a> is an answer to this!</p>
-
-<p>Though it is just started and in very initial stage, one can use it for tracking translation progress. <strong>Transtats</strong> tries to create mapping between upstream project - translation platform and release streams. You may checkout <a href="http://docs.transtats.org/en/latest/">docs</a> for deeper insights. It has some inventory on which jobs operate, to create graphs. Lets see few steps how we get started using it.</p>
-
-<!--more-->
-
-
-<h4>Check Inventory</h4>
-
-<p>Graphs will be generated for enabled languages, aliases are used while syncing. One can create a language set, which can be associated with a release branch. Multiple instances of a translation platform can be added. RHEL and Fedora are release streams whereas Fedora 26 is a branch. A release branch should have a language set and a schedule. Transtats jobs sync at intervals for keeping stats and schedule latest.</p>
-
-<p style="text-align:center;"><img src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/transtats/inventory.png?raw=true" alt="inventory" /></p>
-
-<h4>Add and Configure Packages</h4>
-
-<p>While adding a package, upstream URL is required. And package name is verified with selected translation platform. Translation of a package can be tracked for multiple release streams. Package can be sync&rsquo;d while adding itself. Refreshing a package updates its details, translation stats and creates branch mapping. It maps Transtats release branches with most suitable project versions available at translation platform.</p>
-
-<p style="text-align:center;"><img src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/transtats/package.png?raw=true" alt="package" /></p>
-
-<h4>Add Graph Rule</h4>
-
-<p>Slug form of rule name would be saved. This should be specific for a release branch. Packages having branch mapping created can only be included here. Either languages would be picked from associated language set with release branch or can be chosen. Somehow if a package is not tracked for a release stream and selected for inclusion Transtats would show an error.</p>
-
-<p style="text-align:center;"><img src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/transtats/graphrule.png?raw=true" alt="graphrule" /></p>
-
-<h4>Experience</h4>
-
-<p>Transtats has two graph views: specific to a package in all languages for all branches and another specific to a release branch in chosen languages for selected packages. Latter is a graph rule representation and its accuracy depends on branch mapping of packages. A sync&rsquo;d package can appear in former view whereas branch mapping is necessary for latter.</p>
-
-<p style="text-align:center;"><img src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/transtats/graph.png?raw=true" alt="graph" /></p>
-
-<p>Transtats has reached <strong>0.1.0 release</strong>. If you like the idea and got something to share/contribute feel free to make it <a href="https://github.com/transtats">together</a>.</p>
 ]]></content>
   </entry>
   
