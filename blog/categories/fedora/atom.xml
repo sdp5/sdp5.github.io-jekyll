@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Fedora | sundeep's blog]]></title>
   <link href="http://sundeep.co.in/blog/categories/fedora/atom.xml" rel="self"/>
   <link href="http://sundeep.co.in/"/>
-  <updated>2019-07-31T16:48:45+05:30</updated>
+  <updated>2019-07-31T16:59:32+05:30</updated>
   <id>http://sundeep.co.in/</id>
   <author>
     <name><![CDATA[Sundeep Anand]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Langpacks Auto-installation]]></title>
+    <link href="http://sundeep.co.in/blog/2019/07/31/langpacks-autoinstall/"/>
+    <updated>2019-07-31T17:00:21+05:30</updated>
+    <id>http://sundeep.co.in/blog/2019/07/31/langpacks-autoinstall</id>
+    <content type="html"><![CDATA[<p>Fedora Linux Operating System has strong language support. Underneath, there are a lot of components that facilitate <code>display</code>, <code>input</code> and <code>storage</code> of language specific data. Users can install Fedora in their native language and continue using it, or they can easily switch their workstation from one language to another. For the latter case, the steps are:</p>
+
+<ul>
+<li>Open “GNOME Control Center”</li>
+<li>Select “Region &amp; Language” tab.</li>
+<li>Select language from modal box and logoff-login the session.</li>
+</ul>
+
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/autoinstall-langpacks/switch-lang.png?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/autoinstall-langpacks/switch-lang.png?raw=true</a>" width="450" height="280"></p>
+
+<!-- more -->
+
+
+<p>Here, the user has selected Japanese language. As soon as the user logs into the new session, Japanese <code>locale data</code> would be triggered and applications would appear in Japanese.  Language data available in langpacks (<em>language packs</em>) include fonts, input methods, translations etc.</p>
+
+<p>To make installation of langpacks convenient, <code>langpack meta packages</code> have been created. Once a meta package is installed, the required langpacks for installed applications are downloaded and installed too. For Japanese, the installation command would be:</p>
+
+<pre><code>[localhost] $ sudo dnf install langpacks-ja
+</code></pre>
+
+<p>Earlier, this installation was a manual step. After long discussion, <code>GNOME-Software</code> was identified to be an ideal setup to have langpacks auto-installation functionality.</p>
+
+<p>Now, with the <a href="https://gitlab.gnome.org/GNOME/gnome-software/merge_requests/257">implementation</a>, users need not worry about installation of langpacks as it gets installed automatically in the background as soon as GNOME-Software starts looking for updates the first time a user logs into the desktop in that language.</p>
+
+<p>Because this is a <code>background task</code>, no notifications are popped, however here is how a debug message is logged.</p>
+
+<p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/autoinstall-langpacks/langpacks-ja.png?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/autoinstall-langpacks/langpacks-ja.png?raw=true</a>" width="450" height="280"></p>
+
+<p>If the user uninstalls the language meta package, this feature will not automatically reinstall it. Users can still reinstall the meta package manually if they wish to use it again.</p>
+
+<p>I really hope this feature to be available in Fedora 31. And make the lives of Fedora native language users easier. :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Transtats - Getting Started]]></title>
