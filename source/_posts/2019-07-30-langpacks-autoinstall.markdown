@@ -28,10 +28,10 @@ Earlier, this installation was manual (*and an overhead*). After long discussion
 
 Now, with the [implementation](https://gitlab.gnome.org/GNOME/gnome-software/merge_requests/257), user need not worry about installation of langpack; as in the background it gets installed automatically as soon as GNOME-Software starts looking for updates, may be for the first time, in both the scenarios:
 
-* It’s a new installation in any foriegn language and user continues to use that language.
-* The user switches into new session of a foriegn language from English or any other language.
+* It’s a new installation in any foreign language and user continues to use that language.
+* The user switches into new session of a foreign language from English or any other language.
 
-Because this is a `background task`, no notifications are popped up, however, here is how a debug message is logged. Just in case, user uninstalls the language meta package, this feature may not reinstall it.
+Because this is a `background task`, no notifications are popped, however, here is how a debug message is logged. Just in case, user uninstalls the language meta package, this feature may not reinstall it.
 
 {% img center https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/autoinstall-langpacks/langpacks-ja.png?raw=true 450 280 %}
 
