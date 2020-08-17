@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rpi | sundeep's blog]]></title>
   <link href="http://sundeep.co.in/blog/categories/rpi/atom.xml" rel="self"/>
   <link href="http://sundeep.co.in/"/>
-  <updated>2020-08-17T14:17:21+05:30</updated>
+  <updated>2020-08-17T14:20:59+05:30</updated>
   <id>http://sundeep.co.in/</id>
   <author>
     <name><![CDATA[Sundeep Anand]]></name>
@@ -33,6 +33,9 @@
 <p>Get your laptop. Hit the <a href="https://www.raspberrypi.org/downloads/">downloads</a> page! Make <code>Raspberry Pi Imager</code> work on your system. Basically we will be learning <a href="https://kodi.tv/">kodi</a>, however, lets use <a href="https://osmc.tv/">OSMC</a> which wraps it inside! Download OSMC image respective to the board you&rsquo;re using from <a href="https://osmc.tv/download/">Disk Images</a>. Now, burn that onto your SD Card using the Raspberry Pi Imager. Plug SD card and other peripherals to your board and turn the power on. Here is your OS preparing &hellip;</p>
 
 <p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/osmc-boot.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/osmc-boot.jpg?raw=true</a>" width="450" height="280"></p>
+
+<!-- more -->
+
 
 <p>OSMC (<em>open source media center</em>) is debian based OS, hence all <code>apt</code> here!<br/>With small settings check/enable <code>ssh</code> and try <a href="https://osmc.tv/wiki/general/accessing-the-command-line/">connecting</a>. Look at sources in <code>/etc/apt/sources.list.d/</code>. The UI must have astonished you by now.</p>
 
