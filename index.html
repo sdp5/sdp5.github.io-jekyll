@@ -9,7 +9,7 @@
   <meta name="author" content="Sundeep Anand">
 
   
-  <meta name="description" content="Fedora Linux Operating System has strong language support. Underneath, there are a lot of components that facilitate display, input and storage of &hellip;">
+  <meta name="description" content="Raspberry Pi has gained popularity in a very less time for obvious reasons. Let&rsquo;s take a look how we can turn our TVs smart with the tiny yet &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,72 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2020/08/17/making-your-tv-smart-with-rpi/">Making Your TV Smart With Rpi</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2020-08-17T12:16:12+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>12:16 pm</span></time>
+        
+           | <a href="/blog/2020/08/17/making-your-tv-smart-with-rpi/#disqus_thread"
+             data-disqus-identifier="http://sundeep.co.in/blog/2020/08/17/making-your-tv-smart-with-rpi/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://www.raspberrypi.org/">Raspberry Pi</a> has gained popularity in a very less time for obvious reasons. Let&rsquo;s take a look how we can turn our TVs smart with the tiny yet powerful board. Quickly check you have following:</p>
+
+<ul>
+<li>Raspberry Pi board</li>
+<li>Power cable (Micro USB/USB Type-C)</li>
+<li>SD Card (min 8 GB)</li>
+<li>Ethernet cable</li>
+<li>Keyboard, Mouse</li>
+<li>HDMI Cable, TV or Monitor</li>
+</ul>
+
+
+<p>Get your laptop. Hit the <a href="https://www.raspberrypi.org/downloads/">downloads</a> page! Make <code>Raspberry Pi Imager</code> work on your system. Basically we will be learning <a href="https://kodi.tv/">kodi</a>, however, lets use <a href="https://osmc.tv/">OSMC</a> which wraps it inside! Download OSMC image respective to the board you&rsquo;re using from <a href="https://osmc.tv/download/">Disk Images</a>. Now, burn that onto your SD Card using the Raspberry Pi Imager. Plug SD card and other peripherals to your board and turn the power on. Here is your OS preparing &hellip;</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/osmc-boot.jpg?raw=true" width="450" height="280"></p>
+
+<p>OSMC (<em>open source media center</em>) is debian based OS, hence all <code>apt</code> here!<br/>With small settings check/enable <code>ssh</code> and try <a href="https://osmc.tv/wiki/general/accessing-the-command-line/">connecting</a>. Look at sources in <code>/etc/apt/sources.list.d/</code>. The UI must have astonished you by now.</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/osmc-menu.jpeg?raw=true" width="450" height="280"></p>
+
+<p>I&rsquo;m sure, you cannot wait to configure <code>YouTube</code> and/or <code>Amazon Prime</code> in your setup. Let&rsquo;s roll. <code>YouTube</code> video add-on is available in <em>Kodi Add-on repository</em> so, its just adding/enabling that from navigating to <code>Home &gt; Add-ons &gt; Install from repository &gt; Video Add-ons</code>.</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/youtube-install.png?raw=true" width="450" height="280"></p>
+
+<p>Though you&rsquo;ve enabled YouTube; you may encounter an error <code>accessNotConfigured</code>. And the fix is simple. Navigate to <a href="https://console.developers.google.com/">Google&rsquo;s Developers Console</a> to register a new youtube project to generate <code>API Key</code>, <code>API ID</code> and <code>API Secret</code>. Fill them. Now, it should be working.</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/youtube-api.png?raw=true" width="450" height="280"></p>
+
+<p>For Netflix and Amazon Prime, get onto your <code>ssh console</code> and follow this amazing <a href="https://makingstuffwork.net/technology/install-netflix-amazon-prime-video-plex-raspberry-pi-kodi-osmc/">blog post</a>. Source repo is <a href="https://github.com/Sandmann79/xbmc">here</a>. ARMv6 processors may not support these formats because of <a href="https://github.com/emilsvennesson/script.module.inputstreamhelper/issues/23">libwidevine</a>. Enjoy your add-ons a bit. It has a plenty of options across <code>programs</code>, <code>music</code>, <code>pictures</code> and <code>vidoes</code>. Enable a few more to test performance!</p>
+
+<p>Next is to get rid of keyboard/mouse. Look none other than <a href="https://yatse.tv/">Yatse</a>. <a href="https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree&amp;hl=en_IN">Download</a> and play it on your mobile device. Remember to keep both your mobile and Raspberry Pi on the same network. <code>Yatse</code> will discover your kodi automatically to let you interact seamlessly.</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/yaste.png?raw=true" width="450" height="280"></p>
+
+<p><a href="https://github.com/xbmc">Kodi</a> is great community with awesome people.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -443,47 +509,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/10/22/pythonpune-meetup-oct-16/">PythonPune MeetUp - Oct '16</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-10-22T15:58:02+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>3:58 pm</span></time>
-        
-           | <a href="/blog/2016/10/22/pythonpune-meetup-oct-16/#disqus_thread"
-             data-disqus-identifier="http://sundeep.co.in/blog/2016/10/22/pythonpune-meetup-oct-16/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It has been long attending some talks - specially around <strong>Python</strong>!! And PythonPune looks perfect to meet some folks working with Python in the happening city - PUNE. If I remember correctly it was 6:30 I woke up and dropped text to my friend at Baner - <em>planning to spend latter half of the day at your place</em> - as venue was at GSLabs, Baner.</p>
-
-<h3>Opening</h3>
-
-<p>Chandan Kumar greeted everyone there and with some backgrounds/purpose of this meetup called for a round of introduction - <em>we had the strength of 50</em> - with some new faces. Nevertheless common goal was to <strong>learn new things</strong>. Akshay Goel started the talks with his discussions around <code>pyautogui</code> - an awesome module to automate keyboard/mouse events.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/10/22/pythonpune-meetup-oct-16/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -537,6 +562,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2020/08/17/making-your-tv-smart-with-rpi/">Making Your TV Smart With Rpi</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2019/07/31/langpacks-autoinstall/">Langpacks Auto-installation</a>
       </li>
     
@@ -552,15 +581,11 @@
         <a href="/blog/2018/08/20/flock-2018/">Flock 2018</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2018/03/31/fossasia-2018/">FOSSASIA 2018</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/events/'>events (7)</a></li><li><a href='/blog/categories/fedora/'>fedora (3)</a></li><li><a href='/blog/categories/i18n-slash-l10n/'>i18n/l10n (7)</a></li><li><a href='/blog/categories/php/'>php (1)</a></li><li><a href='/blog/categories/python/'>python (5)</a></li><li><a href='/blog/categories/zanata/'>zanata (6)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/events/'>events (7)</a></li><li><a href='/blog/categories/fedora/'>fedora (3)</a></li><li><a href='/blog/categories/i18n-slash-l10n/'>i18n/l10n (7)</a></li><li><a href='/blog/categories/kodi/'>kodi (1)</a></li><li><a href='/blog/categories/php/'>php (1)</a></li><li><a href='/blog/categories/python/'>python (5)</a></li><li><a href='/blog/categories/rpi/'>rpi (1)</a></li><li><a href='/blog/categories/zanata/'>zanata (6)</a></li></ul>
 </section>
 
 
@@ -581,12 +606,8 @@
 </section>
 
 <section>
-  <h1>Copyrights</h1>
-  <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-</section>
-<section>
   <h1>Tag Cloud</h1>
-    <span id="tag-cloud"><a href='/blog/categories/events' style='font-size: 160.0%'>events(7)</a> <a href='/blog/categories/fedora' style='font-size: 125.71428571428572%'>fedora(3)</a> <a href='/blog/categories/i18n-slash-l10n' style='font-size: 160.0%'>i18n/l10n(7)</a> <a href='/blog/categories/php' style='font-size: 108.57142857142857%'>php(1)</a> <a href='/blog/categories/python' style='font-size: 142.85714285714286%'>python(5)</a> <a href='/blog/categories/zanata' style='font-size: 151.42857142857144%'>zanata(6)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/events' style='font-size: 160.0%'>events(7)</a> <a href='/blog/categories/fedora' style='font-size: 125.71428571428572%'>fedora(3)</a> <a href='/blog/categories/i18n-slash-l10n' style='font-size: 160.0%'>i18n/l10n(7)</a> <a href='/blog/categories/kodi' style='font-size: 108.57142857142857%'>kodi(1)</a> <a href='/blog/categories/php' style='font-size: 108.57142857142857%'>php(1)</a> <a href='/blog/categories/python' style='font-size: 142.85714285714286%'>python(5)</a> <a href='/blog/categories/rpi' style='font-size: 108.57142857142857%'>rpi(1)</a> <a href='/blog/categories/zanata' style='font-size: 151.42857142857144%'>zanata(6)</a> </span>
 </section>
 
 <section>
@@ -597,6 +618,10 @@
   </div>
 </section>
 
+<section>
+  <h1>Copyrights</h1>
+  <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</section>
 
   
 </aside>

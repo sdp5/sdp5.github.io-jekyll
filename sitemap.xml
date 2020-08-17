@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://sundeep.co.in/blog/2020/08/17/making-your-tv-smart-with-rpi/</loc>
+<lastmod>2020-08-17T12:16:12+05:30</lastmod>
+</url>
+<url>
 <loc>http://sundeep.co.in/blog/2019/07/31/langpacks-autoinstall/</loc>
 <lastmod>2019-07-31T17:00:21+05:30</lastmod>
 </url>
@@ -86,6 +90,12 @@
 </url>
 <url>
 <loc>http://sundeep.co.in/blog/categories/fedora/</loc>
+</url>
+<url>
+<loc>http://sundeep.co.in/blog/categories/rpi/</loc>
+</url>
+<url>
+<loc>http://sundeep.co.in/blog/categories/kodi/</loc>
 </url>
 <url>
 <loc>http://sundeep.co.in/assets/sundeep-profile.pdf</loc>

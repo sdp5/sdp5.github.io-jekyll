@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Manage Yourself - sundeep's blog</title>
+  <title>Making Your TV Smart With Rpi - sundeep's blog</title>
   <meta name="author" content="Sundeep Anand">
 
   
-  <meta name="description" content="All throughout schooling we learn to work hard preparing for exams and celebrate the results! This induces tendency to set short term goals and put &hellip;">
+  <meta name="description" content="Raspberry Pi has gained popularity in a very less time for obvious reasons. Let&rsquo;s take a look how we can turn our TVs smart with the tiny yet &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sundeep.co.in/blog/2017/05/24/manage-yourself/">
+  <link rel="canonical" href="http://sundeep.co.in/blog/2020/08/17/making-your-tv-smart-with-rpi/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="sundeep's blog" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Manage Yourself</h1>
+      <h1 class="entry-title">Making Your TV Smart With Rpi</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@
 
 
 
-<time class='entry-date' datetime='2017-05-24T13:58:16+05:30'><span class='date'><span class='date-month'>May</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:58 pm</span></time>
+<time class='entry-date' datetime='2020-08-17T12:16:12+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>12:16 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://sundeep.co.in">Comments</a>
@@ -99,11 +99,41 @@
   </header>
 
 
-<div class="entry-content"><p>All throughout schooling we learn to work hard preparing for exams and celebrate the results! This induces tendency to set short term goals and put some efforts achieving it. Almost every one has some method to plan and execute what ever goals one has. For some goals rigorous efforts are required whereas some require small but continuous inputs. Overall if we find some balance where we keep our daily activities doing and in parallel meet goals requirements, that certainly would be awesome.</p>
+<div class="entry-content"><p><a href="https://www.raspberrypi.org/">Raspberry Pi</a> has gained popularity in a very less time for obvious reasons. Let&rsquo;s take a look how we can turn our TVs smart with the tiny yet powerful board. Quickly check you have following:</p>
 
-<p>In another words, how about developing a tool which may keep us on track minimising random efforts and keep ourselves more focused towards some goals we have in mind for coming 2-3 yrs? <a href="http://makegoalsdaily.com/">make-goals-daily</a> is a small effort towards the same. This keeps a backlog (goals) and log our daily activities. In return it tries to calculate how much work is remaining for completion of goals. Also, it summaries tasks performed in a month grouped by goals. Thus making it personal activity logger to chase short term goals!!</p>
+<ul>
+<li>Raspberry Pi board</li>
+<li>Power cable (Micro USB/USB Type-C)</li>
+<li>SD Card (min 8 GB)</li>
+<li>Ethernet cable</li>
+<li>Keyboard, Mouse</li>
+<li>HDMI Cable, TV or Monitor</li>
+</ul>
 
-<p>Give it a try <code>$ docker pull suanand/makegoalsdaily</code></p>
+
+<p>Get your laptop. Hit the <a href="https://www.raspberrypi.org/downloads/">downloads</a> page! Make <code>Raspberry Pi Imager</code> work on your system. Basically we will be learning <a href="https://kodi.tv/">kodi</a>, however, lets use <a href="https://osmc.tv/">OSMC</a> which wraps it inside! Download OSMC image respective to the board you&rsquo;re using from <a href="https://osmc.tv/download/">Disk Images</a>. Now, burn that onto your SD Card using the Raspberry Pi Imager. Plug SD card and other peripherals to your board and turn the power on. Here is your OS preparing &hellip;</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/osmc-boot.jpg?raw=true" width="450" height="280"></p>
+
+<p>OSMC (<em>open source media center</em>) is debian based OS, hence all <code>apt</code> here!<br/>With small settings check/enable <code>ssh</code> and try <a href="https://osmc.tv/wiki/general/accessing-the-command-line/">connecting</a>. Look at sources in <code>/etc/apt/sources.list.d/</code>. The UI must have astonished you by now.</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/osmc-menu.jpeg?raw=true" width="450" height="280"></p>
+
+<p>I&rsquo;m sure, you cannot wait to configure <code>YouTube</code> and/or <code>Amazon Prime</code> in your setup. Let&rsquo;s roll. <code>YouTube</code> video add-on is available in <em>Kodi Add-on repository</em> so, its just adding/enabling that from navigating to <code>Home &gt; Add-ons &gt; Install from repository &gt; Video Add-ons</code>.</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/youtube-install.png?raw=true" width="450" height="280"></p>
+
+<p>Though you&rsquo;ve enabled YouTube; you may encounter an error <code>accessNotConfigured</code>. And the fix is simple. Navigate to <a href="https://console.developers.google.com/">Google&rsquo;s Developers Console</a> to register a new youtube project to generate <code>API Key</code>, <code>API ID</code> and <code>API Secret</code>. Fill them. Now, it should be working.</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/youtube-api.png?raw=true" width="450" height="280"></p>
+
+<p>For Netflix and Amazon Prime, get onto your <code>ssh console</code> and follow this amazing <a href="https://makingstuffwork.net/technology/install-netflix-amazon-prime-video-plex-raspberry-pi-kodi-osmc/">blog post</a>. Source repo is <a href="https://github.com/Sandmann79/xbmc">here</a>. ARMv6 processors may not support these formats because of <a href="https://github.com/emilsvennesson/script.module.inputstreamhelper/issues/23">libwidevine</a>. Enjoy your add-ons a bit. It has a plenty of options across <code>programs</code>, <code>music</code>, <code>pictures</code> and <code>vidoes</code>. Enable a few more to test performance!</p>
+
+<p>Next is to get rid of keyboard/mouse. Look none other than <a href="https://yatse.tv/">Yatse</a>. <a href="https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree&amp;hl=en_IN">Download</a> and play it on your mobile device. Remember to keep both your mobile and Raspberry Pi on the same network. <code>Yatse</code> will discover your kodi automatically to let you interact seamlessly.</p>
+
+<p><img class="center" src="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/yaste.png?raw=true" width="450" height="280"></p>
+
+<p><a href="https://github.com/xbmc">Kodi</a> is great community with awesome people.</p>
 </div>
 
 
@@ -119,12 +149,12 @@
 
 
 
-<time class='entry-date' datetime='2017-05-24T13:58:16+05:30'><span class='date'><span class='date-month'>May</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:58 pm</span></time>
+<time class='entry-date' datetime='2020-08-17T12:16:12+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>12:16 pm</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/python/'>python</a>
+    <a class='category' href='/blog/categories/kodi/'>kodi</a>, <a class='category' href='/blog/categories/rpi/'>rpi</a>
   
 </span>
 
@@ -133,7 +163,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sundeep.co.in/blog/2017/05/24/manage-yourself/" data-via="sundeep_co_in" data-counturl="http://sundeep.co.in/blog/2017/05/24/manage-yourself/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sundeep.co.in/blog/2020/08/17/making-your-tv-smart-with-rpi/" data-via="sundeep_co_in" data-counturl="http://sundeep.co.in/blog/2020/08/17/making-your-tv-smart-with-rpi/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -144,10 +174,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2017/03/17/introduction-to-transtats/" title="Previous Post: transtats">&laquo; transtats</a>
+        <a class="basic-alignment left" href="/blog/2019/07/31/langpacks-autoinstall/" title="Previous Post: Langpacks Auto-installation">&laquo; Langpacks Auto-installation</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2017/09/01/flock-2017/" title="Next Post: flock 2017">flock 2017 &raquo;</a>
       
     </p>
   </footer>
@@ -286,8 +314,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://sundeep.co.in/blog/2017/05/24/manage-yourself/';
-        var disqus_url = 'http://sundeep.co.in/blog/2017/05/24/manage-yourself/';
+        var disqus_identifier = 'http://sundeep.co.in/blog/2020/08/17/making-your-tv-smart-with-rpi/';
+        var disqus_url = 'http://sundeep.co.in/blog/2020/08/17/making-your-tv-smart-with-rpi/';
         var disqus_script = 'embed.js';
       
     (function () {
