@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rpi | sundeep's blog]]></title>
   <link href="http://sundeep.co.in/blog/categories/rpi/atom.xml" rel="self"/>
   <link href="http://sundeep.co.in/"/>
-  <updated>2020-08-17T14:20:59+05:30</updated>
+  <updated>2020-08-18T10:42:33+05:30</updated>
   <id>http://sundeep.co.in/</id>
   <author>
     <name><![CDATA[Sundeep Anand]]></name>
@@ -30,7 +30,7 @@
 </ul>
 
 
-<p>Get your laptop. Hit the <a href="https://www.raspberrypi.org/downloads/">downloads</a> page! Make <code>Raspberry Pi Imager</code> work on your system. Basically we will be learning <a href="https://kodi.tv/">kodi</a>, however, lets use <a href="https://osmc.tv/">OSMC</a> which wraps it inside! Download OSMC image respective to the board you&rsquo;re using from <a href="https://osmc.tv/download/">Disk Images</a>. Now, burn that onto your SD Card using the Raspberry Pi Imager. Plug SD card and other peripherals to your board and turn the power on. Here is your OS preparing &hellip;</p>
+<p>Get your laptop. Hit the <a href="https://www.raspberrypi.org/downloads/">downloads</a> page! Make <code>Raspberry Pi Imager</code> work on your system. Basically we will be exploring <a href="https://kodi.tv/">kodi</a>, however, lets use <a href="https://osmc.tv/">OSMC</a> which wraps it inside! Download OSMC image respective to the board you&rsquo;re using from <a href="https://osmc.tv/download/">Disk Images</a>. Now, burn that onto your SD Card using the Raspberry Pi Imager. Plug SD card and other peripherals to your board as well as turn the power on. Here is your OS preparing &hellip;</p>
 
 <p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/osmc-boot.jpg?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/osmc-boot.jpg?raw=true</a>" width="450" height="280"></p>
 
@@ -45,17 +45,17 @@
 
 <p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/youtube-install.png?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/youtube-install.png?raw=true</a>" width="450" height="280"></p>
 
-<p>Though you&rsquo;ve enabled YouTube; you may encounter an error <code>accessNotConfigured</code>. And the fix is simple. Navigate to <a href="https://console.developers.google.com/">Google&rsquo;s Developers Console</a> to register a new youtube project to generate <code>API Key</code>, <code>API ID</code> and <code>API Secret</code>. Fill them. Now, it should be working.</p>
+<p>Though you&rsquo;ve enabled YouTube; you may encounter an error <code>accessNotConfigured</code>. However, the fix is simple. Navigate to <a href="https://console.developers.google.com/">Google&rsquo;s Developers Console</a> and register a new youtube project for generating <code>API Key</code>, <code>API ID</code> and <code>API Secret</code>. Fill them. Now, it should be working.</p>
 
 <p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/youtube-api.png?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/youtube-api.png?raw=true</a>" width="450" height="280"></p>
 
-<p>For Netflix and Amazon Prime, get onto your <code>ssh console</code> and follow this amazing <a href="https://makingstuffwork.net/technology/install-netflix-amazon-prime-video-plex-raspberry-pi-kodi-osmc/">blog post</a>. Source repo is <a href="https://github.com/Sandmann79/xbmc">here</a>. ARMv6 processors may not support these formats because of <a href="https://github.com/emilsvennesson/script.module.inputstreamhelper/issues/23">libwidevine</a>. Enjoy your add-ons a bit. It has a plenty of options across <code>programs</code>, <code>music</code>, <code>pictures</code> and <code>vidoes</code>. Enable a few more to test performance!</p>
+<p>For Netflix and Amazon Prime, get onto your <code>ssh console</code> and follow this amazing <a href="https://makingstuffwork.net/technology/install-netflix-amazon-prime-video-plex-raspberry-pi-kodi-osmc/">blog post</a>. Source repo is <a href="https://github.com/Sandmann79/xbmc">here</a>. ARMv6 processors may not support these formats because of <a href="https://github.com/emilsvennesson/script.module.inputstreamhelper/issues/23">libwidevine</a>. Enjoy your add-ons a bit. It has a plenty of options across <code>programs</code>, <code>music</code>, <code>pictures</code> and <code>vidoes</code>. Enable a few more to test the performance!</p>
 
-<p>Next is to get rid of keyboard/mouse. Look none other than <a href="https://yatse.tv/">Yatse</a>. <a href="https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree&amp;hl=en_IN">Download</a> and play it on your mobile device. Remember to keep both your mobile and Raspberry Pi on the same network. <code>Yatse</code> will discover your kodi automatically to let you interact seamlessly.</p>
+<p>Next is to get rid of keyboard/mouse. Look none other than <a href="https://yatse.tv/">Yatse</a>. That&rsquo;s awesome. Just <a href="https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree&amp;hl=en_IN">play</a> it on your mobile device. Remember to keep both your mobile and Raspberry Pi on the same network. <code>Yatse</code> will discover your kodi automatically to let you interact seamlessly.</p>
 
 <p><img class="center <a" src="href="https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/yaste.png?raw=true">https://github.com/sundeep-co-in/sundeep-co-in.github.io/blob/source/source/images/kodi/yaste.png?raw=true</a>" width="450" height="280"></p>
 
-<p><a href="https://github.com/xbmc">Kodi</a> is great community with awesome people.</p>
+<p><a href="https://github.com/xbmc">Kodi</a> is a great community with awesome people.</p>
 ]]></content>
   </entry>
   
