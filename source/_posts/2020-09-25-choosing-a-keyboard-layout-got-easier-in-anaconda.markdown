@@ -12,7 +12,7 @@ categories: fedora
 
 <!-- more -->
 
-Users can enable input methods for their language (and script) using the Keyboard tab. They can choose from a menu of options. Locating desired layout in this long list could seem tedious.
+Users can select keyboard layouts for their language (and script) using the Keyboard tab. They can choose from a menu of options. Locating desired layout in this long list could seem tedious. Moreover, it can be hard to search for the US layout when using the wrong default layout.
 
 {% img center https://github.com/sundeep-co-in/sundeep-anand.github.io/blob/source/source/images/anaconda-keyboards/anaconda-keyboard-layouts.png?raw=true 450 280 %}
 
